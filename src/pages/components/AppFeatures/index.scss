@@ -1,0 +1,82 @@
+@mixin CustomeAppFeaturesStyle(
+  $color,
+  $font-family,
+  $font-size,
+  $font-style,
+  $font-weight,
+  $line-height
+) {
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+.app-features-head {
+  @include CustomeAppFeaturesStyle(
+    #929292,
+    Inter,
+    clamp(14px, 5vw, 18px),
+    normal,
+    600,
+    normal
+  );
+  margin-top: 5%;
+}
+
+.app-features-contents {
+  h2 {
+    @include CustomeAppFeaturesStyle(
+      #000000,
+      Poppins,
+      clamp(30px, 5vw, 6vh),
+      normal,
+      700,
+      normal
+    );
+
+    text-align: center;
+
+    margin-top: 5%;
+    display: flex;
+  }
+  h4 {
+    @include CustomeAppFeaturesStyle(
+      #000000,
+      Poppins,
+      clamp(18px, 5vw, 24px),
+      normal,
+      600,
+      normal
+    );
+  }
+}
+.app-feature-desc {
+  @include CustomeAppFeaturesStyle(
+    #000000,
+    Poppins,
+    clamp(10px, 5vw, 18px),
+    normal,
+    400,
+    27px
+  );
+  width: 85%;
+}
+//Smartphone
+@media screen and (max-width: 767px) {
+  .app-features-demo-img {
+    img {
+      width: 90%;
+    }
+  }
+  .app-feature-desc {
+    width: 100%;
+  }
+}
+//tablet
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+}
+//desktop
+@media screen and (min-width: 1023px) {
+}

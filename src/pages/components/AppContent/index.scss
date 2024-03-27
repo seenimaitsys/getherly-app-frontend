@@ -1,0 +1,54 @@
+@mixin CustomeAppContentDesign(
+  $color,
+  $font-family,
+  $font-size,
+  $font-style,
+  $font-weight,
+  $line-height,
+  $letter-spacing: 0,
+  $margin-top: 0
+) {
+  letter-spacing: $letter-spacing;
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+.app-content {
+  h2 {
+    @include CustomeAppContentDesign(
+      #393939,
+      Poppins,
+      clamp(2rem, 3vw, 3rem),
+      normal,
+      800,
+      normal
+    );
+  }
+  p {
+    @include CustomeAppContentDesign(
+      #393939,
+      Poppins,
+      clamp(12px, 4vw, 20px),
+      normal,
+      500,
+      normal,
+      $margin-top: 2vh
+    );
+
+    text-align: center;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .windo-design {
+    display: none !important;
+  }
+  .app-content {
+    display: flex;
+
+    align-items: center !important;
+  }
+}

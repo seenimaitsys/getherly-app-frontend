@@ -1,0 +1,189 @@
+.login-continer-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  position: absolute;
+}
+
+.login-continer-main .img-child1 {
+  position: absolute;
+  z-index: -1;
+
+  margin-right: 60%;
+}
+.login-continer-main .img-child3 {
+  position: absolute;
+  margin-right: -45%;
+  z-index: -1;
+  top: 0.24vh;
+}
+.login-continer-main .img-child4 {
+  position: absolute;
+  margin-right: -65%;
+  z-index: -1;
+  top: 45%;
+}
+.login-continer-main .img-child2 {
+  position: absolute;
+  margin-right: 65%;
+  z-index: -1;
+  top: 80%;
+}
+.login-continer {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 600px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: 1px solid #33ceff;
+
+  background: linear-gradient(180deg, #00463e 0.18%, #595959 150.98%);
+}
+
+.gethely-logo-login h1 {
+  color: #fff;
+  font-family: Poppins;
+  font-size: clamp(23px, 5vw, 30px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 10px;
+  text-align: center;
+}
+.gethely-logo-login p {
+  color: #b9b9b9;
+  text-align: center;
+
+  font-size: clamp(14px, 5vw, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 5px;
+}
+.inputWithIcon .in {
+  padding-left: 45px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 22px;
+  border: 1px solid #5dc5c4;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+
+  letter-spacing: 0.3px;
+}
+.inputWithIcon .in::-webkit-input-placeholder {
+  color: rgba(93, 197, 196, 0.5);
+  opacity: 50%;
+}
+.inputWithIcon .in::-webkit-outer-spin-button,
+.inputWithIcon .in::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon img {
+  position: absolute;
+  left: 1%;
+  padding: 9px 8px;
+  color: #aaa;
+  transition: 0.3s;
+  top: -1px;
+}
+.login-lable1 {
+  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  text-align: start;
+  font-family: Poppins;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+}
+.login-lable2 {
+  color: #ffffff;
+  display: flex;
+  justify-content: flex-end;
+  font-family: Poppins;
+  font-size: clamp(12px, 5vw, 15px);
+  font-style: normal;
+  padding: 2px;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: underline;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+.login-submit {
+  width: 90%;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #78c1c2 0%, #2a4e8c 100%);
+  color: #fff;
+  margin-top: 3vh;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  /* 112.5% */
+  letter-spacing: 1px;
+}
+.policy-checkbox {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: space-evenly;
+  margin-top: 10%;
+}
+.policy-checkbox div {
+  color: white;
+  font-size: clamp(8px, 2vw, 12px);
+  font-style: normal;
+  font-weight: 500;
+  padding-left: 10px;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+}
+@media screen and (max-width: 767px) {
+  .login-continer {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 600px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 1px solid #33ceff;
+
+    background: linear-gradient(180deg, #00463e 0.18%, #595959 150.98%);
+  }
+}
+//tablet
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .login-continer {
+    width: 50%;
+  }
+}
+//desktop
+@media screen and (min-width: 1023px) {
+}

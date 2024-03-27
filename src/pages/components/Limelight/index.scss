@@ -1,0 +1,83 @@
+@mixin CustomeAppFeaturesStyle(
+  $color,
+  $font-family,
+  $font-size,
+  $font-weight,
+  $line-height,
+  $text-align
+) {
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+
+  font-weight: $font-weight;
+  line-height: $line-height;
+  text-align: $text-align;
+}
+.Limelight-continer {
+  h2 {
+    @include CustomeAppFeaturesStyle(
+      #000000,
+      Poppins,
+      clamp(20px, 6vw, 40px),
+      700,
+      60px,
+      left
+    );
+  }
+  h3 {
+    @include CustomeAppFeaturesStyle(
+      #000000,
+      Inter,
+      clamp(18px, 5vw, 24px),
+      600,
+      29px,
+      left
+    );
+  }
+  p:first-child {
+    @include CustomeAppFeaturesStyle(
+      #000000,
+      Poppins,
+      clamp(10px, 5vw, 18px),
+      400,
+      27px,
+      left
+    );
+  }
+  p:last-child {
+    @include CustomeAppFeaturesStyle(
+      gray,
+      Poppins,
+      clamp(12px, 5vw, 19px),
+      400,
+      30px,
+      left
+    );
+  }
+  h6 {
+    @include CustomeAppFeaturesStyle(
+      rgb(0, 0, 0),
+      Inter,
+      clamp(12px, 4vw, 22px),
+      600,
+      26.63px,
+      center
+    );
+  }
+}
+
+//Smartphone
+@media screen and (max-width: 767px) {
+  .limelignt-demo-img {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+//tablet
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+}
+//desktop
+@media screen and (min-width: 1023px) {
+}

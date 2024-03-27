@@ -1,0 +1,97 @@
+//scss function
+@mixin CustomeHeaderStyle(
+  $color,
+  $family,
+  $weight,
+  $size,
+  $style,
+  $lineheight,
+  $padding: 0,
+  $display: flex,
+  $justify-content: center,
+  $align-items: center,
+  $height: 0,
+
+  $border-radius: 0,
+  $background: none
+) {
+  color: $color;
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  font-style: $style;
+  padding: $padding;
+  line-height: $lineheight;
+  display: $display;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  height: $height;
+  border-radius: $border-radius;
+  $background: $background;
+}
+
+.navmanu {
+  @include CustomeHeaderStyle(
+    #000,
+    Poppins,
+    600,
+    clamp(15px, 1.5vw, 20px),
+    normal,
+    normal
+  );
+}
+
+#header-login {
+  @include CustomeHeaderStyle(
+    #0e42c8,
+    Poppins,
+    600,
+    clamp(15px, 1.5vw, 20px),
+    normal,
+    normal
+  );
+}
+.header-howdoi {
+  @include CustomeHeaderStyle(
+    #000,
+    Poppins,
+    600,
+    clamp(15px, 1.5vw, 20px),
+    normal,
+    normal,
+    $padding: 20px,
+    $height: 40px,
+
+    $border-radius: 30px,
+    $background: #0085ff
+  );
+
+  h4 {
+    @include CustomeHeaderStyle(
+      #000,
+      Poppins,
+      600,
+      clamp(15px, 1.5vw, 20px),
+      normal,
+      normal
+    );
+  }
+}
+
+//Smartphone
+@media screen and (max-width: 767px) {
+  .app-logo {
+    svg {
+      width: 4rem;
+    }
+    img {
+      width: 9rem;
+    }
+  }
+}
+//tablet
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+}
+//desktop
+@media screen and (min-width: 1023px) {
+}

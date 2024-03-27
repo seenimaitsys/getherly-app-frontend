@@ -1,0 +1,100 @@
+@mixin CustomeAppFeaturesStyle(
+  $color,
+  $font-family,
+  $font-size,
+  $font-style,
+  $font-weight,
+  $line-height,
+  $text-align,
+  $align-items,
+  $display
+) {
+  color: $color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  text-align: $text-align;
+  align-items: $align-items;
+  display: $display;
+}
+.appinstruction-content {
+  > p:nth-child(1) {
+    @include CustomeAppFeaturesStyle(
+      #929292,
+      Inter,
+      clamp(20px, 5vw, 24px),
+      normal,
+      600,
+      normal,
+      start,
+      flex-start,
+      flex
+    );
+  }
+
+  .appinstruction-title {
+    @include CustomeAppFeaturesStyle(
+      #363636,
+      Poppins,
+      clamp(20px, 6vw, 40px),
+      normal,
+      700,
+      normal,
+      start,
+      flex-start,
+      flex
+    );
+
+    letter-spacing: 1px;
+  }
+  .appinstruction-desc {
+    @include CustomeAppFeaturesStyle(
+      #5d5d5d,
+      Poppins,
+      clamp(12px, 4vw, 20px),
+      normal,
+      400,
+      normal,
+      start,
+      flex-start,
+      flex
+    );
+    width: 530px;
+
+    letter-spacing: 1px;
+  }
+}
+
+.app-working-steps {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-left: -3rem;
+
+  width: fit-content;
+  p {
+    @include CustomeAppFeaturesStyle(
+      #000000,
+      Inter,
+      clamp(12px, 4vw, 22px),
+      normal,
+      600,
+      26.63px,
+      center,
+      "",
+      ""
+    );
+  }
+}
+@media (max-width: 991.98px) {
+  .app-working-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+    grid-gap: 2rem;
+    width: 100%;
+  }
+}

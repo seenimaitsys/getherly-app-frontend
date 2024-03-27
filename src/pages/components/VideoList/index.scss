@@ -1,0 +1,36 @@
+.videolist-continer {
+  width: 100%;
+  height: 700px;
+  flex-shrink: 0;
+  border-radius: 20px 0px 0px 20px;
+  border: 1px solid #60cac6;
+  background: #5c8886;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  padding: 30px;
+  p {
+    color: #000;
+    font-family: Poppins;
+    font-size: clamp(15px, 4vw, 25px);
+    font-style: normal;
+    font-weight: 500;
+    padding: 10px;
+    line-height: normal;
+  }
+  &:hover {
+    overflow-y: scroll;
+  }
+}
+@media screen and (max-width: 767px) {
+}
+//tablet
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .videolist-continer {
+    width: 100%;
+    height: 100%;
+  }
+}
+//desktop
+@media screen and (min-width: 1023px) {
+}
