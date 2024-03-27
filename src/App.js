@@ -5,7 +5,7 @@ const HomePage = React.lazy(() => import("./layout/HomePage"));
 const AboutPage = React.lazy(() => import("./layout/AboutPage"));
 const Contacts = React.lazy(() => import("./pages/components/Contacts"));
 const LoginPage = React.lazy(() => import("./layout/LoginPage"));
-const HowDOIpage = React.lazy(() => import("./layout/LoginPage"));
+const HowDOIpage = React.lazy(() => import("./layout/How_Do_I_Page"));
 function App() {
   ///Scroll To top function
   let calcScrollValue = () => {
