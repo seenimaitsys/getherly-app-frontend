@@ -21,7 +21,7 @@
     @include CustomeAppContentDesign(
       #393939,
       Poppins,
-      clamp(2rem, 3vw, 3rem),
+      clamp(2.5rem, 4vw, 4rem),
       normal,
       800,
       normal
@@ -31,7 +31,7 @@
     @include CustomeAppContentDesign(
       #393939,
       Poppins,
-      clamp(12px, 4vw, 20px),
+      clamp(18px, 2vw, 25px),
       normal,
       500,
       normal,

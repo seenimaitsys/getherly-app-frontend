@@ -296,11 +296,11 @@ const UserReviewsCard = () => {
     <>
       <Container
         fluid
-        className="d-flex flex-column align-items-center mt-5 justify-content-center"
+        className="user-reviews-container d-flex flex-column align-items-center mt-5 justify-content-center"
       >
-        <h3 className="user-reviews-title">
+        <h2 className="user-reviews-title">
           See what the world tells about us
-        </h3>
+        </h2>
 
         <Slider {...settings} className="review-slider">
           {reviews_card.map((list, index) => {
@@ -317,11 +317,11 @@ const UserReviewsCard = () => {
                     />
                   </Card.Title>
 
-                  <div className="review-content">{list.cord_condent}</div>
+                  <p>{list.cord_condent}</p>
 
-                  <Container className="d-flex align-items-center ">
+                  <Container className="d-flex align-items-center mt-3">
                     <Row>
-                      <Col className="review-user d-flex align-items-center">
+                      <Col className="review-user d-flex align-items-center  gap-2 ">
                         <img
                           avatar="true"
                           loading="lazy"
@@ -330,7 +330,7 @@ const UserReviewsCard = () => {
                           src={demoImg}
                           alt="reviewer"
                         />
-                        {list.presion_name}
+                        <h6>{list.presion_name}</h6>
                       </Col>
                     </Row>
                   </Container>

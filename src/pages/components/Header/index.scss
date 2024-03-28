@@ -39,6 +39,7 @@
     normal,
     normal
   );
+  flex-wrap: nowrap;
 }
 
 #header-login {
@@ -50,6 +51,7 @@
     normal,
     normal
   );
+  flex-wrap: nowrap;
 }
 .header-howdoi {
   @include CustomeHeaderStyle(
@@ -75,11 +77,16 @@
       normal,
       normal
     );
+    flex-wrap: nowrap;
   }
 }
 
 //Smartphone
 @media screen and (max-width: 767px) {
+  .nave-body {
+    gap: 3rem !important;
+  }
+
   .app-logo {
     svg {
       width: 4rem;
@@ -91,6 +98,20 @@
 }
 //tablet
 @media screen and (min-width: 767px) and (max-width: 1023px) {
+  .nave-body {
+    gap: 4rem !important;
+    .navmanu {
+      font-size: clamp(20px, 3vw, 30px);
+    }
+    #header-login {
+      font-size: clamp(20px, 3vw, 30px);
+    }
+    .header-howdoi {
+      h4 {
+        font-size: clamp(20px, 3vw, 30px);
+      }
+    }
+  }
 }
 //desktop
 @media screen and (min-width: 1023px) {

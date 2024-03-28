@@ -5,8 +5,8 @@ import { Container, Navbar, Nav, Offcanvas, Button } from "react-bootstrap";
 import getherlyHeader from "../../../assert/getherly.png";
 import Vector from "../../../assert/Vector.svg";
 import VectorUp from "../../../assert/vectorUp.svg";
-import VectorNoborderUp from "../../../assert/VectorNo_Border-up.svg";
-import VectorNoborderDown from "../../../assert/VectorNo_border_Dowm.svg";
+// import VectorNoborderUp from "../../../assert/VectorNo_Border-up.svg";
+// import VectorNoborderDown from "../../../assert/VectorNo_border_Dowm.svg";
 
 const Header = ({ page }) => {
   const [showNave, setShowNave] = useState(false);
@@ -73,13 +73,14 @@ const Header = ({ page }) => {
                 </defs>
               </svg>
               {page === "contact" ? (
-                <img
-                  src={getherlyHeader}
-                  alt="getherlylogo"
-                  loading="lazy"
-                  width="250"
-                  className="invisible"
-                ></img>
+                // <img
+                //   src={getherlyHeader}
+                //   alt="getherlylogo"
+                //   loading="lazy"
+                //   width="20"
+                //   className="invisible"
+                // ></img>
+                <></>
               ) : (
                 <img
                   src={getherlyHeader}
@@ -168,7 +169,7 @@ const Header = ({ page }) => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 gap-5 align-items-center">
+                <Nav className="nave-body justify-content-end flex-grow-1 gap-4 align-items-center">
                   <Nav.Link id="header-login" href="/login">
                     Log in
                   </Nav.Link>
@@ -177,7 +178,7 @@ const Header = ({ page }) => {
                   </Nav.Link>
                   <Nav.Link className="navmanu d-flex" href="/aboutus">
                     About us{" "}
-                    <div className="d-flex align-items-center p-1">
+                    {/* <div className="d-flex align-items-center p-1">
                       {page === "about" ? (
                         <img
                           src={VectorNoborderDown}
@@ -193,7 +194,7 @@ const Header = ({ page }) => {
                           width={"auto"}
                         ></img>
                       )}
-                    </div>
+                    </div> */}
                   </Nav.Link>
 
                   <Nav.Link className="navmanu" href="/contact">
@@ -204,14 +205,14 @@ const Header = ({ page }) => {
                       <h4 className="d-flex align-items-center justify-content-center mt-2">
                         How do i?
                         {page === "howdoi" ? (
-                          <img src={Vector} alt="down" loading="lazy"></img>
-                        ) : (
                           <img
                             src={VectorUp}
                             alt="up"
                             loading="lazy"
                             style={{}}
                           ></img>
+                        ) : (
+                          <img src={Vector} alt="down" loading="lazy"></img>
                         )}
                       </h4>
                     </Button>

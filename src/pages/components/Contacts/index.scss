@@ -1,85 +1,75 @@
-.top-layer-main-continer .top-background-img {
-  width: 100%;
-  height: 366px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("../../../assert/image22.png");
+@mixin Custom-width-hight($width, $height) {
+  height: $height;
+  width: $width;
 }
-.map-continer {
-  width: 75%;
-  height: auto;
-  border-radius: 30px;
-  flex-shrink: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  margin-top: -6%;
-  background: lightgray 50% / cover no-repeat;
-
-  // background-image: url("../../../assert/image23.png");
-}
-.map-continer iframe {
-  width: 50%;
-  height: 26rem;
-  border-top-left-radius: 30px;
-  /* 50% of height */
-  border-bottom-left-radius: 30px;
-}
-.adderss-continer {
-  display: flex;
-  height: 70%;
-  width: auto;
-  margin-left: 7%;
-  margin-top: -5%;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-around;
-
-  gap: 5vh;
-}
-.address-continer {
-  display: grid;
-
-  width: 70%;
-  height: auto;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 10rem;
-}
-.address-title {
-  color: #6a6a6a;
-  text-align: start;
+@mixin Custome-address-style(
+  $text-align,
+  $font-weight,
+  $line-height,
+  $font-size
+) {
+  color: #4b4b4b;
+  text-align: $text-align;
   font-family: Inter;
-  font-size: clamp(20px, 3vw, 28px);
   font-style: normal;
-  font-weight: 500;
-  line-height: 143.203%;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  font-size: $font-size;
 }
-.address-desc {
-  font-family: Inter;
-  font-size: clamp(13px, 3vw, 20px);
-  font-weight: 400;
-  line-height: 28.64px;
-  text-align: left;
+
+.Address-card {
+  > div:first-child {
+    @include Custom-width-hight(100%, 366px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../../assert/image22.png");
+  }
+  > div:nth-child(2) {
+    @include Custom-width-hight(75%, auto);
+
+    border-radius: 30px;
+    flex-shrink: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    margin-top: -6%;
+    background: lightgray 50% / cover no-repeat;
+  }
+  iframe {
+    @include Custom-width-hight(50%, 26rem);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  > div:nth-child(2) div:nth-child(1) {
+    display: grid;
+
+    @include Custom-width-hight(70%, auto);
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10rem;
+  }
+  h6 {
+    @include Custome-address-style(start, 500, 40.1px, clamp(20px, 3vw, 28px));
+  }
+  p {
+    @include Custome-address-style(left, 400, 0, clamp(13px, 3vw, 20px));
+  }
 }
+
 //Smartphone
 @media screen and (max-width: 767px) {
   .map-continer {
     display: flex;
     flex-direction: column;
 
-    margin-top: -20%;
-
-    // background-image: url("../../../assert/image23.png");
-  }
-  .map-continer iframe {
-    width: 100%;
-    height: 20rem;
-    border-top-left-radius: 30px;
-    /* 50% of height */
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 0px;
+    margin-top: -30% !important;
+    iframe {
+      @include Custom-width-hight(100%, 17rem);
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 0px;
+    }
   }
 }
 
@@ -90,16 +80,12 @@
     flex-direction: column;
 
     margin-top: -12%;
-
-    // background-image: url("../../../assert/image23.png");
-  }
-  .map-continer iframe {
-    width: 100%;
-    height: 20rem;
-    border-top-left-radius: 30px;
-    /* 50% of height */
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 0px;
+    iframe {
+      @include Custom-width-hight(100%, 20rem);
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 0px;
+    }
   }
 }
 //desktop

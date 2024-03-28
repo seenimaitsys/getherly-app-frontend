@@ -12,6 +12,7 @@ import OrgChart from "../Gojs/Orgchart/index.js";
 import Genogram from "../Gojs/GenogramLayout/index.js";
 import IncrementalTree from "../Gojs/IncrementalTree/index.js";
 import VectorNoborderDown from "../../../assert/VectorNo_border_Dowm.svg";
+import Header from "../Header/index.js";
 const GojsViewSlider = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [show, setShow] = useState(false);
@@ -315,7 +316,8 @@ const GojsViewSlider = () => {
 
   return (
     <>
-      <Container fluid>
+      <Header />
+      <Container fluid className="mt-5">
         <div className="image-slider-main-con">
           <h1>Hello ! Senthil Raj , you can access different views in web</h1>
 

@@ -120,7 +120,7 @@ const Fooder = () => {
 
             <div className="fooder-col">Boston , USA</div>
 
-            <div className="fooder-col">Info@email.com</div>
+            <div className="fooder-col">support@twigscorp.com</div>
           </Col>
           <Col className="d-flex flex-column justify-content-center">
             <h1 style={{ ...footer_Title }}>Learn more</h1>

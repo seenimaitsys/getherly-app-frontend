@@ -46,9 +46,10 @@ const Limelight = () => {
         style={{
           marginTop: "10%",
         }}
+        fluid
       >
         <Row>
-          <Col className="Limelight-continer mt-1">
+          <Col className="Limelight-continer mt-1 p-5 w-100">
             <AnimationOnScroll animateIn="animate__fadeInLeft">
               <Row>
                 <h2>Experience Limelight</h2>
@@ -105,21 +106,23 @@ const Limelight = () => {
           </Col>
 
           <Col
-            sm={7}
-            className="limelignt-demo-img d-flex align-items-start justify-content-end gap-5"
+            sm={6}
+            className="limelignt-demo-img d-flex align-items-start justify-content-center gap-5"
           >
             <img
               src={demoimage1}
               alt="share reels"
-              width={"40%"}
-              height={"75%"}
+              loading="lazy"
+              width={"35%"}
+              height={"541.86px"}
+              className="mt-5"
             ></img>
             <img
               src={demoimage2}
               alt="make post"
-              width={"40%"}
-              height={"75%"}
-              style={{ marginTop: "6rem" }}
+              width={"35%"}
+              height={"541.86px"}
+              style={{ marginTop: "10rem" }}
             ></img>
           </Col>
         </Row>

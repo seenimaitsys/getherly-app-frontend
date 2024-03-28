@@ -45,7 +45,7 @@ const AppFeatures = () => {
         fluid
         className="d-flex justify-content-center app-features-head"
       >
-        <p>APP FEATURES</p>
+        {/* <p>APP FEATURES</p> */}
       </Container>
       <Container
         fluid

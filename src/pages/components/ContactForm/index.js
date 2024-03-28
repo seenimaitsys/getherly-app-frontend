@@ -24,8 +24,8 @@ const ContactForm = () => {
 
   return (
     <>
-      <Container className="message-form-main" fluid>
-        <div className="w-100 text-start gethely-logo-message">
+      <Container className="message-form-container mb-5 d-flex" fluid>
+        <div className="w-100 text-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="22%"
@@ -76,8 +76,8 @@ const ContactForm = () => {
             </defs>
           </svg>
 
-          <h3>Drop us a Line</h3>
-          <p>
+          <h3 className="d-flex flex-nowrap p-2">Drop us a Line</h3>
+          <p className="text-start p-2">
             Reach out to us in Contact <br />
             form and we will get back to <br />
             you shortly.
@@ -85,21 +85,16 @@ const ContactForm = () => {
         </div>
 
         <div className="w-100">
-          <h3
-            className="text-start font-weight-bold text-white"
-            style={{ fontSize: "clamp(17px, 2vw, 24px)" }}
-          >
-            Send Us Message
-          </h3>
+          <h3 className="text-start text-white">Send Us Message</h3>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <Form.Group as={Col} className="mt-3">
               <Form.Control
                 type="text"
-                placeholder="Your Name"
+                placeholder="Name"
                 maxLength="30"
                 name="name"
                 autoComplete="off"
-                className=" message-input"
+                className="message-input d-flex w-100 align-items-start border-0 rounded"
                 required
               />
               <Form.Control.Feedback type="invalid" className="text-start">
@@ -109,8 +104,8 @@ const ContactForm = () => {
             <Form.Group as={Col} className="mt-3">
               <Form.Control
                 type="email"
-                placeholder="Your Email"
-                className="message-input"
+                placeholder="Email Address"
+                className="message-input d-flex w-100 align-items-start border-0 rounded"
                 minLength="4"
                 maxLength="40"
                 name="email"
@@ -129,7 +124,7 @@ const ContactForm = () => {
                 name="subject"
                 required
                 autoComplete="off"
-                className="message-input"
+                className="message-input d-flex w-100 align-items-start border-0 rounded"
               />
               <Form.Control.Feedback type="invalid" className="text-start">
                 Please provide a valid Phone No.
@@ -138,20 +133,24 @@ const ContactForm = () => {
             <Form.Group as={Col} className="mt-3">
               <Form.Control
                 as="textarea"
-                placeholder="message"
+                placeholder="Your message"
                 rows={8}
                 name="message"
                 autoComplete="off"
                 required
                 id="message"
-                className="message-textarea"
+                className="message-textarea d-flex w-100 align-items-start border-0 rounded"
               />
               <Form.Control.Feedback type="invalid" className="text-start">
                 Enter minimun 4 character.
               </Form.Control.Feedback>
             </Form.Group>
             {loading ? (
-              <Button variant="primary" disabled className="message-submit">
+              <Button
+                variant="primary"
+                disabled
+                className="message-submit d-flex justify-content-center align-items-center"
+              >
                 <Spinner
                   as="span"
                   animation="border"
@@ -161,8 +160,11 @@ const ContactForm = () => {
                 />
               </Button>
             ) : (
-              <Button type="submit" className="message-submit">
-                Submit
+              <Button
+                type="submit"
+                className="message-submit d-flex justify-content-center align-items-center"
+              >
+                Send message
               </Button>
             )}
           </Form>

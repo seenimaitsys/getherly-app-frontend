@@ -1,40 +1,47 @@
-.review-slider {
-  width: 87%;
+.user-reviews-container {
+  h2 {
+    font-family: Inter;
+    font-size: clamp(25px, 5vw, 40px);
+    margin-top: 5%;
+    font-weight: 700;
+  }
+  .user-reviews-card {
+    width: 80% !important;
+    flex-shrink: 0;
+    border-radius: 30px;
+    height: fit-content !important;
+    border: 1px solid #33ceff;
+    background: #e5e5e5;
+  }
+  .review-slider {
+    width: 87%;
+    margin-top: 5%;
+    border: none;
+    padding: 30px 10px 30px 10px;
+  }
+  p {
+    color: #5d5d5d;
+    width: 90%;
+    font-family: Inter;
+    line-height: 60%;
 
-  margin-top: 5%;
-  border: none;
-  padding: 30px 10px 30px 10px;
-}
-.user-reviews-title {
-  font-family: Inter;
-  font-size: clamp(25px, 5vw, 40px);
-  margin-top: 5%;
-  font-weight: 700;
-}
-.user-reviews-card {
-  width: 80% !important;
-  flex-shrink: 0;
-  border-radius: 30px;
-  height: fit-content !important;
-  border: 1px solid #33ceff;
-  background: #e5e5e5;
-}
-.review-content {
-  color: #5d5d5d;
-  width: 90%;
-  font-family: Inter;
-  line-height: 60%;
-  height: 23vh;
-  letter-spacing: 1px;
-  font-size: 20px;
+    font-size: 20px;
 
-  font-style: normal;
-  text-align: start;
+    font-style: normal;
+    text-align: start;
 
-  display: -webkit-box;
-  -webkit-line-clamp: 6;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  font-weight: 400;
-  line-height: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: 400;
+    line-height: normal;
+  }
+  h6 {
+    font-family: Inter;
+    font-size: clamp(15px, 5vw, 20px);
+    font-weight: 600;
+    line-height: 26.63px;
+    text-align: left;
+  }
 }

@@ -1,11 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import React from "react";
+
 const HomePage = React.lazy(() => import("./layout/HomePage"));
 const AboutPage = React.lazy(() => import("./layout/AboutPage"));
 const Contacts = React.lazy(() => import("./pages/components/Contacts"));
 const LoginPage = React.lazy(() => import("./layout/LoginPage"));
 const HowDOIpage = React.lazy(() => import("./layout/How_Do_I_Page"));
+const GojsViewSlider = React.lazy(() =>
+  import("./pages/components/GojsViewSlider")
+);
 function App() {
   ///Scroll To top function
   let calcScrollValue = () => {
@@ -34,12 +38,14 @@ function App() {
         <div id="progress">
           <span id="progress-value">&#129045;</span>
         </div>
+
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/aboutus" element={<AboutPage />} />
           <Route path="/contact" element={<Contacts />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/how_do_i" element={<HowDOIpage />} />
+          <Route path="/familyTree" element={<GojsViewSlider />} />
         </Routes>
       </div>
     </BrowserRouter>

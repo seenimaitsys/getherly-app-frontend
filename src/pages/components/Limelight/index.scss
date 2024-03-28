@@ -19,7 +19,7 @@
     @include CustomeAppFeaturesStyle(
       #000000,
       Poppins,
-      clamp(20px, 6vw, 40px),
+      clamp(20px, 4vw, 40px),
       700,
       60px,
       left
@@ -49,7 +49,7 @@
     @include CustomeAppFeaturesStyle(
       gray,
       Poppins,
-      clamp(12px, 5vw, 19px),
+      clamp(12px, 5vw, 20px),
       400,
       30px,
       left
