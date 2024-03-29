@@ -316,8 +316,9 @@ const UserReviewsCard = () => {
                       readOnly
                     />
                   </Card.Title>
-
-                  <p>{list.cord_condent}</p>
+                  <div>
+                    <p>{list.cord_condent}</p>
+                  </div>
 
                   <Container className="d-flex align-items-center mt-3">
                     <Row>
