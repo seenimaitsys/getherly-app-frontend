@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import demoImg from "../../../assert/demo.png";
-import image20 from "../../../assert/image20.png";
 import "./index.scss";
 import image21 from "../../../assert/image21.png";
 import { Container, Button, Form } from "react-bootstrap";
@@ -317,27 +316,30 @@ const GojsViewSlider = () => {
   return (
     <>
       <Header />
-      <Container fluid className="mt-5">
-        <div className="image-slider-main-con">
-          <h1>Hello ! Senthil Raj , you can access different views in web</h1>
+      <Container
+        fluid
+        className="mt-2 d-flex flex-column align-items-center justify-content-center views-slider-container mb-5"
+      >
+        <h2 className="mb-3">
+          Hello ! Senthil Raj , you can access different views in web
+        </h2>
 
-          <Slider {...settings} className="image-slider">
-            <OrgChart Show_AddPersion_Model={Show_AddPersion_Model} />
-            <IncrementalTree Show_AddPersion_Model={Show_AddPersion_Model} />
-            <Genogram />
-            <img src={image20} alt=""></img>
-            <img src={image20} alt=""></img>
-          </Slider>
+        <Slider {...settings} className="image-slider">
+          <OrgChart Show_AddPersion_Model={Show_AddPersion_Model} />
+          <IncrementalTree Show_AddPersion_Model={Show_AddPersion_Model} />
+          <Genogram />
+        </Slider>
 
-          <div className="image-slider-bottam">
-            <div>
-              <p>You can add your family members in editor view</p>
-            </div>
-            <img src={image21} alt="" loading="lazy"></img>
+        <div className="image-slider-bottam-design d-flex align-items-center justify-content-end w-100 z-1">
+          <div className="rounded-circle d-flex align-items-center justify-content-center border border-info ">
+            <p className="p-5 text-white ">
+              You can add your family
+              <br /> members in editor view
+            </p>
           </div>
+          <img src={image21} alt="" loading="lazy"></img>
         </div>
       </Container>
-
       <Modal
         open={show}
         style={{ backdropFilter: "blur(10px)" }}
@@ -477,6 +479,145 @@ const GojsViewSlider = () => {
           </Form>
         </div>
       </Modal>
+      {/* <Modal
+        open={show}
+        style={{ backdropFilter: "blur(10px)" }}
+        onClose={handleClose}
+      >
+        <div style={{ ...style }}>
+          <Form
+            noValidate
+            validated={validated}
+            onSubmit={handleSubmit}
+            className="d-flex flex-column justify-content-center"
+          >
+            <Container className="add-persion w-100">
+              <div
+                className="d-flex  align-items-center w-90"
+                style={{
+                  width: "90%",
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: "3vh",
+                    fontWeight: "bold",
+                    display: "flex",
+                    width: "49%",
+                  }}
+                >
+                  Name
+                  <div className="text-end w-100">:</div>
+                </div>
+                <div className="w-100 d-flex justify-content-end">
+                  <Form.Group controlId="validationCustom04">
+                    <Form.Control
+                      type="text"
+                      name={"name"}
+                      placeholder="Name"
+                      required
+                      className="addpersion-input"
+                    />
+                    <Form.Control.Feedback type="invalid">
+                      Enter valid input
+                    </Form.Control.Feedback>
+                  </Form.Group>
+                </div>
+              </div>
+
+              <div
+                className="d-flex  align-items-center w-90"
+                style={{
+                  width: "90%",
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: "3vh",
+                    fontWeight: "bold",
+                    display: "flex",
+                    width: "49%",
+                  }}
+                >
+                  Relationship
+                  <div className="text-end ">:</div>
+                </div>
+                <div className="w-100 d-flex justify-content-end">
+                  <Form.Group controlId="validationCustom04">
+                    <Form.Select
+                      required
+                      className="addpersion-input"
+                      name="relationship"
+                      style={{ cursor: "pointer" }}
+                    >
+                      <option value="" hidden>
+                        Select Relationship
+                      </option>
+                      <option value="Father">Father</option>
+                      <option value="mother">Mother</option>
+
+                      <option value="Brother">Brother</option>
+                      <option value="Sister">Sister</option>
+                      <option value="Son">Son</option>
+                    </Form.Select>
+                    <Form.Control.Feedback type="invalid">
+                      Enter valid input
+                    </Form.Control.Feedback>
+                  </Form.Group>
+                  <img
+                    src={VectorNoborderDown}
+                    alt="vector"
+                    style={{
+                      position: "absolute",
+                      marginTop: "2.5vh",
+                      marginRight: "2vh",
+                      cursor: "pointer",
+                    }}
+                  ></img>
+                </div>
+              </div>
+              <div
+                className="d-flex  align-items-center w-90"
+                style={{
+                  width: "90%",
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: "3vh",
+                    fontWeight: "bold",
+                    display: "flex",
+                    width: "49%",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  Phone No
+                  <div>:</div>
+                </div>
+                <div className="w-100 d-flex justify-content-end">
+                  <Form.Group controlId="validationCustom04">
+                    <Form.Control
+                      type="text"
+                      placeholder="Phone"
+                      name="phone"
+                      required
+                      className="addpersion-input"
+                    />
+                    <Form.Control.Feedback type="invalid">
+                      Enter valid input
+                    </Form.Control.Feedback>
+                  </Form.Group>
+                </div>
+              </div>
+            </Container>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <Button type="submit" className="mt-4 addpersion-submit">
+                Submit
+              </Button>
+            </div>
+          </Form>
+        </div>
+      </Modal> */}
     </>
   );
 };

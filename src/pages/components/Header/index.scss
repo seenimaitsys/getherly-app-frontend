@@ -96,20 +96,7 @@
     }
   }
 }
-@media screen and (min-width: 200px) {
-  .nave-body {
-    gap: 3rem !important;
-  }
 
-  .app-logo {
-    svg {
-      width: 2.5rem;
-    }
-    img {
-      width: 6.3rem;
-    }
-  }
-}
 //tablet
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .nave-body {

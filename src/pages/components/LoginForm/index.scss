@@ -49,8 +49,9 @@
   background: linear-gradient(180deg, #00463e 0.18%, #595959 150.98%);
 
   h2 {
-    @include Custome-Fonts-and-style(600, clamp(14px, 5vw, 20px), #fff);
+    @include Custome-Fonts-and-style(600, clamp(20px, 5vw, 30px), #fff);
     padding: 10px;
+
     text-align: center;
   }
 
