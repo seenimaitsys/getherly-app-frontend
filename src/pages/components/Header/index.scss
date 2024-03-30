@@ -15,16 +15,16 @@
   $border-radius: 0,
   $background: none
 ) {
-  color: $color;
-  font-family: $family;
-  font-weight: $weight;
-  font-size: $size;
+  color: $color !important;
+  font-family: $family !important;
+  font-weight: $weight !important;
+  font-size: $size !important;
   font-style: $style;
   padding: $padding;
   line-height: $lineheight;
-  display: $display;
-  justify-content: $justify-content;
-  align-items: $align-items;
+  display: $display !important;
+  justify-content: $justify-content !important;
+  align-items: $align-items !important;
   height: $height;
   border-radius: $border-radius;
   $background: $background;
@@ -96,12 +96,26 @@
     }
   }
 }
+@media screen and (min-width: 200px) {
+  .nave-body {
+    gap: 3rem !important;
+  }
+
+  .app-logo {
+    svg {
+      width: 2.5rem;
+    }
+    img {
+      width: 6.3rem;
+    }
+  }
+}
 //tablet
 @media screen and (min-width: 767px) and (max-width: 1023px) {
   .nave-body {
     gap: 4rem !important;
     .navmanu {
-      font-size: clamp(20px, 3vw, 30px);
+      font-size: clamp(20px, 3vw, 30px) !important;
     }
     #header-login {
       font-size: clamp(20px, 3vw, 30px);

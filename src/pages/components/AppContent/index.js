@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import image2 from "../../../assert/image2.png";
 import image3 from "../../../assert/image3.png";
 import image4 from "../../../assert/image4.png";
@@ -12,10 +12,10 @@ import SvgIcon from "@mui/material/SvgIcon";
 const AppContent = () => {
   return (
     <>
-      <Container fluid style={{ marginTop: "2%" }}>
+      <Container fluid className="mt-4">
         <Row className="gap-1">
-          <Col sm={3} className="d-flex gap-5 ">
-            <img
+          <Col md={3} className="d-flex gap-5 ">
+            <Image
               src={image5}
               loading="lazy"
               alt="robo"
@@ -23,20 +23,25 @@ const AppContent = () => {
               height={"50%"}
               id="robo-img"
               style={{ marginLeft: "-2rem" }}
-            ></img>
+            ></Image>
 
-            <img
+            <Image
               src={image2}
               alt="mobile"
               loading="lazy"
               className="mt-5"
               width={"50%"}
               height={"90%"}
-            ></img>
+              fluid={true}
+            ></Image>
           </Col>
           <Col className="d-flex justify-content-center align-items-center ">
-            <div className="app-content  d-flex flex-column align-items-end w-100 ">
-              <div className="  d-flex flex-column align-items-center">
+            <Col
+              className="app-content  d-flex flex-column align-items-end  "
+              md={10}
+              xxl={7}
+            >
+              <div className="d-flex flex-column align-items-center">
                 <h2>
                   Discover, Connect,
                   <br /> Communicate and <br />
@@ -146,11 +151,11 @@ const AppContent = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </Col>
 
             <Col
               className="windo-design d-flex align-items-start justify-content-end flex-column"
-              lg={5}
+              xxl={5}
             >
               <div className="d-flex align-items-center justify-content-center flex-column">
                 <img

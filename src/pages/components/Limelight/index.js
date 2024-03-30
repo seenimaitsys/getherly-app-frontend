@@ -84,7 +84,7 @@ const Limelight = () => {
                 </p>
               </Row>
               <Container fluid>
-                <div className="app-working-steps">
+                <Col className="app-working-steps">
                   {List.map((value, index) => {
                     return (
                       <Row key={index}>
@@ -100,7 +100,7 @@ const Limelight = () => {
                       </Row>
                     );
                   })}
-                </div>
+                </Col>
               </Container>
             </AnimationOnScroll>
           </Col>

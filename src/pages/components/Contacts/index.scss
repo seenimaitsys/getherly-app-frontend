@@ -17,7 +17,7 @@
   font-size: $font-size;
 }
 
-.Address-card {
+.Address-card-container {
   > div:first-child {
     @include Custom-width-hight(100%, 366px);
     background-repeat: no-repeat;
@@ -39,16 +39,17 @@
   }
   iframe {
     @include Custom-width-hight(50%, 26rem);
+
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
   }
-  > div:nth-child(2) div:nth-child(1) {
-    display: grid;
+  // > div:nth-child(2) div:nth-child(1) {
+  //   // display: grid;
 
-    @include Custom-width-hight(70%, auto);
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10rem;
-  }
+  //   // @include Custom-width-hight(70%, auto);
+  //   // grid-template-columns: repeat(1, 1fr);
+  //   // grid-gap: 10rem;
+  // }
   h6 {
     @include Custome-address-style(start, 500, 40.1px, clamp(20px, 3vw, 28px));
   }

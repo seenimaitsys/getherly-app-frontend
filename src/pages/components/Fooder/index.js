@@ -15,143 +15,81 @@ const Fooder = () => {
   };
   return (
     <>
-      <Container
-        style={{
-          marginTop: "20vh",
-        }}
-      >
-        {/* <Row className="gap-5">
-          <Col sm={3}>
-            <Col className="d-flex justify-content-center">
-              <img
-                src={getherly}
-                alt="getherly"
-                loading="lazy"
-                width="60px"
-                height="57.343px"
-                className="mt-3"
-              ></img>
-              <img src={getherly2} loading="lazy" alt=""></img>
+      <footer>
+        <Container className="mt-3 mb-5" fluid>
+          <Row>
+            <Col lg={3} md={6}>
+              <Col className="d-flex justify-content-center align-items-center mt-5">
+                <img
+                  src={getherly}
+                  alt="getherly"
+                  loading="lazy"
+                  width="50px"
+                  height="50px"
+                  className=""
+                ></img>
+                <img
+                  src={getherly2}
+                  loading="lazy"
+                  height="70px"
+                  alt="logo"
+                ></img>
+              </Col>
+
+              <div className="fooder-col">2022 reserved</div>
+
+              <div className="fooder-col">All rights reserved</div>
+            </Col>
+            <Col
+              lg={3}
+              md={6}
+              className="d-flex flex-column justify-content-center mt-5"
+            >
+              <h1 style={{ ...footer_Title }}>Get in touch</h1>
+
+              <div className="fooder-col">Boston , USA</div>
+
+              <div className="fooder-col">support@twigscorp.com</div>
+            </Col>
+            <Col
+              lg={3}
+              md={6}
+              className="d-flex flex-column justify-content-center mt-5"
+            >
+              <h1 style={{ ...footer_Title }}>Learn more</h1>
+
+              <div className="fooder-col">Terms of use</div>
+              <div className="fooder-col">Privacy Policy</div>
             </Col>
 
-            <div className="fooder-col">2022 reserved</div>
-
-            <div className="fooder-col">All rights reserved</div>
-          </Col>
-          <Col sm={4} className="d-flex flex-column justify-content-center">
-            <h1
-              style={{
-                color: "#000",
-                fontFamily: "Poppins",
-                fontSize: "22px",
-                fontStyle: "normal",
-                fontWeight: "600",
-                lineHeight: "normal",
-              }}
+            <Col
+              lg={3}
+              md={6}
+              className="d-flex flex-column align-items-center justify-content-center mt-5"
             >
-              Get in touch
-            </h1>
-
-            <div className="fooder-col">Boston , USA</div>
-
-            <div className="fooder-col">Info@email.com</div>
-          </Col>
-          <Col sm={3} className="d-flex flex-column justify-content-center">
-            <h1
-              style={{
-                color: "#000",
-                fontFamily: "Poppins",
-                fontSize: "22px",
-                fontStyle: "normal",
-                fontWeight: "600",
-                lineHeight: "normal",
-              }}
-            >
-              Learn more
-            </h1>
-
-            <div className="fooder-col">Terms of use</div>
-            <div className="fooder-col">Privacy Policy</div>
-          </Col>
-
-          <Col
-            sm={2}
-            className="d-flex flex-column align-items-center justify-content-center"
-            style={{ backgroundColor: "red" }}
-          >
-            <img
-              src={getherly}
-              alt="s"
-              style={{
-                width: "60px",
-                height: "57.343px",
-                flexShrink: "0",
-              }}
-            ></img>
-
-            <div className="fooder-login">Log in</div>
-          </Col>
-        </Row> */}
-        <Row className="fooder-continer gap-5">
-          <Col>
-            <Col className="d-flex justify-content-center align-items-center">
               <img
                 src={getherly}
-                alt="getherly"
-                loading="lazy"
-                width="50px"
-                height="50px"
-                className=""
+                alt="login"
+                style={{
+                  width: "60px",
+                  height: "57.343px",
+                  flexShrink: "0",
+                }}
               ></img>
-              <img
-                src={getherly2}
-                loading="lazy"
-                height="70px"
-                alt="logo"
-              ></img>
+
+              <div className="fooder-login">
+                <a
+                  href="/login"
+                  target="_parent"
+                  className="text-decoration-none"
+                >
+                  Log in
+                </a>
+              </div>
             </Col>
-
-            <div className="fooder-col">2022 reserved</div>
-
-            <div className="fooder-col">All rights reserved</div>
-          </Col>
-          <Col className="d-flex flex-column justify-content-center">
-            <h1 style={{ ...footer_Title }}>Get in touch</h1>
-
-            <div className="fooder-col">Boston , USA</div>
-
-            <div className="fooder-col">support@twigscorp.com</div>
-          </Col>
-          <Col className="d-flex flex-column justify-content-center">
-            <h1 style={{ ...footer_Title }}>Learn more</h1>
-
-            <div className="fooder-col">Terms of use</div>
-            <div className="fooder-col">Privacy Policy</div>
-          </Col>
-
-          <Col className="d-flex flex-column align-items-center justify-content-center">
-            <img
-              src={getherly}
-              alt="login"
-              style={{
-                width: "60px",
-                height: "57.343px",
-                flexShrink: "0",
-              }}
-            ></img>
-
-            <div className="fooder-login">
-              <a
-                href="/login"
-                target="_parent"
-                className="text-decoration-none"
-              >
-                Log in
-              </a>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+          </Row>
+        </Container>
+      </footer>
     </>
   );
 };

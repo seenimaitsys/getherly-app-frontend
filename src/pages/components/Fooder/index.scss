@@ -16,36 +16,3 @@
 
   cursor: pointer;
 }
-.fooder-continer {
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 3rem;
-}
-//Smartphone
-@media screen and (max-width: 767px) {
-  .fooder-continer {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 3rem;
-  }
-}
-//tablet
-@media screen and (min-width: 767px) and (max-width: 1023px) {
-  .fooder-continer {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
-  }
-}
-//desktop
-@media screen and (min-width: 1023px) {
-  .fooder-continer {
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 3rem;
-  }
-}

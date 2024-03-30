@@ -23,9 +23,9 @@
     color: #5d5d5d;
     width: 90%;
     font-family: Inter;
-    line-height: 60%;
+    line-height: 1.8rem;
     height: 9rem;
-    font-size: 20px;
+    font-size: clamp(22px, 5vw, 20px);
 
     font-style: normal;
     text-align: start;
@@ -35,7 +35,6 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-weight: 400;
-    line-height: normal;
   }
   h6 {
     font-family: Inter;

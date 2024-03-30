@@ -38,7 +38,7 @@ const VideoList = () => {
     <>
       <Container fluid className="overflow-hidden">
         <Row style={{ width: "105%" }}>
-          <Col sm={6}>
+          <Col lg={6} md={12}>
             <img
               src={robot}
               alt="robo"
@@ -47,8 +47,8 @@ const VideoList = () => {
               loading="lazy"
             ></img>
           </Col>
-          <Col className="w-100">
-            <div className="videolist-continer">
+          <Col lg={6} md={12}>
+            <div className="videolist-continer w-100">
               {video_list.map((list, index) => {
                 return (
                   <div className="d-flex align-items-center mt-5" key={index}>

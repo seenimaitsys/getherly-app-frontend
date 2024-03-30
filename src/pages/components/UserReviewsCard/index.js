@@ -131,8 +131,8 @@ const UserReviewsCard = () => {
       {
         breakpoint: 1200,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 2,
+          slidesToShow: 2,
+          slidesToScroll: 1,
         },
       },
       {

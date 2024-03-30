@@ -140,8 +140,20 @@ const LoginForm = () => {
             </Button>
           </Form>
         </Container>
-        <img src={image18} loading="lazy" alt="" className="img-child3"></img>
-        <img src={image17} loading="lazy" alt="" className="img-child4"></img>
+        <img
+          src={image18}
+          loading="lazy"
+          width={"7%"}
+          alt=""
+          className="img-child3"
+        ></img>
+        <img
+          src={image17}
+          loading="lazy"
+          alt=""
+          width={"16%"}
+          className="img-child4"
+        ></img>
       </Container>
     </>
   );

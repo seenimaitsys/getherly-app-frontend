@@ -25,15 +25,15 @@
   }
 
   .img-child3 {
-    @include CustomImgStyle(0.24vh, -45%);
+    @include CustomImgStyle(10%, -45%);
   }
 
   .img-child4 {
-    @include CustomImgStyle(45%, -65%);
+    @include CustomImgStyle(45%, -60%);
   }
 
   > img:nth-child(2) {
-    @include CustomImgStyle(80%, 65%);
+    @include CustomImgStyle(80%, 60%);
   }
 }
 

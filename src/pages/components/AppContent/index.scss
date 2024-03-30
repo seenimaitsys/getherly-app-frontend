@@ -21,7 +21,7 @@
     @include CustomeAppContentDesign(
       #393939,
       Poppins,
-      clamp(2.5rem, 4vw, 4rem),
+      clamp(2rem, 5vw, 4rem),
       normal,
       800,
       normal
@@ -31,7 +31,7 @@
     @include CustomeAppContentDesign(
       #393939,
       Poppins,
-      clamp(18px, 2vw, 25px),
+      clamp(16px, 2.5vw, 25px),
       normal,
       500,
       normal,
@@ -48,7 +48,12 @@
   }
   .app-content {
     display: flex;
-
     align-items: center !important;
   }
 }
+// @include media-breakpoint-up(sm) {
+//
+// }
+// @include media-breakpoint-up(Smartphone) {
+
+// }

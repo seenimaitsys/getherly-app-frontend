@@ -9,7 +9,7 @@ import FosterInteractivity from "../../../assert/FosterInteractivity.svg";
 import ShareableJoy from "../../../assert/ShareableJoy.svg";
 import appfeature from "../../../assert/appfeature.gif";
 import robot from "../../../assert/robot.png";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 const AppFeatures = () => {
   const featureList = [
@@ -43,35 +43,30 @@ const AppFeatures = () => {
     <>
       <Container
         fluid
-        className="d-flex justify-content-center app-features-head"
-      >
-        {/* <p>APP FEATURES</p> */}
-      </Container>
-      <Container
-        fluid
-        className="d-flex flex-column justify-content-center align-items-center"
+        className="d-flex flex-column justify-content-center align-items-center mt-5"
       >
         <Row className="w-100">
           <Col
             sm={2}
             className="app-features-demo-img d-flex justify-content-start flex-column"
           >
-            <img
+            <Image
               src={robot}
               style={{ marginLeft: "-20%" }}
               alt="robo"
               width="100%"
               height="290.692px"
               loading="lazy"
-            ></img>
+            ></Image>
             <div>
-              <img
+              <Image
                 src={appfeature}
                 alt="how its work"
                 loading="lazy"
                 width={"100%"}
+                fluid={true}
                 style={{ borderRadius: "20px" }}
-              ></img>
+              ></Image>
             </div>
           </Col>
 
@@ -91,7 +86,7 @@ const AppFeatures = () => {
                 return (
                   <AnimationOnScroll animateIn="animate__fadeIn" key={index}>
                     <Row className="d-flex align-items-center justify-content-center flex-column ">
-                      <Row>
+                      <Row sm={12}>
                         <Col className="d-flex align-items-center justify-content-center gap-2 ">
                           <img
                             src={value.img}
@@ -103,7 +98,7 @@ const AppFeatures = () => {
                           <h4>{value.Title}</h4>
                         </Col>
                       </Row>
-                      <Row className="app-feature-desc">
+                      <Row className="app-feature-desc" sm={12}>
                         <p>{value.Desc}</p>
                       </Row>
                     </Row>
