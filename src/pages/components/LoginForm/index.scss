@@ -129,7 +129,7 @@
     margin-top: 10%;
 
     div {
-      @include Custome-Fonts-and-style(500, clamp(8px, 2vw, 12px), white);
+      @include Custome-Fonts-and-style(500, clamp(11px, 2vw, 12px), white);
 
       letter-spacing: 0.25px;
     }

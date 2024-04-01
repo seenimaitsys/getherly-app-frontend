@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-redundant-roles */
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -5,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import demoImg from "../../../assert/demo.png";
 import "./index.scss";
 import image21 from "../../../assert/image21.png";
-import { Container, Button, Form } from "react-bootstrap";
+import { Container, Button, Form, Col, Row } from "react-bootstrap";
 import { Modal } from "@mui/material";
 import OrgChart from "../Gojs/Orgchart/index.js";
 import Genogram from "../Gojs/GenogramLayout/index.js";
@@ -296,16 +297,16 @@ const GojsViewSlider = () => {
     }
     setValidated(true);
   };
-
+  ///Modelstyle
   const style = {
     position: "absolute",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    border: "none",
-    pt: 2,
-    px: 4,
-    pb: 3,
+    border: "none !important",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   };
   const Show_AddPersion_Model = (node, diagram) => {
     setShow(true);
@@ -337,7 +338,7 @@ const GojsViewSlider = () => {
               <br /> members in editor view
             </p>
           </div>
-          <img src={image21} alt="" loading="lazy"></img>
+          <img src={image21} alt="robo" loading="lazy"></img>
         </div>
       </Container>
       <Modal
@@ -345,279 +346,137 @@ const GojsViewSlider = () => {
         style={{ backdropFilter: "blur(10px)" }}
         onClose={handleClose}
       >
-        <div style={{ ...style }}>
-          <Form
-            noValidate
-            validated={validated}
-            onSubmit={handleSubmit}
-            className="d-flex flex-column justify-content-center"
-          >
-            <Container className="add-persion">
-              <div
-                className="d-flex  align-items-center w-90"
-                style={{
-                  width: "90%",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "3vh",
-                    fontWeight: "bold",
-                    display: "flex",
-                    width: "49%",
-                  }}
-                >
-                  Name
-                  <div className="text-end w-100">:</div>
-                </div>
-                <div className="w-100 d-flex justify-content-end">
-                  <Form.Group controlId="validationCustom04">
-                    <Form.Control
-                      type="text"
-                      name={"name"}
-                      placeholder="Name"
-                      required
-                      className="addpersion-input"
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Enter valid input
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                </div>
-              </div>
+        {/* <Container fluid>
+          <Col style={{ backgroundColor: "red" }} lg={2}>
+            <h1>hello</h1>
+          </Col>
+        </Container> */}
+        <Container style={{ ...style }} fluid className="border-0">
+          <Col lg={4}>
+            <Form
+              noValidate
+              validated={validated}
+              onSubmit={handleSubmit}
+              className="d-flex flex-column "
+            >
+              <Container className="add-persion" fluid>
+                <Row className="d-flex  ">
+                  <Col lg={5} className="d-flex ">
+                    <p> Name</p>
+                    <p className="w-100 text-end"> :</p>
+                  </Col>
+                  <Col>
+                    <Form.Group as={Col}>
+                      <Form.Control
+                        type="text"
+                        placeholder="Name"
+                        maxLength="30"
+                        name="name"
+                        autoComplete="off"
+                        className="addpersion-input d-flex  border-0 rounded"
+                        required
+                      />
+                      <Form.Control.Feedback
+                        type="invalid"
+                        className="text-start"
+                      >
+                        required field.
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                  </Col>
+                </Row>
 
-              <div
-                className="d-flex  align-items-center w-90"
-                style={{
-                  width: "90%",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "3vh",
-                    fontWeight: "bold",
-                    display: "flex",
-                    width: "49%",
-                  }}
-                >
-                  Relationship
-                  <div className="text-end ">:</div>
-                </div>
-                <div className="w-100 d-flex justify-content-end">
-                  <Form.Group controlId="validationCustom04">
-                    <Form.Select
-                      required
-                      className="addpersion-input"
-                      name="relationship"
-                      style={{ cursor: "pointer" }}
+                <Row className="d-flex  " fluid>
+                  <Col
+                    className="d-flex align-items-center justify-content-center"
+                    lg={5}
+                  >
+                    <p> Relationship</p>
+                    <p className="w-100 text-end"> :</p>
+                  </Col>
+                  <Col className="d-flex">
+                    <Form.Group
+                      controlId="validationCustom02"
+                      className="w-100 "
                     >
-                      <option value="" hidden>
-                        Select Relationship
-                      </option>
-                      <option value="Father">Father</option>
-                      <option value="mother">Mother</option>
+                      <Form.Select
+                        required
+                        className="addpersion-input  d-flex border-0 rounded"
+                        autoComplete="off"
+                        name="relationship"
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <option value="" hidden>
+                          Relationship
+                        </option>
+                        <option value="Father">Father</option>
+                        <option value="mother">Mother</option>
 
-                      <option value="Brother">Brother</option>
-                      <option value="Sister">Sister</option>
-                      <option value="Son">Son</option>
-                    </Form.Select>
-                    <Form.Control.Feedback type="invalid">
-                      Enter valid input
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                  <img
-                    src={VectorNoborderDown}
-                    alt="vector"
-                    style={{
-                      position: "absolute",
-                      marginTop: "2.5vh",
-                      marginRight: "2vh",
-                      cursor: "pointer",
-                    }}
-                  ></img>
-                </div>
-              </div>
-              <div
-                className="d-flex  align-items-center w-90"
-                style={{
-                  width: "90%",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "3vh",
-                    fontWeight: "bold",
-                    display: "flex",
-                    width: "49%",
-                    justifyContent: "space-between",
-                  }}
+                        <option value="Brother">Brother</option>
+                        <option value="Sister">Sister</option>
+                        <option value="Son">Son</option>
+                      </Form.Select>
+
+                      <Form.Control.Feedback type="invalid">
+                        Enter valid input
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                    <div className="d-flex align-items-center justify-content-center">
+                      <img
+                        src={VectorNoborderDown}
+                        alt="vector"
+                        className="position-absolute "
+                        role="button"
+                        tabIndex="0"
+                        style={{
+                          marginRight: "2rem",
+                        }}
+                      ></img>
+                    </div>
+                  </Col>
+                </Row>
+                <Row className="d-flex ">
+                  <Col
+                    lg={5}
+                    className="d-flex align-items-center justify-content-center"
+                  >
+                    <p className="text-nowrap">Ph no</p>
+                    <p className="w-100 text-end"> :</p>
+                  </Col>
+                  <Col>
+                    <Form.Group as={Col}>
+                      <Form.Control
+                        type="text"
+                        placeholder="Name"
+                        maxLength="30"
+                        name="name"
+                        autoComplete="off"
+                        className="addpersion-input d-flex w-100 align-items-start border-0 rounded"
+                        required
+                      />
+                      <Form.Control.Feedback
+                        type="invalid"
+                        className="text-start"
+                      >
+                        required field.
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                  </Col>
+                </Row>
+              </Container>
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <Button
+                  type="submit"
+                  className="mt-4 w-50 rounded-pill addpersion-submit"
                 >
-                  Phone No
-                  <div>:</div>
-                </div>
-                <div className="w-100 d-flex justify-content-end">
-                  <Form.Group controlId="validationCustom04">
-                    <Form.Control
-                      type="text"
-                      placeholder="Phone"
-                      name="phone"
-                      required
-                      className="addpersion-input"
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Enter valid input
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                </div>
+                  Submit
+                </Button>
               </div>
-            </Container>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <Button type="submit" className="mt-4 addpersion-submit">
-                Submit
-              </Button>
-            </div>
-          </Form>
-        </div>
+            </Form>
+          </Col>
+        </Container>
       </Modal>
-      {/* <Modal
-        open={show}
-        style={{ backdropFilter: "blur(10px)" }}
-        onClose={handleClose}
-      >
-        <div style={{ ...style }}>
-          <Form
-            noValidate
-            validated={validated}
-            onSubmit={handleSubmit}
-            className="d-flex flex-column justify-content-center"
-          >
-            <Container className="add-persion w-100">
-              <div
-                className="d-flex  align-items-center w-90"
-                style={{
-                  width: "90%",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "3vh",
-                    fontWeight: "bold",
-                    display: "flex",
-                    width: "49%",
-                  }}
-                >
-                  Name
-                  <div className="text-end w-100">:</div>
-                </div>
-                <div className="w-100 d-flex justify-content-end">
-                  <Form.Group controlId="validationCustom04">
-                    <Form.Control
-                      type="text"
-                      name={"name"}
-                      placeholder="Name"
-                      required
-                      className="addpersion-input"
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Enter valid input
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                </div>
-              </div>
-
-              <div
-                className="d-flex  align-items-center w-90"
-                style={{
-                  width: "90%",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "3vh",
-                    fontWeight: "bold",
-                    display: "flex",
-                    width: "49%",
-                  }}
-                >
-                  Relationship
-                  <div className="text-end ">:</div>
-                </div>
-                <div className="w-100 d-flex justify-content-end">
-                  <Form.Group controlId="validationCustom04">
-                    <Form.Select
-                      required
-                      className="addpersion-input"
-                      name="relationship"
-                      style={{ cursor: "pointer" }}
-                    >
-                      <option value="" hidden>
-                        Select Relationship
-                      </option>
-                      <option value="Father">Father</option>
-                      <option value="mother">Mother</option>
-
-                      <option value="Brother">Brother</option>
-                      <option value="Sister">Sister</option>
-                      <option value="Son">Son</option>
-                    </Form.Select>
-                    <Form.Control.Feedback type="invalid">
-                      Enter valid input
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                  <img
-                    src={VectorNoborderDown}
-                    alt="vector"
-                    style={{
-                      position: "absolute",
-                      marginTop: "2.5vh",
-                      marginRight: "2vh",
-                      cursor: "pointer",
-                    }}
-                  ></img>
-                </div>
-              </div>
-              <div
-                className="d-flex  align-items-center w-90"
-                style={{
-                  width: "90%",
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: "3vh",
-                    fontWeight: "bold",
-                    display: "flex",
-                    width: "49%",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  Phone No
-                  <div>:</div>
-                </div>
-                <div className="w-100 d-flex justify-content-end">
-                  <Form.Group controlId="validationCustom04">
-                    <Form.Control
-                      type="text"
-                      placeholder="Phone"
-                      name="phone"
-                      required
-                      className="addpersion-input"
-                    />
-                    <Form.Control.Feedback type="invalid">
-                      Enter valid input
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                </div>
-              </div>
-            </Container>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-              <Button type="submit" className="mt-4 addpersion-submit">
-                Submit
-              </Button>
-            </div>
-          </Form>
-        </div>
-      </Modal> */}
     </>
   );
 };

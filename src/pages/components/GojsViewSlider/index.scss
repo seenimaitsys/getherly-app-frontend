@@ -30,13 +30,12 @@
 }
 
 .add-persion {
-  width: 461px;
-  height: auto;
+  width: 100%;
+  // height: auto;
   gap: 3vh;
   padding: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   border-radius: 10px;
   border: 2px;
@@ -45,21 +44,24 @@
     #60cac6 8.05%,
     rgba(17, 21, 21, 0) 122.15%
   );
+  p {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .addpersion-input {
+    height: 40px;
+    background: #d9d9d9;
+  }
 }
-
-.addpersion-input {
-  width: 234px;
-  height: 40px;
-
-  border-radius: 30px;
-  background: #d9d9d9;
-}
-
 .addpersion-submit {
   background: linear-gradient(90deg, #78c1c2 0%, #2a4e8c 100%);
-  width: 233px;
   height: 44px;
-  top: 601px;
-  left: 603px;
-  border-radius: 30px;
+}
+@media (max-width: 991.98px) {
+  .add-persion {
+    p {
+      text-align: start !important;
+    }
+  }
 }
