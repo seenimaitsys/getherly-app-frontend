@@ -21,7 +21,57 @@ const ContactForm = () => {
 
     setValidated(true);
   };
+  //form json data
+  const Dynamic_Form = [
+    {
+      type: "text",
+      placeholder: "Name",
+      minLength: 2,
+      maxLength: 20,
+      name: "name",
+      autoComplete: "off",
+      className:
+        "message-input d-flex w-100 align-items-start border-0 rounded",
+      required: true,
+      error: "required field.",
+    },
 
+    {
+      type: "email",
+      placeholder: "Email Address",
+      className:
+        "message-input d-flex w-100 align-items-start border-0 rounded",
+      minLength: 4,
+      maxLength: 40,
+      name: "email",
+      autoComplete: "off",
+      required: true,
+      error: "Please provide a valid Email.",
+    },
+
+    {
+      type: "text",
+      placeholder: "subject",
+      minLength: 5,
+      maxLength: 400,
+      name: "subject",
+      autoComplete: "off",
+      className:
+        "message-input d-flex w-100 align-items-start border-0 rounded",
+      required: true,
+      error: "required field.",
+    },
+    // {
+    //   as: "textarea",
+    //   placeholder: "Your message",
+    //   rows: 8,
+    //   name: "message",
+    //   autoComplete: "off",
+    //   required: true,
+    //   className:
+    //     "message-textarea d-flex w-100 align-items-start border-0 rounded",
+    // },
+  ];
   return (
     <>
       <Container
@@ -95,21 +145,30 @@ const ContactForm = () => {
             <div className="w-100 contact-form-container">
               <h3 className="text-start text-white">Send Us Message</h3>
               <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                <Form.Group as={Col} className="mt-3">
-                  <Form.Control
-                    type="text"
-                    placeholder="Name"
-                    maxLength="30"
-                    name="name"
-                    autoComplete="off"
-                    className="message-input d-flex w-100 align-items-start border-0 rounded"
-                    required
-                  />
-                  <Form.Control.Feedback type="invalid" className="text-start">
-                    required field.
-                  </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group as={Col} className="mt-3">
+                {Dynamic_Form.map((data, index) => {
+                  return (
+                    <Form.Group as={Col} className="mt-3" key={index}>
+                      <Form.Control
+                        type={data.type}
+                        placeholder={data.placeholder}
+                        maxLength={data.maxLength}
+                        minLength={data.minLength}
+                        name={data.name}
+                        autoComplete={data.autoComplete}
+                        className={data.className}
+                        required={data.required}
+                      />
+                      <Form.Control.Feedback
+                        type="invalid"
+                        className="text-start"
+                      >
+                        {data.error}
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                  );
+                })}
+
+                {/* <Form.Group as={Col} className="mt-3">
                   <Form.Control
                     type="email"
                     placeholder="Email Address"
@@ -118,7 +177,7 @@ const ContactForm = () => {
                     maxLength="40"
                     name="email"
                     autoComplete="off"
-                    required
+                    required={true}
                   />
                   <Form.Control.Feedback type="invalid" className="text-start">
                     Please provide a valid Email.
@@ -135,18 +194,18 @@ const ContactForm = () => {
                     className="message-input d-flex w-100 align-items-start border-0 rounded"
                   />
                   <Form.Control.Feedback type="invalid" className="text-start">
-                    Please provide a valid Phone No.
+                    required field.
                   </Form.Control.Feedback>
-                </Form.Group>
+                </Form.Group> */}
                 <Form.Group as={Col} className="mt-3">
                   <Form.Control
                     as="textarea"
+                    type=""
                     placeholder="Your message"
                     rows={8}
                     name="message"
                     autoComplete="off"
                     required
-                    id="message"
                     className="message-textarea d-flex w-100 align-items-start border-0 rounded"
                   />
                   <Form.Control.Feedback type="invalid" className="text-start">
