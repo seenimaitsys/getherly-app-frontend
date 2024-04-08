@@ -19,9 +19,11 @@
 .app-content {
   h2 {
     @include CustomeAppContentDesign(
-      #393939,
+      var(--bs-gray-800),
       Poppins,
-      clamp(2rem, 5vw, 4rem),
+      "",
+      // clamp(2rem, 4vw, 4.5rem),
+      // 8vw,
       normal,
       800,
       normal
@@ -31,7 +33,8 @@
     @include CustomeAppContentDesign(
       #393939,
       Poppins,
-      clamp(16px, 2.5vw, 25px),
+      "",
+      // clamp(18px, 3vw, 30px),
       normal,
       500,
       normal,
@@ -42,18 +45,8 @@
   }
 }
 
-@media (max-width: 991.98px) {
-  .windo-design {
-    display: none !important;
-  }
-  .app-content {
-    display: flex;
-    align-items: center !important;
-  }
-}
-// @include media-breakpoint-up(sm) {
-//
-// }
-// @include media-breakpoint-up(Smartphone) {
-
+// @media (max-width: 991.98px) {
+//   .windo-design {
+//     display: none !important;
+//   }
 // }

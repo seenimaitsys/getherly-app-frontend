@@ -169,40 +169,30 @@ const Header = ({ page }) => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="nave-body justify-content-end flex-grow-1 gap-4 align-items-center">
-                  <Nav.Link id="header-login" href="/login">
+                <Nav className="nave-body d-flex justify-content-end flex-grow-1 gap-5 gap-lg-3 gap-xl-5 align-items-center ">
+                  <Nav.Link
+                    id="header-login"
+                    href="/login"
+                    className="text-nowrap"
+                  >
                     Log in
                   </Nav.Link>
-                  <Nav.Link className="navmanu" href="/">
+                  <Nav.Link className="navmanu text-nowrap" href="/">
                     Home
                   </Nav.Link>
-                  <Nav.Link className="navmanu d-flex" href="/aboutus">
+                  <Nav.Link
+                    className="navmanu d-flex text-nowrap"
+                    href="/aboutus"
+                  >
                     About us{" "}
-                    {/* <div className="d-flex align-items-center p-1">
-                      {page === "about" ? (
-                        <img
-                          src={VectorNoborderDown}
-                          alt="down"
-                          loading="lazy"
-                          width={"auto"}
-                        ></img>
-                      ) : (
-                        <img
-                          src={VectorNoborderUp}
-                          alt="up"
-                          loading="lazy"
-                          width={"auto"}
-                        ></img>
-                      )}
-                    </div> */}
                   </Nav.Link>
 
-                  <Nav.Link className="navmanu" href="/contact">
+                  <Nav.Link className="navmanu text-nowrap" href="/contact">
                     Contact us
                   </Nav.Link>
                   <Nav.Link href="/how_do_i">
                     <Button className="header-howdoi">
-                      <h4 className="d-flex align-items-center justify-content-center mt-2">
+                      <h4 className="d-flex align-items-center justify-content-center mt-2 text-nowrap">
                         How do i?
                         {page === "howdoi" ? (
                           <img
@@ -222,69 +212,6 @@ const Header = ({ page }) => {
             </Navbar.Offcanvas>
           </Container>
         </Navbar>
-        {/* Login show */}
-        {/* <Offcanvas
-        show={showLogin}
-        onHide={() => setShowLogin(false)}
-        backdrop={false}
-        className="w-100 "
-        style={{ marginTop: "14.9vh" }}
-        placement="end"
-      >
-        <Offcanvas.Header closeButton hidden>
-          <Offcanvas.Title></Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <LoginForm />
-        </Offcanvas.Body>
-      </Offcanvas> */}
-        {/* show How_to_i */}
-        {/* <Offcanvas
-        show={showHow_to_i}
-        onHide={() => setShowHow_to_i(false)}
-        backdrop={false}
-        className="w-100 "
-        style={{ marginTop: "14.9vh" }}
-        placement="end"
-      >
-        <Offcanvas.Header closeButton hidden>
-          <Offcanvas.Title></Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <VideoList />
-        </Offcanvas.Body>
-      </Offcanvas> */}
-        {/* show AboutAs */}
-        {/* <Offcanvas
-        show={showAboutAs}
-        onHide={() => setShowAboutAs(false)}
-        backdrop={false}
-        className="w-100 "
-        style={{ marginTop: "14.6vh" }}
-        placement="end"
-      >
-        <Offcanvas.Header closeButton hidden>
-          <Offcanvas.Title></Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <AboutAs />
-        </Offcanvas.Body>
-      </Offcanvas> */}
-        {/* show Cantact */}
-        {/* <Offcanvas
-        show={showCantact}
-        onHide={() => setShowCantact(false)}
-        backdrop={false}
-        className="w-100"
-        placement="end"
-      >
-        <Offcanvas.Header closeButton hidden>
-          <Offcanvas.Title></Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          <AddressMap />
-        </Offcanvas.Body>
-      </Offcanvas> */}
       </Container>
     </>
   );

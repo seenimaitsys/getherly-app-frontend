@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.scss";
 import { Container, Form, Button, Col, Spinner, Row } from "react-bootstrap";
-
+import { Dynamic_Form } from "./DynamicForm";
 const ContactForm = () => {
   const [validated, setValidated] = useState(false);
 
@@ -21,57 +21,6 @@ const ContactForm = () => {
 
     setValidated(true);
   };
-  //form json data
-  const Dynamic_Form = [
-    {
-      type: "text",
-      placeholder: "Name",
-      minLength: 2,
-      maxLength: 20,
-      name: "name",
-      autoComplete: "off",
-      className:
-        "message-input d-flex w-100 align-items-start border-0 rounded",
-      required: true,
-      error: "required field.",
-    },
-
-    {
-      type: "email",
-      placeholder: "Email Address",
-      className:
-        "message-input d-flex w-100 align-items-start border-0 rounded",
-      minLength: 4,
-      maxLength: 40,
-      name: "email",
-      autoComplete: "off",
-      required: true,
-      error: "Please provide a valid Email.",
-    },
-
-    {
-      type: "text",
-      placeholder: "subject",
-      minLength: 5,
-      maxLength: 400,
-      name: "subject",
-      autoComplete: "off",
-      className:
-        "message-input d-flex w-100 align-items-start border-0 rounded",
-      required: true,
-      error: "required field.",
-    },
-    // {
-    //   as: "textarea",
-    //   placeholder: "Your message",
-    //   rows: 8,
-    //   name: "message",
-    //   autoComplete: "off",
-    //   required: true,
-    //   className:
-    //     "message-textarea d-flex w-100 align-items-start border-0 rounded",
-    // },
-  ];
   return (
     <>
       <Container
@@ -141,247 +90,48 @@ const ContactForm = () => {
               </p>
             </div>
           </Col>
-          <Col lg={6}>
-            <div className="w-100 contact-form-container">
-              <h3 className="text-start text-white">Send Us Message</h3>
-              <Form noValidate validated={validated} onSubmit={handleSubmit}>
-                {Dynamic_Form.map((data, index) => {
-                  return (
-                    <Form.Group as={Col} className="mt-3" key={index}>
-                      <Form.Control
-                        type={data.type}
-                        placeholder={data.placeholder}
-                        maxLength={data.maxLength}
-                        minLength={data.minLength}
-                        name={data.name}
-                        autoComplete={data.autoComplete}
-                        className={data.className}
-                        required={data.required}
-                      />
-                      <Form.Control.Feedback
-                        type="invalid"
-                        className="text-start"
-                      >
-                        {data.error}
-                      </Form.Control.Feedback>
-                    </Form.Group>
-                  );
-                })}
+          <Col lg={6} className=" contact-form-container">
+            <h3 className="text-start text-white">Send Us Message</h3>
+            <Form noValidate validated={validated} onSubmit={handleSubmit}>
+              {Dynamic_Form.map((data, index) => {
+                return (
+                  <Form.Group as={Col} className="mt-3" key={index}>
+                    <Form.Control {...data} />
+                    <Form.Control.Feedback
+                      type="invalid"
+                      className="text-start"
+                    >
+                      {data.error}
+                    </Form.Control.Feedback>
+                  </Form.Group>
+                );
+              })}
 
-                {/* <Form.Group as={Col} className="mt-3">
-                  <Form.Control
-                    type="email"
-                    placeholder="Email Address"
-                    className="message-input d-flex w-100 align-items-start border-0 rounded"
-                    minLength="4"
-                    maxLength="40"
-                    name="email"
-                    autoComplete="off"
-                    required={true}
+              {loading ? (
+                <Button
+                  variant="primary"
+                  disabled
+                  className="message-submit d-flex justify-content-center align-items-center"
+                >
+                  <Spinner
+                    as="span"
+                    animation="border"
+                    size="sm"
+                    role="status"
+                    aria-hidden="true"
                   />
-                  <Form.Control.Feedback type="invalid" className="text-start">
-                    Please provide a valid Email.
-                  </Form.Control.Feedback>
-                </Form.Group>
-                <Form.Group as={Col} className="mt-3">
-                  <Form.Control
-                    type="text"
-                    maxength="30"
-                    placeholder="Subject"
-                    name="subject"
-                    required
-                    autoComplete="off"
-                    className="message-input d-flex w-100 align-items-start border-0 rounded"
-                  />
-                  <Form.Control.Feedback type="invalid" className="text-start">
-                    required field.
-                  </Form.Control.Feedback>
-                </Form.Group> */}
-                <Form.Group as={Col} className="mt-3">
-                  <Form.Control
-                    as="textarea"
-                    type=""
-                    placeholder="Your message"
-                    rows={8}
-                    name="message"
-                    autoComplete="off"
-                    required
-                    className="message-textarea d-flex w-100 align-items-start border-0 rounded"
-                  />
-                  <Form.Control.Feedback type="invalid" className="text-start">
-                    Enter minimun 4 character.
-                  </Form.Control.Feedback>
-                </Form.Group>
-                {loading ? (
-                  <Button
-                    variant="primary"
-                    disabled
-                    className="message-submit d-flex justify-content-center align-items-center"
-                  >
-                    <Spinner
-                      as="span"
-                      animation="border"
-                      size="sm"
-                      role="status"
-                      aria-hidden="true"
-                    />
-                  </Button>
-                ) : (
-                  <Button
-                    type="submit"
-                    className="message-submit d-flex justify-content-center align-items-center"
-                  >
-                    Send message
-                  </Button>
-                )}
-              </Form>
-            </div>
+                </Button>
+              ) : (
+                <Button
+                  type="submit"
+                  className="message-submit d-flex justify-content-center align-items-center"
+                >
+                  Send message
+                </Button>
+              )}
+            </Form>
           </Col>
         </Row>
-        {/* <div className="w-100 text-start">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22%"
-            height="22%"
-            viewBox="0 0 50 50"
-            fill="none"
-          >
-            <path
-              d="M50 25C50 11.1929 38.8071 0 25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50C38.8071 50 50 38.8071 50 25Z"
-              fill="url(#paint0_linear_205_60)"
-            />
-            <path
-              d="M36.966 22.1644C38.8042 22.1644 40.4757 22.9068 41.6827 24.1137C42.8896 25.3207 43.632 26.9922 43.632 28.8304C43.632 30.6737 42.8896 32.3402 41.6827 33.5471C40.4757 34.7541 38.8042 35.5015 36.966 35.5015C35.1227 35.5015 33.4562 34.7541 32.2493 33.5471C31.0423 32.3402 30.2949 30.6737 30.2949 28.8304C30.2949 26.9922 31.0423 25.3207 32.2493 24.1137C33.4562 22.9068 35.1227 22.1644 36.966 22.1644ZM41.1726 24.6238C40.097 23.5431 38.6072 22.8765 36.966 22.8765C35.3197 22.8765 33.8299 23.5431 32.7543 24.6238C31.6786 25.6994 31.012 27.1892 31.012 28.8304C31.012 30.4767 31.6786 31.9614 32.7543 33.0421C33.8299 34.1178 35.3197 34.7844 36.966 34.7844C38.6072 34.7844 40.097 34.1178 41.1726 33.0421C42.2533 31.9614 42.9199 30.4767 42.9199 28.8304C42.9199 27.1892 42.2533 25.6994 41.1726 24.6238Z"
-              fill="white"
-            />
-            <path
-              d="M24.9976 20.907C27.7953 20.907 30.3254 22.0382 32.1585 23.8713C33.9917 25.7045 35.1229 28.2345 35.1229 31.0322C35.1229 33.8249 33.9917 36.3549 32.1585 38.1881C30.3254 40.0212 27.7953 41.1524 24.9976 41.1524C22.205 41.1524 19.6749 40.0212 17.8418 38.1881C16.0086 36.3549 14.8774 33.8249 14.8774 31.0322C14.8774 28.2345 16.0086 25.7045 17.8418 23.8713C19.6749 22.0382 22.205 20.907 24.9976 20.907ZM24.9976 8.47388C26.6591 8.47388 28.164 9.14553 29.2497 10.2313C30.3405 11.3221 31.0122 12.8219 31.0122 14.4834C31.0122 16.1448 30.3405 17.6447 29.2497 18.7355C28.164 19.8212 26.6591 20.4929 24.9976 20.4929C23.3412 20.4929 21.8363 19.8212 20.7506 18.7355C19.6598 17.6447 18.9881 16.1448 18.9881 14.4834C18.9881 12.8219 19.6598 11.3221 20.7506 10.2313C21.8363 9.14553 23.3412 8.47388 24.9976 8.47388ZM28.7447 10.7363C27.7852 9.78183 26.4621 9.18593 24.9976 9.18593C23.5382 9.18593 22.2151 9.78183 21.2556 10.7363C20.2961 11.6958 19.7052 13.0189 19.7052 14.4834C19.7052 15.9428 20.2961 17.271 21.2556 18.2254C22.2151 19.1849 23.5382 19.7808 24.9976 19.7808C26.4621 19.7808 27.7852 19.1849 28.7447 18.2254C29.7042 17.271 30.2951 15.9428 30.2951 14.4834C30.2951 13.0189 29.7042 11.6958 28.7447 10.7363ZM31.6535 24.3763C29.9517 22.6745 27.5984 21.6241 24.9976 21.6241C22.4019 21.6241 20.0486 22.6745 18.3468 24.3763C16.6449 26.0832 15.5895 28.4315 15.5895 31.0322C15.5895 33.6279 16.6449 35.9812 18.3468 37.6831C20.0486 39.3849 22.4019 40.4403 24.9976 40.4403C27.5984 40.4403 29.9517 39.3849 31.6535 37.6831C33.3554 35.9812 34.4058 33.6279 34.4058 31.0322C34.4058 28.4315 33.3554 26.0832 31.6535 24.3763Z"
-              fill="white"
-            />
-            <path
-              d="M30.5826 6.85788C31.4664 6.85788 32.1784 7.56993 32.1784 8.45368C32.1784 9.33743 31.4664 10.0545 30.5826 10.0545C29.6989 10.0545 28.9868 9.33743 28.9868 8.45368C28.9868 7.56993 29.6989 6.85788 30.5826 6.85788Z"
-              fill="white"
-            />
-            <path
-              d="M13.0338 22.1645C14.8771 22.1645 16.5436 22.9068 17.7505 24.1138C18.9575 25.3207 19.7049 26.9923 19.7049 28.8305C19.7049 30.6737 18.9575 32.3402 17.7505 33.5471C16.5436 34.7541 14.8771 35.5015 13.0338 35.5015C11.1906 35.5015 9.52409 34.7541 8.31714 33.5471C7.11019 32.3402 6.36279 30.6737 6.36279 28.8305C6.36279 26.9923 7.11019 25.3207 8.31714 24.1138C9.52409 22.9068 11.1906 22.1645 13.0338 22.1645ZM17.2455 24.6238C16.1648 23.5431 14.6801 22.8765 13.0338 22.8765C11.3926 22.8765 9.90284 23.5431 8.82719 24.6238C7.74649 25.6995 7.07989 27.1892 7.07989 28.8305C7.07989 30.4768 7.74649 31.9614 8.82719 33.0421C9.90284 34.1178 11.3926 34.7844 13.0338 34.7844C14.6801 34.7844 16.1648 34.1178 17.2455 33.0421C18.3212 31.9614 18.9878 30.4768 18.9878 28.8305C18.9878 27.1892 18.3212 25.6995 17.2455 24.6238Z"
-              fill="white"
-            />
-            <path
-              d="M13.0344 13.837C14.1403 13.837 15.1453 14.2864 15.8725 15.0136C16.5996 15.7358 17.044 16.7407 17.044 17.8467C17.044 18.9577 16.5996 19.9576 15.8725 20.6848C15.1453 21.412 14.1403 21.8614 13.0344 21.8614C11.9284 21.8614 10.9235 21.412 10.1963 20.6848C9.47411 19.9576 9.02466 18.9577 9.02466 17.8467C9.02466 16.7407 9.47411 15.7358 10.1963 15.0136C10.9235 14.2864 11.9284 13.837 13.0344 13.837ZM15.3675 15.5186C14.7716 14.9227 13.9434 14.5541 13.0344 14.5541C12.1254 14.5541 11.3022 14.9227 10.7063 15.5186C10.1104 16.1145 9.73671 16.9377 9.73671 17.8467C9.73671 18.7607 10.1104 19.5839 10.7063 20.1798C11.3022 20.7757 12.1254 21.1443 13.0344 21.1443C13.9434 21.1443 14.7716 20.7757 15.3675 20.1798C15.9634 19.5839 16.332 18.7607 16.332 17.8467C16.332 16.9377 15.9634 16.1145 15.3675 15.5186Z"
-              fill="white"
-            />
-            <path
-              d="M36.9659 13.8672C38.0719 13.8672 39.0768 14.3167 39.799 15.0388C40.5262 15.766 40.9756 16.771 40.9756 17.8769C40.9756 18.9829 40.5262 19.9878 39.799 20.715C39.0768 21.4422 38.0719 21.8866 36.9659 21.8866C35.8549 21.8866 34.855 21.4422 34.1278 20.715C33.4006 19.9878 32.9512 18.9829 32.9512 17.8769C32.9512 16.771 33.4006 15.766 34.1278 15.0388C34.855 14.3167 35.8549 13.8672 36.9659 13.8672ZM39.294 15.5489C38.6981 14.9479 37.8749 14.5793 36.9659 14.5793C36.0569 14.5793 35.2287 14.9479 34.6328 15.5489C34.0369 16.1448 33.6683 16.9679 33.6683 17.8769C33.6683 18.7859 34.0369 19.6091 34.6328 20.21C35.2287 20.8059 36.0569 21.1746 36.9659 21.1746C37.8749 21.1746 38.6981 20.8059 39.294 20.21C39.8899 19.6091 40.2585 18.7859 40.2585 17.8769C40.2585 16.9679 39.8899 16.1448 39.294 15.5489Z"
-              fill="white"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_205_60"
-                x1="4.07923e-07"
-                y1="24.9975"
-                x2="45.8287"
-                y2="43.3189"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#60CAC6" />
-                <stop offset="1" stopColor="#133F8A" />
-              </linearGradient>
-            </defs>
-          </svg>
-
-          <h3 className="d-flex flex-nowrap p-2">Drop us a Line</h3>
-          <p className="text-start p-2">
-            Reach out to us in Contact <br />
-            form and we will get back to <br />
-            you shortly.
-          </p>
-        </div> */}
-
-        {/* <div className="w-100">
-          <h3 className="text-start text-white">Send Us Message</h3>
-          <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            <Form.Group as={Col} className="mt-3">
-              <Form.Control
-                type="text"
-                placeholder="Name"
-                maxLength="30"
-                name="name"
-                autoComplete="off"
-                className="message-input d-flex w-100 align-items-start border-0 rounded"
-                required
-              />
-              <Form.Control.Feedback type="invalid" className="text-start">
-                required field.
-              </Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group as={Col} className="mt-3">
-              <Form.Control
-                type="email"
-                placeholder="Email Address"
-                className="message-input d-flex w-100 align-items-start border-0 rounded"
-                minLength="4"
-                maxLength="40"
-                name="email"
-                autoComplete="off"
-                required
-              />
-              <Form.Control.Feedback type="invalid" className="text-start">
-                Please provide a valid Email.
-              </Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group as={Col} className="mt-3">
-              <Form.Control
-                type="text"
-                maxength="30"
-                placeholder="Subject"
-                name="subject"
-                required
-                autoComplete="off"
-                className="message-input d-flex w-100 align-items-start border-0 rounded"
-              />
-              <Form.Control.Feedback type="invalid" className="text-start">
-                Please provide a valid Phone No.
-              </Form.Control.Feedback>
-            </Form.Group>
-            <Form.Group as={Col} className="mt-3">
-              <Form.Control
-                as="textarea"
-                placeholder="Your message"
-                rows={8}
-                name="message"
-                autoComplete="off"
-                required
-                id="message"
-                className="message-textarea d-flex w-100 align-items-start border-0 rounded"
-              />
-              <Form.Control.Feedback type="invalid" className="text-start">
-                Enter minimun 4 character.
-              </Form.Control.Feedback>
-            </Form.Group>
-            {loading ? (
-              <Button
-                variant="primary"
-                disabled
-                className="message-submit d-flex justify-content-center align-items-center"
-              >
-                <Spinner
-                  as="span"
-                  animation="border"
-                  size="sm"
-                  role="status"
-                  aria-hidden="true"
-                />
-              </Button>
-            ) : (
-              <Button
-                type="submit"
-                className="message-submit d-flex justify-content-center align-items-center"
-              >
-                Send message
-              </Button>
-            )}
-          </Form>
-        </div> */}
       </Container>
     </>
   );

@@ -11,7 +11,9 @@ import appfeature from "../../../assert/appfeature.gif";
 import robot from "../../../assert/robot.png";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { UseGetScreenResolution } from "../GetScreenResolution";
 const AppFeatures = () => {
+  const [currentResolution] = UseGetScreenResolution();
   const featureList = [
     {
       img: Celebrating,
@@ -48,7 +50,7 @@ const AppFeatures = () => {
         <Row className="w-100">
           <Col
             sm={2}
-            className="app-features-demo-img d-flex justify-content-start flex-column"
+            className="app-features-demo-img d-flex justify-content-start flex-column d-none d-lg-block "
           >
             <Image
               src={robot}
@@ -64,50 +66,74 @@ const AppFeatures = () => {
                 alt="how its work"
                 loading="lazy"
                 width={"100%"}
-                fluid={true}
-                style={{ borderRadius: "20px" }}
+                className="rounded-4 "
               ></Image>
             </div>
           </Col>
-
+          <Col className="d-flex d-lg-none">
+            <Col>
+              <Image
+                src={appfeature}
+                alt="how its work"
+                loading="lazy"
+                width={"60%"}
+                fluid={true}
+                style={{ borderRadius: "10px" }}
+              ></Image>
+            </Col>
+            <Col>
+              <Image
+                src={image27}
+                alt="how its work"
+                loading="lazy"
+                width={"60%"}
+                style={{ borderRadius: "10px" }}
+              ></Image>
+            </Col>
+          </Col>
           <Col
-            sm={8}
+            lg={8}
+            sm={12}
             className="app-features-contents d-flex align-items-center justify-content-start flex-column"
           >
-            <h2>
+            <h2
+              style={{
+                fontSize:
+                  currentResolution <= 992
+                    ? "clamp(10px, 5.2vw, 3.6rem)"
+                    : " clamp(20px, 3.5vw, 3rem)",
+              }}
+            >
               Getherly is the Only App you need to<br></br> Connect with your
               Family<br></br> and watch your Network Grow.
             </h2>
             <Container
               fluid
-              className="d-flex align-items-center justify-content-center gap-3 flex-column mt-5"
+              className="d-flex align-items-center justify-content-center gap-3 flex-column mt-4 mt-lg-5"
             >
               {featureList.map((value, index) => {
                 return (
                   <AnimationOnScroll animateIn="animate__fadeIn" key={index}>
                     <Row className="d-flex align-items-center justify-content-center flex-column ">
-                      <Row sm={12}>
-                        <Col className="d-flex align-items-center justify-content-center gap-2 ">
-                          <img
-                            src={value.img}
-                            alt="i"
-                            loading="lazy"
-                            width={"30"}
-                            height={"30"}
-                          ></img>
-                          <h4>{value.Title}</h4>
-                        </Col>
-                      </Row>
-                      <Row className="app-feature-desc" sm={12}>
+                      <Col
+                        className="d-flex align-items-center justify-content-center gap-2 "
+                        sm={12}
+                        xs={12}
+                      >
+                        <img src={value.img} alt="i" loading="lazy"></img>
+                        <h4 className="h2">{value.Title}</h4>
+                      </Col>
+
+                      <Col className="app-feature-desc mt-2" sm={12} lg={10}>
                         <p>{value.Desc}</p>
-                      </Row>
+                      </Col>
                     </Row>
                   </AnimationOnScroll>
                 );
               })}
             </Container>
           </Col>
-          <Col className="d-flex align-items-center justify-content-center flex-column">
+          <Col className="d-flex align-items-center justify-content-center flex-column d-none d-lg-block mt-5">
             <div>
               <img
                 src={image27}
@@ -127,24 +153,6 @@ const AppFeatures = () => {
               ></img>
             </div>
           </Col>
-          {/* <Col sm={2}>
-            <div>
-              <img
-                src={image27}
-                alt="imagemobile"
-                loading="lazy"
-                width={"98%"}
-              ></img>
-            </div>
-
-            <img
-              style={{ marginTop: "17vh" }}
-              src={image28}
-              alt="imagemobile"
-              loading="lazy"
-              width={"98%"}
-            ></img>
-          </Col> */}
         </Row>
       </Container>
     </>

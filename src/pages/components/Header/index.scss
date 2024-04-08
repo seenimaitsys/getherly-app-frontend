@@ -31,26 +31,11 @@
 }
 
 .navmanu {
-  @include CustomeHeaderStyle(
-    #000,
-    Poppins,
-    600,
-    clamp(15px, 1.5vw, 20px),
-    normal,
-    normal
-  );
-  flex-wrap: nowrap;
+  @include CustomeHeaderStyle(#000, Poppins, 600, 22px, normal, normal);
 }
 
 #header-login {
-  @include CustomeHeaderStyle(
-    #0e42c8,
-    Poppins,
-    600,
-    clamp(15px, 1.5vw, 20px),
-    normal,
-    normal
-  );
+  @include CustomeHeaderStyle(#0e42c8, Poppins, 600, 22px, normal, normal);
   flex-wrap: nowrap;
 }
 .header-howdoi {
@@ -58,7 +43,7 @@
     #000,
     Poppins,
     600,
-    clamp(15px, 1.5vw, 20px),
+    22px,
     normal,
     normal,
     $padding: 20px,
@@ -69,24 +54,12 @@
   );
 
   h4 {
-    @include CustomeHeaderStyle(
-      #000,
-      Poppins,
-      600,
-      clamp(15px, 1.5vw, 20px),
-      normal,
-      normal
-    );
-    flex-wrap: nowrap;
+    @include CustomeHeaderStyle(#000, Poppins, 600, 20px, normal, normal);
   }
 }
 
 //Smartphone
 @media screen and (max-width: 767px) {
-  .nave-body {
-    gap: 3rem !important;
-  }
-
   .app-logo {
     svg {
       width: 4rem;
@@ -96,24 +69,13 @@
     }
   }
 }
-
-//tablet
-@media screen and (min-width: 767px) and (max-width: 1023px) {
-  .nave-body {
-    gap: 4rem !important;
-    .navmanu {
-      font-size: clamp(20px, 3vw, 30px) !important;
+@media screen and (max-width: 350px) {
+  .app-logo {
+    svg {
+      width: 3rem;
     }
-    #header-login {
-      font-size: clamp(20px, 3vw, 30px);
-    }
-    .header-howdoi {
-      h4 {
-        font-size: clamp(20px, 3vw, 30px);
-      }
+    img {
+      width: 7rem;
     }
   }
-}
-//desktop
-@media screen and (min-width: 1023px) {
 }

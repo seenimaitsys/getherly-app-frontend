@@ -7,8 +7,9 @@ import check_circle from "../../../assert/check_circle.svg";
 // import Header from "../../../pages/components/Header";
 import Familyimg from "../../../assert/Rectangle1.png";
 import yourFriends from "../../../assert/Rectangle2.png";
-
+import { UseGetScreenResolution } from "../GetScreenResolution";
 const AboutAs = () => {
+  const [currentResolution] = UseGetScreenResolution();
   const listItems = [
     {
       content: "You can Text and call your Family Members with ease.",
@@ -30,7 +31,12 @@ const AboutAs = () => {
 
           <div className="d-flex justify-content-center align-items-center w-100 position-relative mt-3">
             {" "}
-            <p className="position-absolute " style={{ marginTop: "5rem" }}>
+            <p
+              className="position-absolute "
+              style={{
+                marginTop: currentResolution <= 992 ? "3rem" : "5rem",
+              }}
+            >
               We Connect Families.
             </p>
           </div>
@@ -38,19 +44,20 @@ const AboutAs = () => {
           <img
             src={familyImg}
             alt="getherly-famliy"
+            style={{ height: currentResolution <= 992 ? "12rem" : "" }}
             width={"100%"}
-            style={{ height: "24rem" }}
             loading="lazy"
           ></img>
         </div>
 
-        <div className="about-main-continer w-100 mt-5 d-flex align-items-start">
+        <div className="about-main-continer w-100 mt-3 mt-lg-5  d-flex align-items-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="115"
             height="168"
             viewBox="0 0 115 168"
             fill="none"
+            className="round-circle d-none d-lg-block d-md-block"
           >
             <circle
               cx="30.6074"
@@ -527,90 +534,88 @@ const AboutAs = () => {
             </defs>
           </svg>
           <Container fluid className="d-flex mt-3">
-            <Row>
-              <div className="about-info-content  mt-5 d-flex flex-column align-items-start justify-content-start text-start">
-                <Row>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="64"
-                    height="64"
-                    viewBox="0 0 64 64"
-                    fill="none"
-                  >
-                    <path
-                      d="M64 32C64 37.71 59.25 42.34 53.39 42.34C47.53 42.34 42.78 37.71 42.78 32C42.78 26.29 47.53 21.66 53.39 21.66C59.25 21.66 64 26.29 64 32ZM7.3 38.85H3.65C1.63 38.85 0 37.22 0 35.2V28.8C0 26.79 1.63 25.15 3.65 25.15H7.3V38.85Z"
-                      fill="#2E2E2E"
-                    />
-                    <path
-                      d="M17.07 46.82H15.56V44.39H17.07C17.29 44.39 17.47 44.57 17.47 44.79V46.43C17.47 46.64 17.29 46.82 17.07 46.82Z"
-                      fill="#E0E2E0"
-                    />
-                    <path
-                      d="M12.62 58.27C10.68 58.27 9.10001 56.7 9.10001 54.75V38.91H16.13V54.76C16.14 56.7 14.56 58.27 12.62 58.27Z"
-                      fill="#2E2E2E"
-                    />
-                    <path
-                      d="M7.49001 42.32L24.19 42.33V21.66H7.51001C5.85001 21.66 4.50001 22.97 4.50001 24.58L4.48001 39.38C4.48001 41.01 5.83001 42.32 7.49001 42.32Z"
-                      fill="#E0E2E0"
-                    />
-                    <path
-                      d="M52.77 56.71L22.99 42.34V21.66L52.77 7.29V56.71Z"
-                      fill="#2E2E2E"
-                    />
-                    <path
-                      d="M53.39 59.41C51.86 59.41 50.62 58.2 50.62 56.71V7.29C50.62 5.8 51.86 4.59 53.39 4.59C54.92 4.59 56.16 5.8 56.16 7.29V56.72C56.16 58.2 54.92 59.41 53.39 59.41Z"
-                      fill="#E0E2E0"
-                    />
-                  </svg>
-                </Row>
-                <Row>
-                  <h2 className="mt-3">Who we are?</h2>
-                </Row>
-                <Row>
-                  <p className="mt-4">
-                    Getherly is a family app which helps you stay connected with
-                    your family and create family trees and make your family
-                    network even bigger , better and stronger. You canexplore
-                    Family members and connect with them at ease.
-                  </p>
-                </Row>
-                <Row className="p-3">
-                  {listItems.map((items, index) => {
-                    return (
-                      <Container className="mt-2" key={index}>
-                        <div className="d-flex align-items-center gap-1">
-                          <img
-                            alt="check"
-                            src={check_circle}
-                            loading="lazy"
-                            width={"20px"}
-                            height={"20px"}
-                          ></img>
+            <div className="about-info-content mt-0 mt-lg-5  d-flex flex-column align-items-start justify-content-start text-start">
+              <Row>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="64"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                >
+                  <path
+                    d="M64 32C64 37.71 59.25 42.34 53.39 42.34C47.53 42.34 42.78 37.71 42.78 32C42.78 26.29 47.53 21.66 53.39 21.66C59.25 21.66 64 26.29 64 32ZM7.3 38.85H3.65C1.63 38.85 0 37.22 0 35.2V28.8C0 26.79 1.63 25.15 3.65 25.15H7.3V38.85Z"
+                    fill="#2E2E2E"
+                  />
+                  <path
+                    d="M17.07 46.82H15.56V44.39H17.07C17.29 44.39 17.47 44.57 17.47 44.79V46.43C17.47 46.64 17.29 46.82 17.07 46.82Z"
+                    fill="#E0E2E0"
+                  />
+                  <path
+                    d="M12.62 58.27C10.68 58.27 9.10001 56.7 9.10001 54.75V38.91H16.13V54.76C16.14 56.7 14.56 58.27 12.62 58.27Z"
+                    fill="#2E2E2E"
+                  />
+                  <path
+                    d="M7.49001 42.32L24.19 42.33V21.66H7.51001C5.85001 21.66 4.50001 22.97 4.50001 24.58L4.48001 39.38C4.48001 41.01 5.83001 42.32 7.49001 42.32Z"
+                    fill="#E0E2E0"
+                  />
+                  <path
+                    d="M52.77 56.71L22.99 42.34V21.66L52.77 7.29V56.71Z"
+                    fill="#2E2E2E"
+                  />
+                  <path
+                    d="M53.39 59.41C51.86 59.41 50.62 58.2 50.62 56.71V7.29C50.62 5.8 51.86 4.59 53.39 4.59C54.92 4.59 56.16 5.8 56.16 7.29V56.72C56.16 58.2 54.92 59.41 53.39 59.41Z"
+                    fill="#E0E2E0"
+                  />
+                </svg>
+              </Row>
+              <Row>
+                <h2 className="mt-3">Who we are?</h2>
+              </Row>
+              <Row>
+                <p className="mt-lg-4 mt-2">
+                  Getherly is a family app which helps you stay connected with
+                  your family and create family trees and make your family
+                  network even bigger , better and stronger. You canexplore
+                  Family members and connect with them at ease.
+                </p>
+              </Row>
+              <Row className="p-3">
+                {listItems.map((items, index) => {
+                  return (
+                    <Container className="mt-lg-2 mt-0" key={index}>
+                      <div className="d-flex align-items-center gap-1">
+                        <img
+                          alt="check"
+                          src={check_circle}
+                          loading="lazy"
+                          width={"20px"}
+                          height={"20px"}
+                        ></img>
 
-                          <div className="listitems">{items.content}</div>
-                        </div>
-                      </Container>
-                    );
-                  })}
-                </Row>
-              </div>
+                        <div className="listitems">{items.content}</div>
+                      </div>
+                    </Container>
+                  );
+                })}
+              </Row>
+            </div>
 
-              <Col className="about-design-image d-flex align-items-end flex-column justify-content-center">
-                <img
-                  src={Familyimg}
-                  alt="family"
-                  loading="lazy"
-                  width={"70%"}
-                ></img>
-                <img
-                  src={yourFriends}
-                  loading="lazy"
-                  className="Friendsimg"
-                  alt="yourFriends"
-                  width={"50%"}
-                ></img>
-              </Col>
-            </Row>
+            <Col className="about-design-image d-flex align-items-end flex-column justify-content-center d-none d-lg-block d-md-none">
+              <img
+                src={Familyimg}
+                alt="family"
+                loading="lazy"
+                width={"70%"}
+              ></img>
+              <img
+                src={yourFriends}
+                loading="lazy"
+                className="Friendsimg"
+                alt="yourFriends"
+                width={"50%"}
+              ></img>
+            </Col>
           </Container>
         </div>
       </div>

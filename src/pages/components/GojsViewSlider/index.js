@@ -426,7 +426,9 @@ const GojsViewSlider = () => {
                       <img
                         src={VectorNoborderDown}
                         alt="vector"
-                        className="position-absolute "
+                        className={`position-absolute ${
+                          validated ? "mb-4" : "mb-0"
+                        }`}
                         role="button"
                         tabIndex="0"
                         style={{

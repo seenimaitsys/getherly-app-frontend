@@ -30,7 +30,8 @@
     @include CustomeAppFeaturesStyle(
       #000000,
       Poppins,
-      clamp(25px, 3.5vw, 6vh),
+      // clamp(20px, 3.5vw, 6vh),
+      "",
       normal,
       700,
       normal
@@ -45,7 +46,7 @@
     @include CustomeAppFeaturesStyle(
       #000000,
       Poppins,
-      clamp(18px, 5vw, 24px),
+      clamp(14px, 5vw, 30px),
       normal,
       600,
       normal
@@ -54,14 +55,13 @@
 }
 .app-feature-desc {
   @include CustomeAppFeaturesStyle(
-    #000000,
+    #040404,
     Poppins,
-    clamp(10px, 5vw, 18px),
+    clamp(10px, 4vw, 25px),
     normal,
     400,
     27px
   );
-  width: 85%;
 }
 //Smartphone
 @media screen and (max-width: 767px) {

@@ -9,47 +9,46 @@
   color: $color;
   font-family: $font-family;
   font-size: $font-size;
-
   font-weight: $font-weight;
-  line-height: $line-height;
-  text-align: $text-align;
+  line-height: 35px;
+  // text-align: $text-align;
 }
 .Limelight-continer {
   h2 {
     @include CustomeAppFeaturesStyle(
-      #000000,
+      #363636,
       Poppins,
-      clamp(20px, 4vw, 40px),
+      clamp(10px, 7vw, 3rem),
       700,
-      60px,
-      left
+      "",
+      ""
     );
   }
   h3 {
     @include CustomeAppFeaturesStyle(
       #000000,
       Inter,
-      clamp(18px, 5vw, 24px),
+      clamp(7px, 5vw, 1.9rem),
       600,
-      29px,
-      left
+      "",
+      ""
     );
   }
   p:first-child {
     @include CustomeAppFeaturesStyle(
       #000000,
       Poppins,
-      clamp(10px, 5vw, 18px),
+      clamp(10px, 4vw, 28px),
       400,
-      27px,
+      10px,
       left
     );
   }
-  p:last-child {
+  p:nth-child(2) {
     @include CustomeAppFeaturesStyle(
       gray,
       Poppins,
-      clamp(12px, 5vw, 20px),
+      clamp(12px, 4vw, 27px),
       400,
       30px,
       left
@@ -68,13 +67,13 @@
 }
 
 //Smartphone
-@media screen and (max-width: 767px) {
-  .limelignt-demo-img {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-}
+// @media screen and (max-width: 767px) {
+//   .limelignt-demo-img {
+//     display: flex !important;
+//     align-items: center !important;
+//     justify-content: center !important;
+//   }
+// }
 //tablet
 @media screen and (min-width: 767px) and (max-width: 1023px) {
 }

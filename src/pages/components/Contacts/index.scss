@@ -51,10 +51,10 @@
   //   // grid-gap: 10rem;
   // }
   h6 {
-    @include Custome-address-style(start, 500, 40.1px, clamp(20px, 3vw, 28px));
+    @include Custome-address-style(start, 500, 40.1px, clamp(10px, 7vw, 30px));
   }
   p {
-    @include Custome-address-style(left, 400, 0, clamp(13px, 3vw, 20px));
+    @include Custome-address-style(left, 400, 0, clamp(10px, 5vw, 23px));
   }
 }
 
@@ -63,7 +63,7 @@
   .map-continer {
     display: flex;
     flex-direction: column;
-
+    width: 90% !important;
     margin-top: -30% !important;
     iframe {
       @include Custom-width-hight(100%, 17rem);

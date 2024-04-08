@@ -11,8 +11,11 @@ import Becomecontentcreator from "../../../assert/Becomecontentcreator.gif";
 import Editandpostvideos from "../../../assert/Becomecontentcreator.gif";
 import howitswork from "../../../assert/howitswork.gif";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import { UseGetScreenResolution } from "../GetScreenResolution";
 
 const Appinstruction = () => {
+  const [currentResolution] = UseGetScreenResolution();
+
   const List = [
     {
       img: downloadapp,
@@ -43,68 +46,104 @@ const Appinstruction = () => {
   return (
     <>
       <Container
-        style={{
-          marginTop: "10%",
-          overflowX: "hidden",
-        }}
+        className=" overflow-hidden "
+        style={{ marginTop: "10%" }}
         fluid
       >
         <Row>
           <Col className="d-flex align-items-center justify-content-center ">
-            <div>
+            <Col lg={7} xl={5} className="d-none d-lg-block">
               <img
                 src={howitswork}
                 alt="how its work"
                 loading="lazy"
-                width={"100%"}
-                height={600}
+                width={"95%"}
+                height={670}
                 className="rounded-4 border border-dark"
               ></img>
-            </div>
+            </Col>
           </Col>
 
-          <Col>
+          <Col md={12} lg={6}>
             <AnimationOnScroll
               animateIn="animate__fadeInRight"
               className="appinstruction-content"
             >
-              <p className=" mt-4">How it Works</p>
+              <p className="text-start mt-4 d-none d-lg-block">How it Works</p>
 
-              <Row>
-                <p className="appinstruction-title mt-3">
-                  Download the app, create your
-                  <br /> family network, you're all set!
-                </p>
-              </Row>
-              <Row>
-                <p className="appinstruction-desc">
-                  {" "}
-                  You can download the app from both App store and play store
-                  and start exploring your family members. Getherly provides
-                  features such as wall and limelight where you can post videos
-                  and photos to your family members. You can also create a
-                  public club in limelight and kickstart your content creation
-                  with our unique editing options.
-                </p>
-              </Row>
-              <Container fluid>
-                <div className="app-working-steps">
-                  {List.map((value, index) => {
-                    return (
-                      <Row key={index}>
-                        <Col>
+              <p className="mt-lg-5 mt-md-0 text-lg-start text-md-center h1">
+                Download the app, create your
+                <br /> family network, you're all set!
+              </p>
+
+              <p className="appinstruction-desc text-lg-start text-md-center mt-4 mt-sm-4  mt-lg-3">
+                {" "}
+                You can download the app from both App store and play store and
+                start exploring your family members. Getherly provides features
+                such as wall and limelight where you can post videos and photos
+                to your family members. You can also create a public club in
+                limelight and kickstart your content creation with our unique
+                editing options.
+              </p>
+              <Container fluid className="mt-5 mt-lg-0">
+                <Row className="app-working-steps d-flex">
+                  <Col
+                    md={5}
+                    sm={5}
+                    xs={5}
+                    className={`d-flex align-items-center  d-xs-block d-lg-none ${
+                      currentResolution < 320 ? "w-100" : ""
+                    } `}
+                  >
+                    <img
+                      src={howitswork}
+                      alt="how its work"
+                      loading="lazy"
+                      width={"100%"}
+                      height={"100%"}
+                      className="rounded-4 border border-dark"
+                    ></img>
+                  </Col>
+                  <Col
+                    className={`mobile-appinstruction d-flex flex-wrap  ${
+                      currentResolution < 320 ? "w-100 " : ""
+                    } ${
+                      currentResolution <= 992
+                        ? "align-items-center justify-content-center"
+                        : ""
+                    }`}
+                    xs={7}
+                    lg={12}
+                    md={7}
+                    sm={7}
+                    xxs={12}
+                    style={{
+                      marginLeft: currentResolution >= 992 ? "-10%" : "0",
+                    }}
+                  >
+                    {List.map((value, index) => {
+                      return (
+                        <Col
+                          key={index}
+                          sm={6}
+                          xs={6}
+                          lg={4}
+                          md={6}
+                          className="p-0 p-lg-3"
+                        >
                           <img
                             src={value.img}
                             width={"50"}
                             height={"50"}
-                            alt=""
+                            alt={value.Title}
                           ></img>
-                          <p>{value.Title}</p>
+
+                          <p className="appinstruction-steps">{value.Title}</p>
                         </Col>
-                      </Row>
-                    );
-                  })}
-                </div>
+                      );
+                    })}
+                  </Col>
+                </Row>
               </Container>
             </AnimationOnScroll>
           </Col>

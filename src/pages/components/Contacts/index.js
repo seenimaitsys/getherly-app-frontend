@@ -50,16 +50,32 @@ const AddressMap = () => {
                 ></img>
                 <div>
                   <h6>Phone</h6>
-                  <p className="address-desc text-start">1234567890</p>
+                  <a
+                    href="tell:support@twigscorp.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    title="1234567890"
+                    className="text-decoration-none"
+                  >
+                    <p className="address-desc text-start">1234567890</p>
+                  </a>
                 </div>
               </div>
               <div className="d-flex align-items-center ">
                 <img src={email} loading="lazy" alt="email"></img>
                 <div style={{ marginLeft: "5%" }}>
                   <h6>Email</h6>
-                  <p className="address-desc text-start">
-                    support@twigscorp.com
-                  </p>
+                  <a
+                    href="mailto:support@twigscorp.com"
+                    target="_blank"
+                    rel="noreferrer"
+                    title="support@twigscorp.com"
+                    className="text-decoration-none"
+                  >
+                    <p className="address-desc text-start">
+                      support@twigscorp.com
+                    </p>
+                  </a>
                 </div>
               </div>
             </div>

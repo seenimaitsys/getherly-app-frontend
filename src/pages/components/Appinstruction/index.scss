@@ -1,100 +1,55 @@
-@mixin CustomeAppFeaturesStyle(
-  $color,
-  $font-family,
-  $font-size,
-  $font-style,
-  $font-weight,
-  $line-height,
-  $text-align,
-  $align-items,
-  $display
-) {
+@mixin CustomeAppFeaturesStyle($color, $font-family, $font-size, $font-weight) {
   color: $color;
   font-family: $font-family;
   font-size: $font-size;
-  font-style: $font-style;
+  line-height: normal;
   font-weight: $font-weight;
-  line-height: $line-height;
-  text-align: $text-align;
-  align-items: $align-items;
-  display: $display;
 }
 .appinstruction-content {
   > p:nth-child(1) {
     @include CustomeAppFeaturesStyle(
       #929292,
       Inter,
-      clamp(20px, 5vw, 24px),
-      normal,
-      600,
-      normal,
-      start,
-      flex-start,
-      flex
+      clamp(20px, 5vw, 30px),
+      600
     );
   }
 
-  .appinstruction-title {
+  > p:nth-child(2) {
     @include CustomeAppFeaturesStyle(
       #363636,
       Poppins,
-      clamp(20px, 4vw, 40px),
-      normal,
-      700,
-      normal,
-      start,
-      flex-start,
-      flex
+      clamp(22px, 6vw, 45px),
+      700
     );
 
     letter-spacing: 1px;
   }
-  .appinstruction-desc {
+  > p:nth-child(3) {
     @include CustomeAppFeaturesStyle(
       #5d5d5d,
       Poppins,
-      clamp(12px, 4vw, 20px),
-      normal,
-      400,
-      normal,
-      start,
-      flex-start,
-      flex
+      clamp(12px, 4vw, 25px),
+      400
     );
-    width: 530px;
 
     letter-spacing: 1px;
   }
 }
 
-.app-working-steps {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2rem;
-  margin-left: -3rem;
-
-  width: fit-content;
-  p {
-    @include CustomeAppFeaturesStyle(
-      #000000,
-      Inter,
-      clamp(12px, 4vw, 22px),
-      normal,
-      600,
-      26.63px,
-      center,
-      "",
-      ""
-    );
-  }
+.appinstruction-steps {
+  @include CustomeAppFeaturesStyle(#000000, Inter, clamp(10px, 3vw, 22px), 600);
 }
+
 @media (max-width: 991.98px) {
   .app-working-steps {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-left: 0;
-    grid-gap: 2rem;
-    width: 100%;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    // margin-left: 0;
+    // grid-gap: 2rem;
+    // width: 100%;
   }
+  // .mobile-appinstruction {
+  //   margin-left: 0 !important;
+  // }
 }
