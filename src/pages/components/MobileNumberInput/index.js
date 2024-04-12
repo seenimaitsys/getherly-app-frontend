@@ -30,6 +30,7 @@ export const MuiPhone = ({ value, onChange, ...restProps }) => {
     <TextField
       variant="standard"
       required
+      autoComplete="off"
       sx={{
         input: {
           color: "white",
@@ -41,17 +42,8 @@ export const MuiPhone = ({ value, onChange, ...restProps }) => {
           },
         },
       }}
-      placeholder="Phone number"
-      style={{
-        width: "100%",
-        color: "white",
-        fontWeight: "400",
-        lineHeight: "18px",
-        height: "44px",
-        flexShrink: "0",
-        borderRadius: "22px",
-        border: "1px solid #5DC5C4",
-      }}
+      placeholder=""
+      className="text-white fw-normal fs-20 h-44 rounded-22 border-custom-login-input-border bg-transparent  w-100 d-flex justify-content-center"
       value={inputValue}
       onChange={handlePhoneValueChange}
       type="tel"
@@ -59,19 +51,13 @@ export const MuiPhone = ({ value, onChange, ...restProps }) => {
       InputProps={{
         disableUnderline: true,
         startAdornment: (
-          <InputAdornment
-            position="start"
-            style={{
-              display: "flex",
-              marginLeft: "4px",
-            }}
-          >
+          <InputAdornment position="start" className="d-flex ms-2">
             <Select
               name="flag"
               MenuProps={{
                 style: {
                   height: "300px",
-                  width: "360px",
+                  width: "80%",
                   top: "10px",
                   left: "-3px",
                 },

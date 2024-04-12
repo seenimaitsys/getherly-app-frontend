@@ -1,7 +1,6 @@
 import React from "react";
-import "./index.scss";
 import video from "../../../assert/video1.mp4";
-import { Container } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 
 const GetherlyVideo = () => {
   return (
@@ -10,15 +9,17 @@ const GetherlyVideo = () => {
         fluid
         className="d-flex justify-content-center align-items-center mt-5"
       >
-        <video
-          width="60%"
-          height="100%"
-          controls
-          className="getherly-logo"
-          autoPlay
-        >
-          <source src={video} type="video/mp4" />
-        </video>
+        <Col xl={7} sm={8} md={9} lg={7}>
+          <video
+            width="100%"
+            height="100%"
+            controls
+            className="getherly-logo mt-10 rounded-20 shadow object-fit-cover"
+            autoPlay
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        </Col>
       </Container>
     </>
   );

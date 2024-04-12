@@ -1,0 +1,205 @@
+// Import Bootstrap Utils first
+// otherwise our amends aren't added correctly
+@import "../../node_modules/bootstrap/scss/maps";
+@import "../../node_modules/bootstrap/scss/utilities";
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        90: 90%,
+        93: 93%,
+        80: 80%,
+        60: 60%,
+        75: 75%,
+      ),
+    ),
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        40: 40px,
+        44: 44px,
+        9: 9rem,
+
+        366: 366px,
+        26: 26rem,
+      ),
+    ),
+    "font-size": (
+      rfs: true,
+      property: font-size,
+      class: fs,
+      values: (
+        22: 22px,
+        20: 20px,
+        30: 30px,
+        25: 25px,
+        18: 18px,
+      ),
+    ),
+    "font-style": (
+      property: font-style,
+      class: fst,
+      values: (
+        normal: normal,
+      ),
+    ),
+    "font-weight": (
+      property: font-weight,
+      class: fw,
+      values: (
+        800: 800,
+      ),
+    ),
+    "color": (
+      property: color,
+      class: text,
+      values:
+        map-merge(
+          $theme-colors,
+          (
+            "login": #0e42c8,
+            "black": black,
+            "howtoi": #0085ff,
+            "appcontent-title": #393939,
+            "appcontent-desc": #333333,
+            "features-title": #262626,
+            "how-it-work": #929292,
+            "custom-gray-900": #363636,
+            "custom-gray-800": #5d5d5d,
+            "custom-black-1": #1c1b1b,
+            "custom-gray-700": #b9b9b9,
+            "custom-gray-600": #595959,
+            "custom-gray-500": #3a3a3a,
+            "custom-gray-400": #656565,
+            "custom-gray-300": #464646,
+            "custom-gray-200": #4b4b4b,
+            "terms-policy": #5dc5c4,
+          )
+        ),
+    ),
+    "background-color": (
+      property: background-color,
+      class: bg,
+      values: (
+        "custom-card-bg": #e5e5e5,
+        "contact-bg": rgba(0, 0, 0, 0.83),
+        "contact-input-bg": rgba(255, 255, 255, 0.3),
+      ),
+    ),
+    "gradient": (
+      property: background-image,
+      class: bg,
+      values: (
+        bg-image1: url("./../../src/assert/image22.png"),
+        login-form-bg: linear-gradient(180deg, #00463e 0.18%, #595959 150.98%),
+        login-submit-bg: linear-gradient(90deg, #78c1c2 0%, #2a4e8c 100%),
+        message-form-submit:
+          linear-gradient(106deg, #c961de 24.79%, #2954a3 71.87%),
+      ),
+    ),
+    "line-height": (
+      property: line-height,
+      class: lh,
+      values: (
+        0: normal,
+        30: 30px,
+        50: 50.1px,
+        custom-lh-1: 1.8rem,
+      ),
+    ),
+    "margin-start": (
+      responsive: true,
+      property: margin-left,
+      class: ms,
+      values: (
+        -20: -20%,
+        20: 20%,
+        n8: -8%,
+        n10: -10%,
+        custom-3: 3rem,
+      ),
+    ),
+    "top": (
+      property: top,
+      values: (
+        25: 25%,
+        10: 10%,
+        45: 45%,
+        80: 80%,
+      ),
+    ),
+    "margin-top": (
+      responsive: true,
+      property: margin-top,
+      class: mt,
+      values: (
+        10: 10%,
+        n6: -6rem,
+        custom-2: 2.3rem,
+        n22: -22%,
+        n30: -30%,
+        15: 15rem,
+        25: 25%,
+        custom-3: 3rem,
+        custom-5: 5rem,
+      ),
+    ),
+    "margin-end": (
+      responsive: true,
+      property: margin-right,
+      class: me,
+      values: (
+        60: 60%,
+        n45: -45%,
+        n60: -60%,
+        45: 45%,
+      ),
+    ),
+    "padding": (
+      responsive: true,
+      property: padding,
+      class: p,
+      values: (
+        20: 20px,
+        10: 10px,
+      ),
+    ),
+    "padding-x": (
+      responsive: true,
+      property: padding-right padding-left,
+      class: px,
+      values: (
+        30: 30px,
+      ),
+    ),
+    "padding-y": (
+      responsive: true,
+      property: padding-top padding-bottom,
+      class: py,
+      values: (
+        10: 10px,
+      ),
+    ),
+    "rounded": (
+      property: border-radius,
+      class: rounded,
+      values: (
+        30: 30px,
+        10: 10px,
+        20: 20px,
+        22: 22px,
+      ),
+    ),
+    "border": (
+      property: border,
+      values: (
+        custom-card-border: 1px solid #33ceff,
+        custom-login-input-border: 1px solid #5dc5c4,
+      ),
+    ),
+  )
+);

@@ -1,82 +1,53 @@
 import React from "react";
-import "./index.scss";
-
-import { Container, Row, Col } from "react-bootstrap";
-
-import downloadapp from "../../../assert/download.gif";
-import Addfamilymembers from "../../../assert/Addfamilymembers.gif";
-import StartConnecting from "../../../assert/StartConnecting.gif";
-import Createclub from "../../../assert/StartConnecting.gif";
-import Becomecontentcreator from "../../../assert/Becomecontentcreator.gif";
-import Editandpostvideos from "../../../assert/Becomecontentcreator.gif";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import howitswork from "../../../assert/howitswork.gif";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { UseGetScreenResolution } from "../GetScreenResolution";
-
+import { Instructions } from "./Instructions";
 const Appinstruction = () => {
   const [currentResolution] = UseGetScreenResolution();
 
-  const List = [
-    {
-      img: downloadapp,
-      Title: "1.Download",
-    },
-
-    {
-      img: Addfamilymembers,
-      Title: "2.Add family member",
-    },
-    {
-      img: StartConnecting,
-      Title: "3.Start Connecting",
-    },
-    {
-      img: Createclub,
-      Title: "4.Create club",
-    },
-    {
-      img: Becomecontentcreator,
-      Title: "5.Become content creator ",
-    },
-    {
-      img: Editandpostvideos,
-      Title: "6.Edit and post videos ",
-    },
-  ];
   return (
     <>
-      <Container
-        className=" overflow-hidden "
-        style={{ marginTop: "10%" }}
-        fluid
-      >
+      <Container className=" overflow-hidden mt-10" fluid>
         <Row>
           <Col className="d-flex align-items-center justify-content-center ">
             <Col lg={7} xl={5} className="d-none d-lg-block">
-              <img
+              <Image
                 src={howitswork}
                 alt="how its work"
                 loading="lazy"
                 width={"95%"}
                 height={670}
                 className="rounded-4 border border-dark"
-              ></img>
+              ></Image>
             </Col>
           </Col>
 
           <Col md={12} lg={6}>
-            <AnimationOnScroll
-              animateIn="animate__fadeInRight"
-              className="appinstruction-content"
-            >
-              <p className="text-start mt-4 d-none d-lg-block">How it Works</p>
+            <AnimationOnScroll animateIn="animate__fadeInRight">
+              <p className="text-start text-how-it-work fs-30 fw-semibold font-Inter mt-4 d-none d-lg-block">
+                How it Works
+              </p>
 
-              <p className="mt-lg-5 mt-md-0 text-lg-start text-md-center h1">
+              <p
+                className="mt-lg-5 mt-md-0 text-lg-start text-custom-gray-900 fw-bold font-Poppins  text-md-center h1 "
+                style={{
+                  fontSize:
+                    currentResolution <= 992
+                      ? "clamp(22px, 6vw, 45px)"
+                      : " clamp(30px, 3vw, 45px)",
+                  letterSpacing: "1px",
+                }}
+              >
                 Download the app, create your
                 <br /> family network, you're all set!
               </p>
 
-              <p className="appinstruction-desc text-lg-start text-md-center mt-4 mt-sm-4  mt-lg-3">
+              <p
+                className=" text-lg-start text-custom-gray-800 fw-normal font-Poppins text-md-center mt-4 mt-sm-4  mt-lg-3"
+                style={{ fontSize: "clamp(12px, 4vw, 25px)" }}
+              >
                 {" "}
                 You can download the app from both App store and play store and
                 start exploring your family members. Getherly provides features
@@ -86,7 +57,7 @@ const Appinstruction = () => {
                 editing options.
               </p>
               <Container fluid className="mt-5 mt-lg-0">
-                <Row className="app-working-steps d-flex">
+                <Row className=" d-flex">
                   <Col
                     md={5}
                     sm={5}
@@ -105,23 +76,20 @@ const Appinstruction = () => {
                     ></img>
                   </Col>
                   <Col
-                    className={`mobile-appinstruction d-flex flex-wrap  ${
+                    className={` d-flex flex-wrap  ${
                       currentResolution < 320 ? "w-100 " : ""
                     } ${
                       currentResolution <= 992
                         ? "align-items-center justify-content-center"
                         : ""
-                    }`}
+                    } ms-lg-n10`}
                     xs={7}
                     lg={12}
                     md={7}
                     sm={7}
                     xxs={12}
-                    style={{
-                      marginLeft: currentResolution >= 992 ? "-10%" : "0",
-                    }}
                   >
-                    {List.map((value, index) => {
+                    {Instructions.map((value, index) => {
                       return (
                         <Col
                           key={index}
@@ -138,7 +106,12 @@ const Appinstruction = () => {
                             alt={value.Title}
                           ></img>
 
-                          <p className="appinstruction-steps">{value.Title}</p>
+                          <p
+                            className=" text-black font-Inter fw-semibold"
+                            style={{ fontSize: "clamp(10px, 3vw, 22px)" }}
+                          >
+                            {value.Title}
+                          </p>
                         </Col>
                       );
                     })}

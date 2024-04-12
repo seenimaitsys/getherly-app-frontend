@@ -1,60 +1,26 @@
 import React from "react";
-import "./index.scss";
 import CapsuleMoments from "../../../assert/CapsuleMoments.svg";
 
 import demoimage1 from "../../../assert/demoimage1.png";
 import demoimage2 from "../../../assert/demoimage2.png";
-import { Container, Row, Col } from "react-bootstrap";
-import TextStyles from "../../../assert/TextStyles.gif";
-import Multipleeffectsandfilters from "../../../assert/Multipleeffectsandfilters.gif";
-import Addmusic from "../../../assert/Addmusic.gif";
-import GainFanbase from "../../../assert/GainFanbase.gif";
-import PictureinPicture from "../../../assert/PictureinPicture.gif";
-import Tagrelatives from "../../../assert/Tagrelatives.gif";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import { CapsuleMomentsList } from "./CapsuleMomentsList";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { UseGetScreenResolution } from "../GetScreenResolution";
 const Limelight = () => {
   const [currentResolution] = UseGetScreenResolution();
-  const List = [
-    {
-      img: TextStyles,
-      Title: "1. Text Styles",
-    },
 
-    {
-      img: Multipleeffectsandfilters,
-      Title: "2. Multiple effects and filters",
-    },
-    {
-      img: Addmusic,
-      Title: "3. Add music ",
-    },
-    {
-      img: GainFanbase,
-      Title: "4. Gain Fanbase",
-    },
-    {
-      img: PictureinPicture,
-      Title: "5. Picture in Picture ",
-    },
-    {
-      img: Tagrelatives,
-      Title: "6.Tag relatives ",
-    },
-  ];
   return (
     <>
-      <Container
-        style={{
-          marginTop: "10%",
-        }}
-        fluid
-      >
+      <Container className="mt-10" fluid>
         <Row>
-          <Col className="Limelight-continer mt-1 p-lg-5 p-md-3 p-sm-1 ">
+          <Col className=" mt-1 p-lg-5 p-md-3 p-sm-1 ">
             <AnimationOnScroll animateIn="animate__fadeInLeft">
               <Col xs={12} md={12}>
-                <h2 className=" text-lg-start text-md-center">
+                <h2
+                  className=" text-lg-start text-custom-gray-900 fw-bold font-Poppins fst-normal lh-0 text-md-center "
+                  style={{ fontSize: "clamp(10px, 7vw, 3rem)" }}
+                >
                   Experience Limelight
                 </h2>
               </Col>
@@ -63,7 +29,10 @@ const Limelight = () => {
                 className="d-flex justify-content-center justify-content-lg-start gap-2 mt-lg-5 mt-xs-5 mt-md-4"
                 xs={12}
               >
-                <h3 className=" text-lg-start text-center">
+                <h3
+                  className="text-black fw-semibold font-Inter fst-normal lh-0 text-lg-start text-center "
+                  style={{ fontSize: "clamp(7px, 5vw, 1.9rem)" }}
+                >
                   Time-Capsule Moments
                 </h3>
                 <img
@@ -74,14 +43,20 @@ const Limelight = () => {
               </Col>
 
               <Col sm={12}>
-                <p className="mt-3 mt-lg-0 text-lg-start text-md-center">
+                <p
+                  className="text-custom-black-1 fw-mormal font-Poppins fst-normal lh-30 mt-3 mt-lg-0 text-lg-start text-md-center"
+                  style={{ fontSize: "clamp(10px, 4vw, 20px)" }}
+                >
                   Preserve fleeting moments with a modern twist. Our app
                   transforms ordinary days into extraordinary memories,
                   capturing the essence of your family's everyday life in a
                   virtual time capsule of videos.
                 </p>
 
-                <p className="mt-2 mt-lg-0 text-lg-start text-md-center">
+                <p
+                  className="text-custom-gray-800 fw-mormal font-Poppins fst-normal lh-30 mt-2 mt-lg-0 text-lg-start text-md-center"
+                  style={{ fontSize: " clamp(12px, 4vw, 22px)" }}
+                >
                   Limelight allows you to create and post videos to your family
                   and to the public . You can start your content creating
                   journey with our unique video editing options . In limelight
@@ -94,6 +69,7 @@ const Limelight = () => {
               </Col>
               <Container fluid className="mt-5 mt-lg-0">
                 <Row>
+                  {/* mobile design */}
                   <Col
                     md={6}
                     sm={6}
@@ -102,34 +78,31 @@ const Limelight = () => {
                       currentResolution < 320 ? "w-100" : ""
                     }`}
                   >
-                    <img
+                    <Image
                       src={demoimage1}
                       alt="share reels"
                       loading="lazy"
                       width={"50%"}
                       height={"80%"}
-                    ></img>
-                    <img
+                    ></Image>
+                    <Image
                       src={demoimage2}
                       alt="make post"
                       width={"50%"}
                       height={"80%"}
-                      style={{ marginTop: "3rem", marginLeft: "0.5rem" }}
-                    ></img>
+                      className="mt-custom-2 ms-2"
+                    ></Image>
                   </Col>
                   <Col
                     className={` d-flex flex-wrap ${
                       currentResolution < 320 ? "w-100" : ""
-                    }`}
+                    } ms-lg-n8`}
                     xs={6}
                     lg={12}
                     md={6}
                     sm={6}
-                    style={{
-                      marginLeft: currentResolution >= 992 ? "-8%" : "0",
-                    }}
                   >
-                    {List.map((value, index) => {
+                    {CapsuleMomentsList.map((value, index) => {
                       return (
                         <Col
                           key={index}
@@ -139,14 +112,17 @@ const Limelight = () => {
                           md={6}
                           className="p-0 p-lg-3"
                         >
-                          <img
+                          <Image
                             src={value.img}
                             width={"50"}
                             height={"50"}
                             alt={value.Title}
-                          ></img>
+                          ></Image>
 
-                          <h5 className="appinstruction-steps">
+                          <h5
+                            className=" text-black font-Inter fw-semibold"
+                            style={{ fontSize: "clamp(10px, 3vw, 22px)" }}
+                          >
                             {value.Title}
                           </h5>
                         </Col>
@@ -160,22 +136,21 @@ const Limelight = () => {
 
           <Col
             sm={6}
-            className="limelignt-demo-img d-none d-lg-block d-flex align-items-start justify-content-center gap-4"
+            className=" d-none d-lg-block d-flex align-items-start justify-content-center gap-4"
           >
-            <img
+            <Image
               src={demoimage1}
               alt="share reels"
               loading="lazy"
               width={"35%"}
               className=" p-2"
-            ></img>
-            <img
+            ></Image>
+            <Image
               src={demoimage2}
               alt="make post"
-              className="p-2 ml-5"
+              className="p-2  mt-15 ms-custom-3"
               width={"35%"}
-              style={{ marginTop: "15rem", marginLeft: "3rem" }}
-            ></img>
+            ></Image>
           </Col>
         </Row>
       </Container>

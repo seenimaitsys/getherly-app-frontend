@@ -2,12 +2,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
 import "./App.css";
 import "../src/css/main.min.css";
+
 // import "../src/css/index.min.css";
 const HomePage = React.lazy(() => import("./layout/HomePage"));
 const AboutPage = React.lazy(() => import("./layout/AboutPage"));
 const Contacts = React.lazy(() => import("./pages/components/Contacts"));
 const LoginPage = React.lazy(() => import("./layout/LoginPage"));
 const HowDOIpage = React.lazy(() => import("./layout/How_Do_I_Page"));
+const Privacy = React.lazy(() => import("./layout/PrivacyPage"));
+const TermsPage = React.lazy(() => import("./layout/TermsPage"));
 const GojsViewSlider = React.lazy(() =>
   import("./pages/components/GojsViewSlider")
 );
@@ -60,6 +63,8 @@ function App() {
           <Route path="/contact" element={<Contacts />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/how_do_i" element={<HowDOIpage />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<TermsPage />} />
           <Route path="/familyTree" element={<GojsViewSlider />} />
         </Routes>
       </div>

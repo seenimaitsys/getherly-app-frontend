@@ -171,28 +171,34 @@ const Header = ({ page }) => {
               <Offcanvas.Body>
                 <Nav className="nave-body d-flex justify-content-end flex-grow-1 gap-5 gap-lg-3 gap-xl-5 align-items-center ">
                   <Nav.Link
-                    id="header-login"
                     href="/login"
-                    className="text-nowrap"
+                    className="navmanu fw-semibold text-login text-nowrap font-Poppins fs-20 fst-normal lh-0"
                   >
                     Log in
                   </Nav.Link>
-                  <Nav.Link className="navmanu text-nowrap" href="/">
+
+                  <Nav.Link
+                    className="navmanu fw-semibold text-black text-nowrap font-Poppins fs-20 fst-normal lh-0"
+                    href="/"
+                  >
                     Home
                   </Nav.Link>
                   <Nav.Link
-                    className="navmanu d-flex text-nowrap"
+                    className="navmanu  d-flex text-nowrap fw-semibold text-black text-nowrap font-Poppins fs-20 fst-normal lh-0"
                     href="/aboutus"
                   >
                     About us{" "}
                   </Nav.Link>
 
-                  <Nav.Link className="navmanu text-nowrap" href="/contact">
+                  <Nav.Link
+                    className="navmanu text-nowrap fw-semibold text-black text-nowrap font-Poppins fs-20 fst-normal lh-0"
+                    href="/contact"
+                  >
                     Contact us
                   </Nav.Link>
                   <Nav.Link href="/how_do_i">
-                    <Button className="header-howdoi">
-                      <h4 className="d-flex align-items-center justify-content-center mt-2 text-nowrap">
+                    <Button className="text-nowrap fw-semibold btn-howtoi text-black text-nowrap font-Poppins fs-20 fst-normal lh-0 p-20 h-40 rounded-30 d-flex align-items-center justify-content-center">
+                      <h4 className="d-flex align-items-center justify-content-center mt-2 fw-semibold text-black text-nowrap font-Poppins fs-20 fst-normal lh-0 gap-1">
                         How do i?
                         {page === "howdoi" ? (
                           <img

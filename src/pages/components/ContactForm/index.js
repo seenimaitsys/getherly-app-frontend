@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./index.scss";
 import { Container, Form, Button, Col, Spinner, Row } from "react-bootstrap";
 import { Dynamic_Form } from "./DynamicForm";
 const ContactForm = () => {
@@ -24,12 +23,19 @@ const ContactForm = () => {
   return (
     <>
       <Container
-        className="message-form-container  d-flex align-items-center justify-content-center mb-5"
+        className="  d-flex align-items-center justify-content-center mb-5"
         fluid
       >
-        <Row className="w-100">
-          <Col lg={6}>
-            <div className="contact-form-logo-container w-100 text-start mb-5">
+        <Col
+          className=" bg-contact-bg rounded-30 mt-10 p-4 p-lg-5"
+          xl={7}
+          xxl={8}
+        >
+          <Row className="d-flex  justify-content-center align-items-start">
+            <Col
+              lg={6}
+              className=" text-start d-flex flex-column  justify-content-center align-items-center justify-content-xl-start align-items-xl-start justify-content-lg-start align-items-lg-start"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22%"
@@ -82,56 +88,64 @@ const ContactForm = () => {
                 </defs>
               </svg>
 
-              <h3 className="d-flex flex-nowrap p-2">Drop us a Line</h3>
-              <p className="text-start p-2">
+              <h3 className="text-white fw-semibold d-flex flex-nowrap p-2">
+                Drop us a Line
+              </h3>
+              <p className="text-custom-gray-700 text-start fw-normal p-2 lh-custom-lh-1">
                 Reach out to us in Contact <br />
                 form and we will get back to <br />
                 you shortly.
               </p>
-            </div>
-          </Col>
-          <Col lg={6} className=" contact-form-container">
-            <h3 className="text-start text-white">Send Us Message</h3>
-            <Form noValidate validated={validated} onSubmit={handleSubmit}>
-              {Dynamic_Form.map((data, index) => {
-                return (
-                  <Form.Group as={Col} className="mt-3" key={index}>
-                    <Form.Control {...data} />
-                    <Form.Control.Feedback
-                      type="invalid"
-                      className="text-start"
+            </Col>
+            <Col lg={6} md={11}>
+              <h3 className="text-start text-white fw-bold font-Inter">
+                Send Us Message
+              </h3>
+              <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                {Dynamic_Form.map((data, index) => {
+                  return (
+                    <Form.Group
+                      as={Col}
+                      className="mt-4 message-form"
+                      key={index}
                     >
-                      {data.error}
-                    </Form.Control.Feedback>
-                  </Form.Group>
-                );
-              })}
+                      <Form.Control {...data} />
+                      <Form.Control.Feedback
+                        type="invalid"
+                        className="text-start"
+                      >
+                        {data.error}
+                      </Form.Control.Feedback>
+                    </Form.Group>
+                  );
+                })}
 
-              {loading ? (
-                <Button
-                  variant="primary"
-                  disabled
-                  className="message-submit d-flex justify-content-center align-items-center"
-                >
-                  <Spinner
-                    as="span"
-                    animation="border"
-                    size="sm"
-                    role="status"
-                    aria-hidden="true"
-                  />
-                </Button>
-              ) : (
-                <Button
-                  type="submit"
-                  className="message-submit d-flex justify-content-center align-items-center"
-                >
-                  Send message
-                </Button>
-              )}
-            </Form>
-          </Col>
-        </Row>
+                {loading ? (
+                  <Button
+                    variant="primary"
+                    disabled
+                    className="h-40 mt-4 text-white fw-medium bg-send-message-btn font-Poppins fs-18 rounded-10 d-flex justify-content-center align-items-center shadow"
+                  >
+                    <Spinner
+                      as="span"
+                      animation="border"
+                      size="sm"
+                      role="status"
+                      aria-hidden="true"
+                    />
+                  </Button>
+                ) : (
+                  <Button
+                    type="submit"
+                    className="h-40 mt-4 text-white fw-medium bg-message-form-submit font-Poppins fs-18 rounded-10 d-flex justify-content-center align-items-center shadow"
+                  >
+                    Send message
+                  </Button>
+                )}
+              </Form>
+            </Col>
+          </Row>
+        </Col>
       </Container>
     </>
   );

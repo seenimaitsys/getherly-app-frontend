@@ -1,65 +1,80 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
-import "./index.scss";
-import { Container, Row, Col } from "react-bootstrap";
+
+import { Container, Row, Col, Image } from "react-bootstrap";
 import getherly from "../../../assert/getherlyfooter.svg";
 import getherly2 from "../../../assert/getherlyFooder.png";
 const Fooder = () => {
-  const footer_Title = {
-    color: "#000",
-    fontFamily: "Poppins",
-    fontSize: "clamp(18px, 5vw, 22px)",
-    fontStyle: "normal",
-    fontWeight: "600",
-    lineHeight: "normal",
-  };
   return (
     <>
       <footer>
-        <Container className="mt-3 mb-5" fluid>
-          <Row>
+        <Container className="mt-5 mb-5" fluid>
+          <Row className="mt-5">
             <Col lg={3} md={6}>
               <Col className="d-flex justify-content-center align-items-center mt-5">
-                <img
+                <Image
                   src={getherly}
                   alt="getherly"
                   loading="lazy"
                   width="50px"
                   height="50px"
-                  className=""
-                ></img>
-                <img
+                  fluid
+                ></Image>
+                <Image
                   src={getherly2}
                   loading="lazy"
                   height="70px"
                   alt="logo"
-                ></img>
+                ></Image>
               </Col>
 
-              <div className="fooder-col">2022 reserved</div>
-
-              <div className="fooder-col">All rights reserved</div>
+              <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
+                2022 reserved
+              </div>
+              <a href="/#" target="_parent" className="text-decoration-none">
+                <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
+                  All rights reserved
+                </div>
+              </a>
             </Col>
             <Col
               lg={3}
               md={6}
               className="d-flex flex-column justify-content-center mt-5"
             >
-              <h1 style={{ ...footer_Title }}>Get in touch</h1>
+              <h1 className="text-black fs-normal fw-semibold lh-0 fs-22 font-Poppins ">
+                Get in touch
+              </h1>
 
-              <div className="fooder-col">Boston , USA</div>
-
-              <div className="fooder-col">support@twigscorp.com</div>
+              <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
+                Boston , USA
+              </div>
+              <a
+                href="mailto:support@twigscorp.com"
+                target="_parent"
+                className="text-decoration-none"
+              >
+                <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
+                  support@twigscorp.com
+                </div>
+              </a>
             </Col>
             <Col
               lg={3}
               md={6}
               className="d-flex flex-column justify-content-center mt-5"
             >
-              <h1 style={{ ...footer_Title }}>Learn more</h1>
+              <h1 className="text-black fst-normal fw-semibold lh-0 fs-22 font-Poppins">
+                Learn more
+              </h1>
 
-              <div className="fooder-col">Terms of use</div>
-              <div className="fooder-col">Privacy Policy</div>
+              <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
+                Terms of use
+              </div>
+              <a href="/#" target="_parent" className="text-decoration-none">
+                <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
+                  Privacy Policy
+                </div>
+              </a>
             </Col>
 
             <Col
@@ -67,17 +82,9 @@ const Fooder = () => {
               md={6}
               className="d-flex flex-column align-items-center justify-content-center mt-5"
             >
-              <img
-                src={getherly}
-                alt="login"
-                style={{
-                  width: "60px",
-                  height: "57.343px",
-                  flexShrink: "0",
-                }}
-              ></img>
+              <Image src={getherly} alt="login" width={"60px"}></Image>
 
-              <div className="fooder-login">
+              <div className="fooder-login text-login font-Poppins fw-semibold fs-20 fst-normal">
                 <a
                   href="/login"
                   target="_parent"

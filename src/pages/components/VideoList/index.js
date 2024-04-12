@@ -47,7 +47,7 @@ const VideoList = () => {
               loading="lazy"
             ></img>
           </Col>
-          <Col lg={6} md={12}>
+          <Col lg={6} md={12} className="mb-5 mb-xl-3">
             <div className="videolist-continer w-100">
               {video_list.map((list, index) => {
                 return (

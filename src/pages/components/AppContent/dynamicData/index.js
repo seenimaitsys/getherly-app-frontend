@@ -96,7 +96,7 @@ export const AppButtonProps = [
 ];
 export const AppContent_ImageProps = [
   {
-    src: require("../../../assert/appContentRobo.png"),
+    src: require("../../../../assert/appContentRobo.png"),
     loading: "lazy",
     alt: "robo",
     width: "50%",
@@ -106,7 +106,7 @@ export const AppContent_ImageProps = [
     style: { marginLeft: "-2.5rem", marginTop: "-90%" },
   },
   {
-    src: require("../../../assert/getherlyMobileImage1.png"),
+    src: require("../../../../assert/getherlyMobileSignup.png"),
     alt: "mobile",
     loading: "lazy",
     className: "mt-5",

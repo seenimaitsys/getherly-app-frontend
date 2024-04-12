@@ -1,34 +1,75 @@
 import React, { useState } from "react";
-import "./index.scss";
-
-import { Container, Button, Form, Row, Col } from "react-bootstrap";
-import image16 from "../../../assert/image16.png";
-import image19 from "../../../assert/image19.png";
-import image18 from "../../../assert/image18.png";
-import image17 from "../../../assert/image17.png";
+import { Container, Button, Form, Row, Col, Image } from "react-bootstrap";
 import "react-international-phone/style.css";
 import { MuiPhone } from "../MobileNumberInput";
-// import { usePhoneValidation } from "react-international-phone";
-
+import { isValidPhoneNumber } from "react-phone-number-input";
+import { DynamicData_loginForm } from "./DynamicData_loginForm";
 const LoginForm = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [muiPhone, setMuiPhone] = useState("+91");
+  const [OTP, setOtp] = useState(false);
+  const [invaliedOTP, setinvaliedOTP] = useState(false);
+  const [invaliedMobile, setinvaliedMobile] = useState(false);
   // const muiValidation = usePhoneValidation(muiPhone);
+  console.log(isValidPhoneNumber(muiPhone));
+
+  const [validated, setValidated] = useState(false);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const form = event.currentTarget;
+    const getdata = new FormData(event.target);
+
+    if (form.checkValidity() === true) {
+      // setLoading(true);
+      //send data code
+      const digits = "0123456789";
+      let userOtp = "";
+      for (let i = 0; i < 6; i++) {
+        setOtp((userOtp += digits[Math.floor(Math.random() * digits.length)]));
+      }
+      // console.log(OTP);
+      // console.log(getdata.get("otp") === 123);
+
+      if (
+        !isValidPhoneNumber(getdata.get("phone")) &&
+        !getdata.get("otp") === 123
+      ) {
+        setinvaliedMobile(true);
+        setinvaliedOTP(true);
+      } else if (
+        !isValidPhoneNumber(getdata.get("phone")) ||
+        getdata.get("phone").length < 5
+      ) {
+        setinvaliedMobile(true);
+      } else if (getdata.get("otp") === 123 || OTP) {
+        setinvaliedOTP(true);
+      } else {
+        setinvaliedOTP(false);
+        setinvaliedMobile(false);
+      }
+    } else {
+      setinvaliedOTP(true);
+      setinvaliedMobile(true);
+    }
+    setValidated(true);
+  };
 
   return (
     <>
       <Container
-        className="login-continer-main d-flex align-items-center justify-content-center position-absolute w-100 h-100"
+        className="d-flex align-items-center justify-content-center position-absolute w-100 h-100"
         fluid
       >
-        <img src={image16} alt="image1" width={"20%"} loading="lazy"></img>
-        <img src={image19} alt="" loading="lazy" width={"20%"}></img>
+        <Image {...DynamicData_loginForm[0]}></Image>
+        <Image {...DynamicData_loginForm[1]}></Image>
         <Container
           fluid
-          className="d-flex align-items-center justify-content-center mt-5"
+          className="d-flex align-items-center justify-content-center mt-lg-5 mb-5 mb-lg-2"
         >
           <Col
-            className="login-form-continer mt-5"
+            className="login-form-continer mt-lg-5 rounded-30 border-custom-card-border bg-login-form-bg"
             // md={4}
             // sm={2}
             xxl={4}
@@ -37,7 +78,7 @@ const LoginForm = () => {
             md={8}
             sm={10}
           >
-            <Row className="p-2 p-lg-5 p-sm-3">
+            <Row className="mt-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="60"
@@ -87,86 +128,112 @@ const LoginForm = () => {
                   </linearGradient>
                 </defs>
               </svg>
-              <h2>Web login</h2>
-              <h6>
+              <h2 className="font-Poppins text-white fw-semibold fs-30 p-10">
+                Web login
+              </h2>
+              <h6 className="text-custom-gray-700 fw-normal fs-20">
                 Enter your details
                 <br /> to get signed in
               </h6>
             </Row>
             <Form
-              className="login-form gap-5 p-4 p-lg-5 p-md-5 mb-2"
-              action="/familyTree"
-              method={"get"}
+              className="login-form gap-5 p-4 p-lg-5 p-md-5 "
+              // action="/familyTree"
+              onSubmit={handleSubmit}
+              validated={validated}
+              noValidate
+              // method={"get"}
             >
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label className="login-lable1">
+              <Form.Group>
+                <Form.Label
+                  htmlFor="phone"
+                  className="d-flex align-items-start justify-content-start text-white fw-normal fs-18 font-Poppins"
+                >
                   Enter phone number*
                 </Form.Label>
+                <Form.Control
+                  {...DynamicData_loginForm[4].formData[0]}
+                  value={muiPhone}
+                  isInvalid={invaliedMobile}
+                />
+
                 <MuiPhone
                   value={muiPhone}
                   onChange={setMuiPhone}
                   required
                   name={"phoneNo"}
                   type={"tel"}
-
-                  // error={!muiValidation.isValid}
-                  // helperText={
-                  //   muiValidation.isValid
-                  //     ? undefined
-                  //     : "Phone number is not valid"
-                  // }
                 />
-                <Form.Label className="login-lable2">Get OTP</Form.Label>
+                <Form.Control.Feedback type="invalid" className="text-start">
+                  {invaliedMobile ? "invalied phone No" : "required field"}
+                </Form.Control.Feedback>
+                <Form.Label
+                  className="login-lable2 d-flex align-items-center justify-content-end font-Poppins text-white fw-normal fs-18 p-1 text-decoration-underline cursor-pointer"
+                  htmlFor={"otp"}
+                >
+                  Get OTP
+                </Form.Label>
               </Form.Group>
 
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label className="login-lable1">Enter OTP</Form.Label>
+              <Form.Group>
+                <Form.Label
+                  className="d-flex align-items-start justify-content-start text-white fw-normal fs-18 font-Poppins"
+                  htmlFor={"otp"}
+                >
+                  Enter OTP
+                </Form.Label>
 
                 <Form.Control
-                  type={"number"}
-                  min={0}
-                  maxLength={6}
-                  minLength={6}
-                  className="login-input"
-                  name={"otp"}
-                  placeholder="Enter OTP"
-                  required
+                  {...DynamicData_loginForm[4].formData[1]}
+                  isInvalid={invaliedOTP}
                 />
+                <Form.Control.Feedback type="invalid" className="text-start">
+                  {invaliedOTP ? "invalied OTP!" : "required field"}
+                </Form.Control.Feedback>
               </Form.Group>
-              <div className="policy-checkbox d-flex text-start align-items-center">
-                <Form.Check required type="checkbox" name="check" />
-                <div>
+              <div className="policy-checkbox d-flex text-start align-items-center gap-3 ms-3 mt-4">
+                <Form.Check required htmlFor="policy" name="policy" />
+
+                {/* <Form.Check required type="checkbox" name="check"></Form.Check> */}
+                <div
+                  className="text-white fw-medium font-Poppins"
+                  style={{ fontSize: "clamp(10px, 2.9vw, 15px)" }}
+                >
                   By continuing you agree to our
-                  <span style={{ color: " #5DC5C4" }}>
-                    {" "}
-                    Terms of Use
+                  <span>
+                    <a
+                      href="/terms"
+                      target="_parent"
+                      className="text-terms-policy text-decoration-none ms-1"
+                    >
+                      Terms of Use
+                    </a>
                     <br />
                   </span>
                   and confirming that you have read our{" "}
-                  <span style={{ color: " #5DC5C4" }}>Privacy Policy</span>
+                  <span>
+                    <a
+                      href="/privacy"
+                      target="_parent"
+                      className="text-terms-policy text-decoration-none ms-1"
+                    >
+                      Privacy Policy
+                    </a>
+                  </span>
                 </div>
               </div>
-              <Button type="submit" className="login-submit">
+              <Button
+                type="submit"
+                className="w-90 h-44 rounded-30 mt-4 text-center fw-medium text-white fs-18 font-Poppins bg-login-submit-bg"
+              >
                 Submit
               </Button>
             </Form>
           </Col>
         </Container>
 
-        <img
-          src={image18}
-          loading="lazy"
-          width={"7%"}
-          alt=""
-          className="img-child3"
-        ></img>
-        <img
-          src={image17}
-          loading="lazy"
-          alt=""
-          width={"16%"}
-          className="img-child4"
-        ></img>
+        <Image {...DynamicData_loginForm[2]}></Image>
+        <Image {...DynamicData_loginForm[3]}></Image>
       </Container>
     </>
   );

@@ -1,53 +1,34 @@
 import React from "react";
-import "./index.scss";
-import { Container, Row, Col } from "react-bootstrap";
-import familyImg from "../../../assert/familyimg.png";
-
-import check_circle from "../../../assert/check_circle.svg";
-// import Header from "../../../pages/components/Header";
-import Familyimg from "../../../assert/Rectangle1.png";
-import yourFriends from "../../../assert/Rectangle2.png";
+import { Container, Row, Col, Image } from "react-bootstrap";
 import { UseGetScreenResolution } from "../GetScreenResolution";
+import { AboutDesignData, Dynamic_image_about_page } from "./AboutDesignData";
 const AboutAs = () => {
   const [currentResolution] = UseGetScreenResolution();
-  const listItems = [
-    {
-      content: "You can Text and call your Family Members with ease.",
-    },
-    {
-      content:
-        "Create a family network which allows you to easily stay in touch with them",
-    },
-    {
-      content:
-        "Post Photos and Videos of beautiful family moments and make the most out of the memories.",
-    },
-  ];
+
   return (
     <>
-      <div className="about-page-continer">
-        <div className="family-img-continer ">
-          <h2 className="text-center w-100">Hello ! This is Getherly</h2>
+      <div>
+        <div>
+          <h1 className="text-center w-100 fw-800 text-custom-gray-600 font-Poppins display-4">
+            Hello ! This is Getherly
+          </h1>
 
           <div className="d-flex justify-content-center align-items-center w-100 position-relative mt-3">
             {" "}
             <p
-              className="position-absolute "
-              style={{
-                marginTop: currentResolution <= 992 ? "3rem" : "5rem",
-              }}
+              className="position-absolute text-custom-gray-500 font-Inter fw-normal h3 mt-xl-custom-5 mt-custom-3"
+              // style={{
+              //   marginTop: currentResolution <= 992 ? "3rem" : "5rem",
+              // }}
             >
               We Connect Families.
             </p>
           </div>
 
-          <img
-            src={familyImg}
-            alt="getherly-famliy"
+          <Image
+            {...Dynamic_image_about_page[0]}
             style={{ height: currentResolution <= 992 ? "12rem" : "" }}
-            width={"100%"}
-            loading="lazy"
-          ></img>
+          ></Image>
         </div>
 
         <div className="about-main-continer w-100 mt-3 mt-lg-5  d-flex align-items-start">
@@ -534,7 +515,10 @@ const AboutAs = () => {
             </defs>
           </svg>
           <Container fluid className="d-flex mt-3">
-            <div className="about-info-content mt-0 mt-lg-5  d-flex flex-column align-items-start justify-content-start text-start">
+            <Col
+              xl={7}
+              className="mt-0 mt-lg-5  d-flex flex-column align-items-start justify-content-start text-start"
+            >
               <Row>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -570,10 +554,12 @@ const AboutAs = () => {
                 </svg>
               </Row>
               <Row>
-                <h2 className="mt-3">Who we are?</h2>
+                <h2 className="mt-3 text-custom-gray-400 fw-bold font-Inter h1">
+                  Who we are?
+                </h2>
               </Row>
               <Row>
-                <p className="mt-lg-4 mt-2">
+                <p className="text-custom-gray-300 font-Inter fw-normal mt-lg-4 mt-2 h3">
                   Getherly is a family app which helps you stay connected with
                   your family and create family trees and make your family
                   network even bigger , better and stronger. You canexplore
@@ -581,40 +567,25 @@ const AboutAs = () => {
                 </p>
               </Row>
               <Row className="p-3">
-                {listItems.map((items, index) => {
+                {AboutDesignData.map((items, index) => {
                   return (
                     <Container className="mt-lg-2 mt-0" key={index}>
                       <div className="d-flex align-items-center gap-1">
-                        <img
-                          alt="check"
-                          src={check_circle}
-                          loading="lazy"
-                          width={"20px"}
-                          height={"20px"}
-                        ></img>
+                        <Image {...Dynamic_image_about_page[1]}></Image>
 
-                        <div className="listitems">{items.content}</div>
+                        <div className=" text-custom-gray-600 fw-medium font-Inter p-10 h4 w-93">
+                          {items.content}
+                        </div>
                       </div>
                     </Container>
                   );
                 })}
               </Row>
-            </div>
+            </Col>
 
-            <Col className="about-design-image d-flex align-items-end flex-column justify-content-center d-none d-lg-block d-md-none">
-              <img
-                src={Familyimg}
-                alt="family"
-                loading="lazy"
-                width={"70%"}
-              ></img>
-              <img
-                src={yourFriends}
-                loading="lazy"
-                className="Friendsimg"
-                alt="yourFriends"
-                width={"50%"}
-              ></img>
+            <Col xl={5} className=" d-none d-xl-block d-lg-none mt-5">
+              <Image {...Dynamic_image_about_page[2]}></Image>
+              <Image {...Dynamic_image_about_page[3]}></Image>
             </Col>
           </Container>
         </div>

@@ -2,13 +2,15 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./index.scss";
 import Rating from "@mui/material/Rating";
 
-import { Col, Card, Container, Row } from "react-bootstrap";
+import { Col, Card, Container, Row, Image } from "react-bootstrap";
 
 import { UserReviewsData } from "./UserReviewsData";
+import { UseGetScreenResolution } from "../GetScreenResolution";
 const UserReviewsCard = () => {
+  const [currentResolution] = UseGetScreenResolution();
+
   const SlickArrowLeft = ({ currentSlide, style, slideCount, ...props }) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +153,7 @@ const UserReviewsCard = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 488,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -167,15 +169,28 @@ const UserReviewsCard = () => {
   return (
     <>
       <Container
-        className="user-reviews-container d-flex flex-column align-items-center mt-5 justify-content-center"
+        className="user-reviews-container d-flex flex-column align-items-center mt-10 justify-content-center"
         fluid
       >
-        <h2>See what the world tells about us</h2>
+        <h2
+          className="font-Inter fw-bold"
+          style={{ fontSize: "clamp(20px, 5vw, 40px)" }}
+        >
+          See what the world tells about us
+        </h2>
 
-        <Slider {...settings} className=" review-slider mt-5">
+        <Slider
+          {...settings}
+          className={` review-slider  ${
+            currentResolution <= 768 ? "w-100" : "w-90"
+          } mt-5`}
+        >
           {UserReviewsData.map((list, index) => {
             return (
-              <Card className="user-reviews-card" key={index}>
+              <Card
+                className="user-reviews-card w-80 rounded-30 border-custom-card-border bg-custom-card-bg overflow-hidden "
+                key={index}
+              >
                 <Card.Body className="d-flex flex-column align-items-start p-4">
                   <Card.Title>
                     <Rating
@@ -187,21 +202,23 @@ const UserReviewsCard = () => {
                     />
                   </Card.Title>
                   <div>
-                    <p>{list.cord_condent}</p>
+                    <p className="fw-normal h-9 text-custom-gray-800 font-Inter lh-custom-lh-1 fs-25 fst-normal text-start m-0 overflow-hidden display-webkit-box">
+                      {list.cord_condent}
+                    </p>
                   </div>
 
                   <Container className="d-flex align-items-center mt-3">
                     <Row>
                       <Col className="review-user d-flex align-items-center  gap-2 ">
-                        <img
+                        <Image
                           avatar="true"
                           loading="lazy"
                           width="25%"
-                          height="100%"
+                          height="90%"
                           src={list.presion_img}
                           alt={list.presion_name}
                         />
-                        <h6 className="text-truncate mt-3">
+                        <h6 className="text-truncate mt-3 fw-semibold fs-20 text-start font-Inter w-60">
                           {list.presion_name}
                         </h6>
                       </Col>

@@ -6,7 +6,8 @@ export const Dynamic_Form = [
     maxLength: 20,
     name: "name",
     autoComplete: "off",
-    className: "message-input d-flex w-100 align-items-start border-0 rounded",
+    className:
+      "message-input message-form-placeholder-style h-40 bg-contact-input-bg text-white fw-medium font-Poppins fs-18  d-flex w-100 align-items-start border-0 rounded p-3 shadow",
     required: true,
     error: "required field.",
   },
@@ -14,7 +15,8 @@ export const Dynamic_Form = [
   {
     type: "email",
     placeholder: "Email Address",
-    className: "message-input d-flex w-100 align-items-start border-0 rounded",
+    className:
+      "message-input h-40 bg-contact-input-bg text-white fw-medium font-Poppins fs-18  d-flex w-100 align-items-start border-0 rounded p-3 shadow",
     minLength: 4,
     maxLength: 40,
     name: "email",
@@ -30,7 +32,8 @@ export const Dynamic_Form = [
     maxLength: 400,
     name: "subject",
     autoComplete: "off",
-    className: "message-input d-flex w-100 align-items-start border-0 rounded",
+    className:
+      "message-input h-40 bg-contact-input-bg text-white fw-medium font-Poppins fs-18  d-flex w-100 align-items-start border-0 rounded p-3 shadow",
     required: true,
     error: "required field.",
   },
@@ -42,7 +45,7 @@ export const Dynamic_Form = [
     autoComplete: "off",
     required: true,
     className:
-      "message-textarea d-flex w-100 align-items-start border-0 rounded",
+      "message-input bg-contact-input-bg text-white fw-medium font-Poppins fs-18 d-flex w-100 align-items-start border-0 rounded p-3 shadow",
     error: "Enter minimun 4 character.",
   },
 ];
