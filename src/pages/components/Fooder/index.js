@@ -66,11 +66,21 @@ const Fooder = () => {
               <h1 className="text-black fst-normal fw-semibold lh-0 fs-22 font-Poppins">
                 Learn more
               </h1>
+              <a
+                href="/terms"
+                target="_parent"
+                className="text-decoration-none"
+              >
+                <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
+                  Terms of use
+                </div>
+              </a>
 
-              <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
-                Terms of use
-              </div>
-              <a href="/#" target="_parent" className="text-decoration-none">
+              <a
+                href="/privacy"
+                target="_parent"
+                className="text-decoration-none"
+              >
                 <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
                   Privacy Policy
                 </div>
