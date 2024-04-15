@@ -58,8 +58,8 @@ const VideoList = () => {
             {/* <div className="videolist-continer w-100"> */}
             {video_list.map((list, index) => {
               return (
-                <Row className="d-flex flex-column justify-content-center align-items-center">
-                  <Col key={index} lg={4} xs={10} sm={5}>
+                <Row>
+                  <Col key={index} lg={4} sm={5}>
                     <video
                       width={`100%`}
                       height="120px"
