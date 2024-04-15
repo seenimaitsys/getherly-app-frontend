@@ -12,7 +12,7 @@ export const UserReviewsData = [
     cord_condent:
       "Donec ullamcorper nulla non metus auctor fringilla. Crasmattis consectetu purus sit amet fermentum. Integer posu ere erat a ante venenatis dapibus posuere velit",
     presion_img: demo,
-    presion_name: "persion2",
+    presion_name: "SEENIVASAN T",
   },
   {
     rading_value: 3,
