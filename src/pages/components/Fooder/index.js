@@ -30,11 +30,10 @@ const Fooder = () => {
               <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
                 2022 reserved
               </div>
-              <a href="/#" target="_parent" className="text-decoration-none">
-                <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
-                  All rights reserved
-                </div>
-              </a>
+
+              <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
+                All rights reserved
+              </div>
             </Col>
             <Col
               lg={3}
