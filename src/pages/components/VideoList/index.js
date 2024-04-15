@@ -3,9 +3,9 @@ import "./index.scss";
 import video from "../../../assert/video1.mp4";
 import robot from "../../../assert/robot2.png";
 import { Row, Container, Col } from "react-bootstrap";
-import { UseGetScreenResolution } from "../GetScreenResolution";
+// import { UseGetScreenResolution } from "../GetScreenResolution";
 const VideoList = () => {
-  const [currentResolution] = UseGetScreenResolution();
+  // const [currentResolution] = UseGetScreenResolution();
   const video_list = [
     {
       video: video,
@@ -58,10 +58,10 @@ const VideoList = () => {
             {/* <div className="videolist-continer w-100"> */}
             {video_list.map((list, index) => {
               return (
-                <Row>
-                  <Col key={index} lg={4} sm={5}>
+                <Row key={index}>
+                  <Col lg={4} sm={5}>
                     <video
-                      width={`100%`}
+                      // width={`${currentResolution <= 775 ? "80%" : "100%"}`}
                       height="120px"
                       controls
                       title={list.video_title}

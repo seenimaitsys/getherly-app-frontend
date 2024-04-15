@@ -10,7 +10,7 @@ const AboutAs = () => {
       <div>
         <div>
           <h1 className="text-center w-100 fw-800 text-custom-gray-600 font-Poppins display-4">
-            {/* Hello ! This is Getherly */}
+            Hello ! This is Getherly
           </h1>
 
           <div className="d-flex justify-content-center align-items-center w-100 position-relative mt-3">
