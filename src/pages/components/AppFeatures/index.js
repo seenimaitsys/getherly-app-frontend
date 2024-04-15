@@ -71,7 +71,7 @@ const AppFeatures = () => {
               style={{
                 fontSize:
                   currentResolution <= 992
-                    ? "clamp(10px, 5.2vw, 3.6rem)"
+                    ? "clamp(8px, 5vw, 3.6rem)"
                     : " clamp(20px, 3.5vw, 3rem)",
               }}
             >

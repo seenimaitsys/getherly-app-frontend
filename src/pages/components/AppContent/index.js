@@ -54,7 +54,7 @@ const AppContent = () => {
                   style={{
                     fontSize:
                       currentResolution <= 992
-                        ? "clamp(14px, 4.6vw, 3.6rem)"
+                        ? "clamp(10px, 4.6vw, 3.6rem)"
                         : " clamp(10px, 2vw, 1.8rem)",
                   }}
                 >

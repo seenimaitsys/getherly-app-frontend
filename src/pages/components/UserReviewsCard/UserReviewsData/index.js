@@ -1,4 +1,4 @@
-import demo from "../../../assert/demo.png";
+import demo from "../../../../assert/demo.png";
 export const UserReviewsData = [
   {
     rading_value: 5,

@@ -214,11 +214,11 @@ const UserReviewsCard = () => {
                           avatar="true"
                           loading="lazy"
                           width="25%"
-                          height="90%"
+                          height="85%"
                           src={list.presion_img}
                           alt={list.presion_name}
                         />
-                        <h6 className="text-truncate mt-3 fw-semibold fs-20 text-start font-Inter w-60">
+                        <h6 className="text-truncate mt-3 fw-semibold fs-20 text-start font-Inter w-12r">
                           {list.presion_name}
                         </h6>
                       </Col>

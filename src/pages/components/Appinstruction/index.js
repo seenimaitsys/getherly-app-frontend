@@ -35,7 +35,7 @@ const Appinstruction = () => {
                 style={{
                   fontSize:
                     currentResolution <= 992
-                      ? "clamp(22px, 6vw, 45px)"
+                      ? "clamp(10px, 6vw, 45px)"
                       : " clamp(30px, 3vw, 45px)",
                   letterSpacing: "1px",
                 }}
