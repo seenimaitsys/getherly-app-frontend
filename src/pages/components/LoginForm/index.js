@@ -11,7 +11,7 @@ const LoginForm = () => {
   const [invaliedOTP, setinvaliedOTP] = useState(false);
   const [invaliedMobile, setinvaliedMobile] = useState(false);
   // const muiValidation = usePhoneValidation(muiPhone);
-  console.log(isValidPhoneNumber(muiPhone));
+  // console.log(isValidPhoneNumber(muiPhone));
 
   const [validated, setValidated] = useState(false);
   const handleSubmit = (event) => {
@@ -59,7 +59,7 @@ const LoginForm = () => {
   return (
     <>
       <Container
-        className="d-flex align-items-center justify-content-center position-absolute w-100 h-100"
+        className="d-flex align-items-center justify-content-center  w-100 h-100"
         fluid
       >
         <Image {...DynamicData_loginForm[0]}></Image>

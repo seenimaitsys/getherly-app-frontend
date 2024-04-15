@@ -14,8 +14,8 @@ const AddressMap = () => {
         </div>
 
         <div
-          className={`map-continer ${
-            currentResolution <= 767 ? "d-flex flex-column w-90 mt-n30" : "w-75"
+          className={` ${
+            currentResolution <= 768 ? "d-flex flex-column w-90 mt-n30" : "w-75"
           }   rounded-30 background-styles d-flex mt-n6 bg-address-bg overflow-hidden  `}
         >
           <iframe
@@ -25,7 +25,7 @@ const AddressMap = () => {
             }
             allowFullScreen
             className={`  h-26  ${
-              currentResolution <= 767
+              currentResolution <= 768
                 ? "w-100 iframe-radius-mobile"
                 : "w-50 iframe-radius-desktop"
             }`}

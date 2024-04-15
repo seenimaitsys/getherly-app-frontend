@@ -30,6 +30,7 @@ const ContactForm = () => {
           className=" bg-contact-bg rounded-30 mt-10 p-4 p-lg-5"
           xl={7}
           xxl={8}
+          sm={10}
         >
           <Row className="d-flex  justify-content-center align-items-start">
             <Col
