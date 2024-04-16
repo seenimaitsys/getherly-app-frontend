@@ -92,6 +92,7 @@ $utilities: map-merge(
         "contact-bg": rgba(0, 0, 0, 0.83),
         "contact-input-bg": rgba(255, 255, 255, 0.3),
         "videolist-bg": #5c8886,
+        "add-persion-input-bg": #d9d9d9,
       ),
     ),
     "gradient": (
@@ -99,6 +100,7 @@ $utilities: map-merge(
       class: bg,
       values: (
         bg-image1: url("./../../src/assert/image22.png"),
+        select-custom-icon: url("../../src/assert/VectorNo_border_Dowm.svg"),
         login-form-bg: linear-gradient(180deg, #00463e 0.18%, #595959 150.98%),
         login-submit-bg: linear-gradient(90deg, #78c1c2 0%, #2a4e8c 100%),
         message-form-submit:

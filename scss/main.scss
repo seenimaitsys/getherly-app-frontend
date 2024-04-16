@@ -5,15 +5,6 @@
 
 @import "./utilities/bootstrap-api-utilities";
 
-//Custom colors
-$custom-colors: (
-  "appstore": #54a8c7,
-  "playstore": #45c4a0,
-);
-
-$theme-colors: map-merge($theme-colors, $custom-colors); //add to boostrap
-//////////////////////
-///custome-fonts///
 .font-Poppins {
   font-family: Poppins;
 }
@@ -66,6 +57,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors); //add to boostrap
   border-top-right-radius: 30px;
   border-bottom-left-radius: 0px;
 }
+
 .cursor-pointer {
   cursor: pointer;
 }
