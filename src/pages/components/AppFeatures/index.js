@@ -99,7 +99,7 @@ const AppFeatures = () => {
                         ></Image>
                         <h4
                           className="h2 text-black fw-semibold font-Poppins fst-normal lh-0 mt-2"
-                          style={{ fontSize: "clamp(14px, 5vw, 30px)" }}
+                          style={{ fontSize: "clamp(14px, 5vw, 28px)" }}
                         >
                           {value.Title}
                         </h4>
@@ -110,7 +110,7 @@ const AppFeatures = () => {
                         sm={12}
                         lg={10}
                         style={{
-                          fontSize: "clamp(10px, 4vw, 25px)",
+                          fontSize: "clamp(10px, 4vw, 23px)",
                         }}
                       >
                         <p>{value.Desc}</p>

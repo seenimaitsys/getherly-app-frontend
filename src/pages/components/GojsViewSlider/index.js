@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-redundant-roles */
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -6,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import demoImg from "../../../assert/demo.png";
 import "./index.scss";
 import image21 from "../../../assert/image21.png";
-import { Container, Button, Form, Col, Row } from "react-bootstrap";
+import { Container, Button, Form, Col, Row, Image } from "react-bootstrap";
 import { Modal } from "@mui/material";
 import OrgChart from "../Gojs/Orgchart/index.js";
 import Genogram from "../Gojs/GenogramLayout/index.js";
@@ -268,7 +267,7 @@ const GojsViewSlider = () => {
     //   </div>
     // ),
   };
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+
   const [validated, setValidated] = useState(false);
 
   const handleSubmit = (event) => {
@@ -328,20 +327,23 @@ const GojsViewSlider = () => {
           Hello ! Senthil Raj , you can access different views in web
         </h2>
 
-        <Slider {...settings} className="image-slider">
+        <Slider {...settings} className="image-slider w-90">
           <OrgChart Show_AddPersion_Model={Show_AddPersion_Model} />
           <IncrementalTree Show_AddPersion_Model={Show_AddPersion_Model} />
           <Genogram />
         </Slider>
 
-        <div className="image-slider-bottam-design d-flex align-items-center justify-content-end w-100 z-1">
-          <div className="rounded-circle d-flex align-items-center justify-content-center border border-info ">
-            <p className="p-5 text-white ">
+        <div className="image-slider-bottam-design  mt-n7 d-flex align-items-center justify-content-end w-100 z-1">
+          <div className="rounded-circle mt-6 h-8 bg-rounded-background d-flex align-items-center justify-content-center border border-info ">
+            <p
+              className="p-5 text-white font-Poppins fw-semibold"
+              style={{ fontSize: "clamp(12px, 3.5vw, 20px)" }}
+            >
               You can add your family
               <br /> members in editor view
             </p>
           </div>
-          <img src={image21} alt="robo" loading="lazy"></img>
+          <Image src={image21} alt="robo" loading="lazy"></Image>
         </div>
       </Container>
       <Modal
@@ -357,11 +359,17 @@ const GojsViewSlider = () => {
               onSubmit={handleSubmit}
               className="d-flex flex-column "
             >
-              <Container className="add-persion" fluid>
+              <Container
+                className="add-persion w-100 gap-4 p-15 rounded-10 bg-add-persion-module d-flex flex-column justify-content-center"
+                fluid
+              >
                 <Row className="d-flex  ">
                   <Col lg={5} className="d-flex ">
-                    <p> Name</p>
-                    <p className="w-100 text-end"> :</p>
+                    <p className="font-Poppins fw-semibold fs-20"> Name</p>
+                    <p className="w-100 text-end font-Poppins fw-semibold fs-20">
+                      {" "}
+                      :
+                    </p>
                   </Col>
                   <Col>
                     <Form.Group as={Col}>
@@ -389,7 +397,10 @@ const GojsViewSlider = () => {
                     className="d-flex align-items-center justify-content-center"
                     lg={5}
                   >
-                    <p> Relationship</p>
+                    <p className="font-Poppins fw-semibold fs-20">
+                      {" "}
+                      Relationship
+                    </p>
                     <p className="w-100 text-end"> :</p>
                   </Col>
                   <Col className="d-flex">
@@ -441,7 +452,9 @@ const GojsViewSlider = () => {
                     lg={5}
                     className="d-flex align-items-center justify-content-center"
                   >
-                    <p className="text-nowrap">Ph no</p>
+                    <p className="text-nowrap font-Poppins fw-semibold fs-20">
+                      Ph no
+                    </p>
                     <p className="w-100 text-end"> :</p>
                   </Col>
                   <Col>
