@@ -28,6 +28,7 @@ $utilities: map-merge(
 
         366: 366px,
         26: 26rem,
+        700: 700px,
       ),
     ),
     "font-size": (
@@ -90,6 +91,7 @@ $utilities: map-merge(
         "custom-card-bg": #e5e5e5,
         "contact-bg": rgba(0, 0, 0, 0.83),
         "contact-input-bg": rgba(255, 255, 255, 0.3),
+        "videolist-bg": #5c8886,
       ),
     ),
     "gradient": (
@@ -171,6 +173,7 @@ $utilities: map-merge(
       values: (
         20: 20px,
         10: 10px,
+        30: 30px,
       ),
     ),
     "padding-x": (
@@ -199,11 +202,19 @@ $utilities: map-merge(
         22: 22px,
       ),
     ),
+    "rounded-start": (
+      property: border-bottom-left-radius border-top-left-radius,
+      class: rounded-start,
+      values: (
+        20: 20px,
+      ),
+    ),
     "border": (
       property: border,
       values: (
         custom-card-border: 1px solid #33ceff,
         custom-login-input-border: 1px solid #5dc5c4,
+        custom-videolist-border: 1px solid #60cac6,
       ),
     ),
   )

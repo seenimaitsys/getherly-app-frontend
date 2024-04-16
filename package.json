@@ -25,7 +25,7 @@
     "react-animation-on-scroll": "^5.1.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.4",
     "react-international-phone": "^4.2.6",
     "react-phone-number-input": "^3.3.12",
     "react-router-dom": "^6.21.3",

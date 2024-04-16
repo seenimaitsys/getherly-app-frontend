@@ -321,7 +321,10 @@ const GojsViewSlider = () => {
         fluid
         className="mt-2 d-flex flex-column align-items-center justify-content-center views-slider-container mb-5"
       >
-        <h2 className="mb-3">
+        <h2
+          className="mb-3 text-custom-gray-600 fw-800 font-Poppins"
+          style={{ fontSize: "clamp(20px, 5vw, 40px)" }}
+        >
           Hello ! Senthil Raj , you can access different views in web
         </h2>
 
@@ -346,11 +349,6 @@ const GojsViewSlider = () => {
         style={{ backdropFilter: "blur(10px)" }}
         onClose={handleClose}
       >
-        {/* <Container fluid>
-          <Col style={{ backgroundColor: "red" }} lg={2}>
-            <h1>hello</h1>
-          </Col>
-        </Container> */}
         <Container style={{ ...style }} fluid className="border-0">
           <Col lg={4}>
             <Form

@@ -3,15 +3,18 @@ import React from "react";
 import Terms from "../../pages/components/Terms";
 import Header from "../../pages/components/Header";
 import Fooder from "../../pages/components/Fooder";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async"; //you get woring(UNSAFE_componentWillMount) then use (npm install react-helmet-async) other then  use (npm i react-helmet)
+
 const TermsPage = () => {
   return (
     <>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Getherly-Termss</title>
-        {/* <link rel="canonical" href="http://mysite.com/example" /> */}
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Getherly-Terms</title>
+          {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+        </Helmet>
+      </HelmetProvider>
       <Header />
       <Terms />
       <Fooder />
