@@ -1,6 +1,6 @@
 import React from "react";
-import LoginForm from "../../pages/components/LoginForm";
-import Header from "../../pages/components/Header";
+import LoginForm from "../../components/LoginForm";
+import Header from "../../components/Header";
 import { Helmet, HelmetProvider } from "react-helmet-async"; //you get woring(UNSAFE_componentWillMount) then use (npm install react-helmet-async) other then  use (npm i react-helmet)
 
 const LoginPage = () => {

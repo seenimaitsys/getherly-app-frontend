@@ -1,13 +1,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import Header from "../../pages/components/Header";
-import AppContent from "../../pages/components/AppContent";
-import AppFeatures from "../../pages/components/AppFeatures";
-import Fooder from "../../pages/components/Fooder";
-import ReviewsCard from "../../pages/components/UserReviewsCard";
-import GetherlyVideo from "../../pages/components/GetherlyVideo";
-import Appinstruction from "../../pages/components/Appinstruction";
-import Limelight from "../../pages/components/Limelight";
+import Header from "../../components/Header";
+import AppContent from "../../components/AppContent";
+import AppFeatures from "../../components/AppFeatures";
+import Fooder from "../../components/Fooder";
+import ReviewsCard from "../../components/UserReviewsCard";
+import GetherlyVideo from "../../components/GetherlyVideo";
+import Appinstruction from "../../components/Appinstruction";
+import Limelight from "../../components/Limelight";
 import { Helmet, HelmetProvider } from "react-helmet-async"; //you get woring(UNSAFE_componentWillMount) then use (npm install react-helmet-async) other then  use (npm i react-helmet)
 
 const HomePage = () => {

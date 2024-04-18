@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../../pages/components/Header";
-import AboutAs from "../../pages/components/AboutAs";
+import Header from "../../components/Header";
+import AboutAs from "../../components/AboutAs";
 import { Helmet, HelmetProvider } from "react-helmet-async"; //you get woring(UNSAFE_componentWillMount) then use (npm install react-helmet-async) other then  use (npm i react-helmet)
 
 const AboutPage = () => {

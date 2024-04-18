@@ -1,5 +1,5 @@
 import React from "react";
-import MainRouter from "../../routers/main";
+import MainRouter from "../../routes/main";
 
 const Content = () => {
   return <MainRouter />;
