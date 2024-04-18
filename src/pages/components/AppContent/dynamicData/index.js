@@ -8,6 +8,7 @@ export const AppButtonProps = [
         fontWeight: "bold",
         background: "#54a8c7",
         fontSize: "clamp(10px, 3vw, 1.3rem)",
+        textDecoration: "none",
       },
       sx: { textTransform: "none" },
       startIcon: (

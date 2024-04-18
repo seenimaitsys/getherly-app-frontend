@@ -4,7 +4,16 @@
 @import "../node_modules/bootstrap/scss/_mixins.scss";
 
 @import "./utilities/bootstrap-api-utilities";
-
+$grid-breakpoints: (
+  xs: 0,
+  xsm: 362px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 2000px,
+);
 .font-Poppins {
   font-family: Poppins;
 }

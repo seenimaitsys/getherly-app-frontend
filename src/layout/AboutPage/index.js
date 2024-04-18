@@ -10,7 +10,34 @@ const AboutPage = () => {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Getherly-AboutUs</title>
-          {/* <link rel="canonical" href="http://mysite.com/example" /> */}
+          <meta
+            name="description"
+            content="Getherly is a family friendly social media app which helps you connect with your family and makes sure you have a fun experience with our features."
+          />
+          <meta property="og:title" content="Getherly-AboutUs" />
+          <meta
+            property="og:description"
+            content="Getherly is a family friendly social media app which helps you connect with your family and makes sure you have a fun experience with our features."
+          />
+          <meta
+            property="og:image"
+            content="%PUBLIC_URL%/../src/assert/SingleFamilyimg.png"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Getherly-AboutUs" />
+          <meta property="og:url" content="https://www.getherly.net/aboutus" />
+          <meta
+            name="twitter:description"
+            content="Getherly is a family friendly social media app which helps you connect with your family and makes sure you have a fun experience with our features."
+          />
+          <meta
+            name="twitter:image"
+            content="%PUBLIC_URL%/../src/assert/SingleFamilyimg.png"
+          />
+          <meta name="twitter:url" content="https://www.getherly.net/aboutus" />
+          <meta name="robots" content="index, follow" />
+
+          <meta name="keywords" content="family, social media app" />
         </Helmet>
       </HelmetProvider>
       <Header page={"about"} />

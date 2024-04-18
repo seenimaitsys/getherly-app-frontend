@@ -66,7 +66,12 @@ const AppContent = () => {
                   {AppButtonProps.map((data, index) => {
                     return (
                       <a {...data.links} key={index}>
-                        <Button {...data.buttonProps}>{data.btnName} </Button>
+                        <Button
+                          {...data.buttonProps}
+                          className="text-decoration-none"
+                        >
+                          {data.btnName}{" "}
+                        </Button>
                       </a>
                     );
                   })}

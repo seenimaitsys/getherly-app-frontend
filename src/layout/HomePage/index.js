@@ -30,18 +30,34 @@ const HomePage = () => {
       <HelmetProvider>
         <Helmet>
           <title>Getherly</title>
+          <meta
+            name="description"
+            content="Getherly is a family friendly social media app which helps you connect with your family and makes sure you have a fun experience with our features."
+          />
           <meta property="og:title" content="Getherly" />
           <meta
             property="og:description"
-            content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website."
+            content="Getherly is a family friendly social media app which helps you connect with your family and makes sure you have a fun experience with our features."
           />
           <meta
             property="og:image"
-            // content="../src/assert/getherly_reels.png"
-            content="../../assert/getherly_reels.png"
+            content="%PUBLIC_URL%/../src/assert/getherly_reels.png"
           />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Getherly" />
+          <meta property="og:url" content="https://www.getherly.net/" />
+          <meta
+            name="twitter:description"
+            content="Getherly is a family friendly social media app which helps you connect with your family and makes sure you have a fun experience with our features."
+          />
+          <meta
+            name="twitter:image"
+            content="%PUBLIC_URL%/../src/assert/getherly_reels.png"
+          />
+          <meta name="twitter:url" content="https://www.getherly.net/" />
+          <meta name="robots" content="index, follow" />
 
-          <meta property="og:type" content="website" />
+          <meta name="keywords" content="family, social media app" />
         </Helmet>
       </HelmetProvider>
 
