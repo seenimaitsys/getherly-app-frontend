@@ -1,4 +1,4 @@
-import check_circle from "../../../assert/check_circle.svg";
+import check_circle from "../../../assert/images/check_circle.svg";
 
 export const AboutDesignData = [
   {
@@ -15,7 +15,7 @@ export const AboutDesignData = [
 ];
 export const Dynamic_image_about_page = [
   {
-    src: require("../../../assert/familyimg.png"),
+    src: require("../../../assert/images/familyimg.png"),
     alt: "getherly-famliy",
 
     width: "100%",
@@ -29,14 +29,14 @@ export const Dynamic_image_about_page = [
     height: "20px",
   },
   {
-    src: require("../../../assert/SingleFamilyimg.png"),
+    src: require("../../../assert/images/SingleFamilyimg.png"),
     alt: "family",
     loading: "lazy",
     className: "ms-20",
     width: "70%",
   },
   {
-    src: require("../../../assert/yourFriends.png"),
+    src: require("../../../assert/images/yourFriends.png"),
     loading: "lazy",
     className: "mt-n22 me-45",
     alt: "yourFriends",

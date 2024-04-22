@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactDiagram } from "gojs-react";
 import * as go from "gojs";
-import demoImg from "../../../assert/demo.png";
+import demoImg from "../../../assert/images/demo.png";
 import "./index.scss";
 const OrgChart = ({ Show_AddPersion_Model }) => {
   const treemap = [
@@ -11,7 +11,7 @@ const OrgChart = ({ Show_AddPersion_Model }) => {
       name: "Alonzo",
       relationship: "seenivasan",
       phone: "91+ 9677978279",
-      source: "../../../assert/image21.png",
+      source: "../../../assert/images/image21.png",
       pic: demoImg,
     },
     {
@@ -20,7 +20,7 @@ const OrgChart = ({ Show_AddPersion_Model }) => {
       name: "Alonzo",
       relationship: "seenivasan",
       phone: "91+ 9677978279",
-      source: "../../../assert/image21.png",
+      source: "../../../assert/images/image21.png",
       pic: demoImg,
     },
     {
@@ -47,7 +47,7 @@ const OrgChart = ({ Show_AddPersion_Model }) => {
       name: "Alonzo",
       relationship: "seenivasan",
       phone: "91+ 9677978279",
-      source: "../../../assert/image21.png",
+      source: "../../../assert/images/image21.png",
       pic: demoImg,
     },
   ];
@@ -131,7 +131,7 @@ const OrgChart = ({ Show_AddPersion_Model }) => {
       return { font: "9pt  Segoe UI,sans-serif", stroke: "white" };
     }
     function findHeadShot(pic) {
-      if (!pic) return "../../../assert/image20.png"; // There are only 16 images on the server
+      if (!pic) return "../../../assert/images/image20.png"; // There are only 16 images on the server
       return pic;
     }
 
@@ -194,7 +194,7 @@ const OrgChart = ({ Show_AddPersion_Model }) => {
                 name: "pic",
                 desiredSize: new go.Size(50, 50),
 
-                source: "../../../assert/image20.png",
+                source: "../../../assert/images/image20.png",
               },
               new go.Binding("source", "pic", findHeadShot)
             )
@@ -285,7 +285,7 @@ const OrgChart = ({ Show_AddPersion_Model }) => {
     // })
 
     //   .add(
-    //     new go.Picture("../../../assert/image20.png", {
+    //     new go.Picture("../../../assert/images/image20.png", {
     //       margin: 10,
     //       width: 50,
     //       height: 50,

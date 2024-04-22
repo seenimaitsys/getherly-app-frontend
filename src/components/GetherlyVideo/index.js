@@ -1,5 +1,5 @@
 import React from "react";
-import video from "../../assert/video1.mp4";
+import video from "../../assert/images/video1.mp4";
 import { Container, Col } from "react-bootstrap";
 
 const GetherlyVideo = () => {

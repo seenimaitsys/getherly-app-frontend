@@ -1,8 +1,8 @@
-import Celebrating from "../../../assert/Celebrating.svg";
-import RealTimeUpdates from "../../../assert/Real-Time Updates.svg";
-import PreservingCulturalTraditions from "../../../assert/PreservingCulturalTraditions.svg";
-import FosterInteractivity from "../../../assert/FosterInteractivity.svg";
-import ShareableJoy from "../../../assert/ShareableJoy.svg";
+import Celebrating from "../../../assert/images/Celebrating.svg";
+import RealTimeUpdates from "../../../assert/images/Real-Time Updates.svg";
+import PreservingCulturalTraditions from "../../../assert/images/PreservingCulturalTraditions.svg";
+import FosterInteractivity from "../../../assert/images/FosterInteractivity.svg";
+import ShareableJoy from "../../../assert/images/ShareableJoy.svg";
 
 export const FeaturesList = [
   {

@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header";
 import Fooder from "../Fooder";
-import error_404_Page from "../../assert/404error.png";
+import error_404_Page from "../../assert/images/404error.png";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 const PageNotFound = () => {
   return (

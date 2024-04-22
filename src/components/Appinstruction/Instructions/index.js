@@ -1,9 +1,9 @@
-import downloadapp from "../../../assert/download.gif";
-import Addfamilymembers from "../../../assert/Addfamilymembers.gif";
-import StartConnecting from "../../../assert/StartConnecting.gif";
-import Createclub from "../../../assert/StartConnecting.gif";
-import Becomecontentcreator from "../../../assert/Becomecontentcreator.gif";
-import Editandpostvideos from "../../../assert/Becomecontentcreator.gif";
+import downloadapp from "../../../assert/images/download.gif";
+import Addfamilymembers from "../../../assert/images/Addfamilymembers.gif";
+import StartConnecting from "../../../assert/images/StartConnecting.gif";
+import Createclub from "../../../assert/images/StartConnecting.gif";
+import Becomecontentcreator from "../../../assert/images/Becomecontentcreator.gif";
+import Editandpostvideos from "../../../assert/images/Becomecontentcreator.gif";
 export const Instructions = [
   {
     img: downloadapp,

@@ -1,8 +1,8 @@
 import React from "react";
-import getherly_reels from "../../assert/getherly_reels.png";
-import getherly_reels_comment from "../../assert/getherly_reels_comment.png";
-import appfeature from "../../assert/appfeature.gif";
-import robot from "../../assert/robot.png";
+import getherly_reels from "../../assert/images/getherly_reels.png";
+import getherly_reels_comment from "../../assert/images/getherly_reels_comment.png";
+import appfeature from "../../assert/images/appfeature.gif";
+import robot from "../../assert/images/robot.png";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { UseGetScreenResolution } from "../GetScreenResolution";

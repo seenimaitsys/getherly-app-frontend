@@ -1,9 +1,9 @@
-import TextStyles from "../../assert/TextStyles.gif";
-import Multipleeffectsandfilters from "../../assert/Multipleeffectsandfilters.gif";
-import Addmusic from "../../assert/Addmusic.gif";
-import GainFanbase from "../../assert/GainFanbase.gif";
-import PictureinPicture from "../../assert/PictureinPicture.gif";
-import Tagrelatives from "../../assert/Tagrelatives.gif";
+import TextStyles from "../../assert/images/TextStyles.gif";
+import Multipleeffectsandfilters from "../../assert/images/Multipleeffectsandfilters.gif";
+import Addmusic from "../../assert/images/Addmusic.gif";
+import GainFanbase from "../../assert/images/GainFanbase.gif";
+import PictureinPicture from "../../assert/images/PictureinPicture.gif";
+import Tagrelatives from "../../assert/images/Tagrelatives.gif";
 
 export const CapsuleMomentsList = [
   {

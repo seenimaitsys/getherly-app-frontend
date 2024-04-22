@@ -41,7 +41,6 @@ $utilities: map-merge(
         15: 15px,
         20: 20px,
         30: 30px,
-        25: 25px,
         18: 18px,
       ),
     ),
@@ -103,7 +102,7 @@ $utilities: map-merge(
       property: background-image,
       class: bg,
       values: (
-        bg-image1: url("./../../src/assert/image22.png"),
+        bg-image1: url("./../../src/assert/contact_bg.png"),
         select-custom-icon: url("../../src/assert/VectorNo_border_Dowm.svg"),
         login-form-bg: linear-gradient(180deg, #00463e 0.18%, #595959 150.98%),
         login-submit-bg: linear-gradient(90deg, #78c1c2 0%, #2a4e8c 100%),

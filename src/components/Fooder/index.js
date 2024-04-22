@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Container, Row, Col, Image } from "react-bootstrap";
-import getherly from "../../assert/getherlyfooter.svg";
-import getherly2 from "../../assert/getherlyFooder.png";
+import getherly from "../../assert/images/getherlyfooter.svg";
+import getherly2 from "../../assert/images/getherlyFooder.png";
 const Fooder = () => {
   return (
     <>

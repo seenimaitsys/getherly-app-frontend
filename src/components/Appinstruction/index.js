@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import howitswork from "../../assert/howitswork.gif";
+import howitswork from "../../assert/images/howitswork.gif";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import { UseGetScreenResolution } from "../GetScreenResolution";
 import { Instructions } from "./Instructions";

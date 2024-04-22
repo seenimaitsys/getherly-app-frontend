@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import appcontent_Ellipse from "../../assert/image3.png";
-import getherly_mobile_message from "../../assert/image4.png";
+import appcontent_Ellipse from "../../assert/images/diment.png";
+import getherly_mobile_message from "../../assert/images/getherly_chart.png";
 
 import { Button } from "@mui/material";
 import { AppButtonProps, AppContent_ImageProps } from "./dynamicData";

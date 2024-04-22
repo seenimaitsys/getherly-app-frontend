@@ -1,5 +1,5 @@
 import React from "react";
-import robot from "../../assert/robot2.png";
+import robot from "../../assert/images/robot2.png";
 
 import { Row, Container, Col } from "react-bootstrap";
 // import { UseGetScreenResolution } from "../GetScreenResolution";

@@ -1,4 +1,4 @@
-import userOfflineimg from "../../assert/userOflineimg.png";
+import userOfflineimg from "../../assert/images/userOflineimg.png";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { UseGetScreenResolution } from "../GetScreenResolution";
 const UserOfflinePage = () => {

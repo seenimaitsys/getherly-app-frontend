@@ -1,6 +1,6 @@
-import map from "../../../assert/map.svg";
-import email from "../../../assert/email.svg";
-import phone from "../../../assert/Phone.svg";
+import map from "../../../assert/images/map.svg";
+import email from "../../../assert/images/email.svg";
+import phone from "../../../assert/images/Phone.svg";
 export const DynamicData_contact = [
   {
     src: map,

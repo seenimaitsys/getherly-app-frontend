@@ -8,9 +8,9 @@ import {
   Image,
   Col,
 } from "react-bootstrap";
-import getherlyHeader from "../../assert/getherly.png";
-import Vector from "../../assert/Vector.svg";
-import VectorUp from "../../assert/vectorUp.svg";
+import getherlyHeader from "../../assert/images/getherly.png";
+import Vector from "../../assert/images/Vector.svg";
+import VectorUp from "../../assert/images/vectorUp.svg";
 
 const Header = ({ page }) => {
   return (

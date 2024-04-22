@@ -1,4 +1,14 @@
 // when not install sass server the use [npm install scss and sass -w scss/main.scss{from} assets/css/custom.css{to}]
+// (or)
+//how to compile sass file [ install live sass-> setting-> search live sass-> edit in setting.json -> add tis code ->
+//    "liveSassCompile.settings.formats": [
+//     {
+//       "format": "compressed",
+//       "extensionName": ".min.css",
+//       "savePath": "/src/assert/css"
+//     }
+//   ],
+//->seve this.
 @import "../node_modules/bootstrap/scss/_functions.scss";
 @import "../node_modules/bootstrap/scss/_variables.scss";
 @import "../node_modules/bootstrap/scss/_mixins.scss";

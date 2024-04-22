@@ -1,8 +1,8 @@
 import React from "react";
-import CapsuleMoments from "../../assert/CapsuleMoments.svg";
+import CapsuleMoments from "../../assert/images/CapsuleMoments.svg";
 
-import demoimage1 from "../../assert/demoimage1.png";
-import demoimage2 from "../../assert/demoimage2.png";
+import demoimage1 from "../../assert/images/demoimage1.png";
+import demoimage2 from "../../assert/images/demoimage2.png";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { CapsuleMomentsList } from "./CapsuleMomentsList";
 import { AnimationOnScroll } from "react-animation-on-scroll";

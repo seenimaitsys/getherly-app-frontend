@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactDiagram } from "gojs-react";
 import * as go from "gojs";
-import image20 from "../../../assert/demo.png";
+import image20 from "../../../assert/images/demo.png";
 
 const Genogram = () => {
   const relationshipData = [
@@ -515,7 +515,7 @@ const Genogram = () => {
       return { font: "9pt  Segoe UI,sans-serif", stroke: "white" };
     }
     function findHeadShot(pic) {
-      if (!pic) return "../../../assert/image20.png"; // There are only 16 images on the server
+      if (!pic) return "../../../assert/images/image20.png"; // There are only 16 images on the server
       return pic;
     }
     myDiagram.nodeTemplateMap.add(
