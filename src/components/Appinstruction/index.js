@@ -17,8 +17,8 @@ const Appinstruction = () => {
                 src={howitswork}
                 alt="how its work"
                 loading="lazy"
-                width={"95%"}
-                height={670}
+                width={"100%"}
+                height={"100%"}
                 className="rounded-4 border border-dark"
               ></Image>
             </Col>
@@ -31,7 +31,7 @@ const Appinstruction = () => {
               </p>
 
               <p
-                className="mt-lg-5 mt-md-0 text-lg-start text-custom-gray-900 fw-bold font-Poppins  text-md-center h1 "
+                className="mt-lg-4 mt-md-0 text-lg-start text-custom-gray-900 fw-bold font-Poppins  text-md-center h1 "
                 style={{
                   fontSize:
                     currentResolution <= 992
@@ -45,7 +45,7 @@ const Appinstruction = () => {
               </p>
 
               <p
-                className=" text-lg-start text-custom-gray-800 fw-normal font-Poppins text-md-center mt-4 mt-sm-4  mt-lg-3"
+                className=" text-lg-start text-custom-gray-800 fw-normal font-Poppins text-md-center mt-4 mt-sm-4  mt-lg-2"
                 style={{ fontSize: "clamp(12px, 4vw, 25px)" }}
               >
                 {" "}
@@ -97,7 +97,7 @@ const Appinstruction = () => {
                           xs={6}
                           lg={4}
                           md={6}
-                          className="p-0 p-lg-3"
+                          className="p-0 p-lg-1"
                         >
                           <img
                             src={value.img}
