@@ -30,7 +30,8 @@ const Routers = () => {
         scrollProgress.style.display = "none";
       }
       scrollProgress.addEventListener("click", () => {
-        document.documentElement.scrollTop = 0;
+        // document.documentElement.scrollTop = 0;
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
       scrollProgress.style.background = `conic-gradient(rgba(84, 168, 199, 0.7) ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
     };

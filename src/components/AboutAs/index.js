@@ -34,7 +34,12 @@ const AboutAs = () => {
         </div>
 
         <div className="about-main-continer w-100 mt-3 mt-lg-5  d-flex align-items-start">
-          <Image src={Round_eclipse} alt="round-eclips" loading="lazy"></Image>
+          <Image
+            src={Round_eclipse}
+            alt="round-eclips"
+            className="d-none d-md-block d-xl-block d-xxl-block d-xxl-block"
+            loading="lazy"
+          ></Image>
           <Container fluid className="d-flex mt-3">
             <Col
               xl={7}
