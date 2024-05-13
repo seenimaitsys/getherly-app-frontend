@@ -6,7 +6,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async"; //you get woring(UN
 const LoginPage = () => {
   return (
     <>
-      {/* <HelmetProvider>
+      <HelmetProvider>
         <Helmet>
           <meta charSet="utf-8" />
           <title>Getherly-Login</title>
@@ -50,7 +50,7 @@ const LoginPage = () => {
           </script>
           <meta name="keywords" content="family, social media app" />
         </Helmet>
-      </HelmetProvider> */}
+      </HelmetProvider>
 
       <Header />
       <LoginForm className="animate__animated animate__fadeInRight" />

@@ -6,7 +6,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 const AboutPage = () => {
   return (
     <>
-      {/* <HelmetProvider>
+      <HelmetProvider>
         <Helmet>
           <meta charSet="utf-8" />
           <title>Getherly-AboutUs</title>
@@ -48,10 +48,26 @@ const AboutPage = () => {
               }
             `}
           </script>
-          
+          {/* <script type="application/ld+json">
+            {`
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.getherly.net/",
+      "name": "Getherly",
+      "description": "Getherly is a family friendly social media app which helps you connect with your family and makes sure you have a fun experience with our features.",
+      "image": "/../src/assert/images/SingleFamilyimg.png",
+      "sameAs": [
+        "https://twitter.com/yourtwitterhandle",
+        "https://facebook.com/yourfacebookpage",
+        // Add other social media links or relevant URLs here
+      ]
+    }
+  `}
+          </script> */}
           <meta name="keywords" content="family, social media app" />
         </Helmet>
-      </HelmetProvider> */}
+      </HelmetProvider>
       <Header page={"about"} />
       <AboutAs />
     </>

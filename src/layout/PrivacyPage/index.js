@@ -8,13 +8,13 @@ import { Helmet, HelmetProvider } from "react-helmet-async"; //you get woring(UN
 const PolicyPage = () => {
   return (
     <>
-      {/* <HelmetProvider>
+      <HelmetProvider>
         <Helmet>
           <meta charSet="utf-8" />
           <title>Getherly-Privacy</title>
-          
+          {/* <link rel="canonical" href="http://mysite.com/example" /> */}
         </Helmet>
-      </HelmetProvider> */}
+      </HelmetProvider>
       <Header />
       <Privacy />
       <Fooder />
