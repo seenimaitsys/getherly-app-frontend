@@ -12,7 +12,7 @@ const LoginForm = () => {
   const [invaliedMobile, setinvaliedMobile] = useState(false);
   // const muiValidation = usePhoneValidation(muiPhone);
   // console.log(isValidPhoneNumber(muiPhone));
-
+  console.log(muiPhone);
   const [validated, setValidated] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();

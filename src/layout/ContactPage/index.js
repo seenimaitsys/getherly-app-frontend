@@ -5,7 +5,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 const ConnectPage = () => {
   return (
     <>
-      <HelmetProvider>
+      {/* <HelmetProvider>
         <Helmet>
           <meta charSet="utf-8" />
           <title>Getherly-Contact</title>
@@ -49,7 +49,7 @@ const ConnectPage = () => {
           </script>
           <meta name="keywords" content="family, social media app" />
         </Helmet>
-      </HelmetProvider>
+      </HelmetProvider> */}
       <AddressMap />
     </>
   );

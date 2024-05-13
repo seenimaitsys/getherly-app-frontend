@@ -8,13 +8,12 @@ import { Helmet, HelmetProvider } from "react-helmet-async"; //you get woring(UN
 const TermsPage = () => {
   return (
     <>
-      <HelmetProvider>
+      {/* <HelmetProvider>
         <Helmet>
           <meta charSet="utf-8" />
           <title>Getherly-Terms</title>
-          {/* <link rel="canonical" href="http://mysite.com/example" /> */}
         </Helmet>
-      </HelmetProvider>
+      </HelmetProvider> */}
       <Header />
       <Terms />
       <Fooder />

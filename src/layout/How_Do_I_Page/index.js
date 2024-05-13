@@ -6,7 +6,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async"; //you get woring(UN
 const How_DO_I_page = () => {
   return (
     <>
-      <HelmetProvider>
+      {/* <HelmetProvider>
         <Helmet>
           <title>Getherly-HowDoI</title>
           <meta charSet="utf-8" />
@@ -50,7 +50,7 @@ const How_DO_I_page = () => {
           </script>
           <meta name="keywords" content="family, social media app" />
         </Helmet>
-      </HelmetProvider>
+      </HelmetProvider> */}
 
       <Header page={"howdoi"} />
       <VideoList />

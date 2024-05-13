@@ -27,7 +27,7 @@ const HomePage = () => {
 
   return (
     <>
-      <HelmetProvider>
+      {/* <HelmetProvider>
         <Helmet>
           <title>Getherly</title>
           <meta
@@ -59,7 +59,7 @@ const HomePage = () => {
 
           <meta name="keywords" content="family, social media app" />
         </Helmet>
-      </HelmetProvider>
+      </HelmetProvider> */}
 
       <Header />
       <AppContent />
