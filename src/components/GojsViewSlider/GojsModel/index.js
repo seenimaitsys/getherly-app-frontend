@@ -175,12 +175,11 @@ export const DynamicData_form = [
     },
     Input_Type: (
       <Form.Control
-        type="tel"
-        placeholder="Name"
-        maxLength="30"
+        type="number"
+        placeholder="Ph No"
         name="phone"
         autoComplete="off"
-        className=" h-40 bg-add-persion-input-bg d-flex w-100 align-items-start border-0 rounded"
+        className="numberinput h-40 bg-add-persion-input-bg d-flex w-100 align-items-start border-0 rounded"
         required
       />
     ),

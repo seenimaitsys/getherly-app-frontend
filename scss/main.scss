@@ -36,29 +36,6 @@ $grid-breakpoints: (
   -webkit-line-clamp: 5; /* Number of lines to show */
 }
 
-.login-form {
-  .login-input {
-    letter-spacing: 0.3px;
-    &::-webkit-input-placeholder {
-      color: rgba(93, 197, 196, 0.5);
-      opacity: 50%;
-    }
-  }
-  &::-webkit-outer-spin-button,
-  ::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-}
-////////
-.message-form {
-  .message-input {
-    letter-spacing: 1px;
-    &::-webkit-input-placeholder {
-      color: white;
-    }
-  }
-}
 .background-styles {
   background-repeat: no-repeat;
   background-size: cover;
