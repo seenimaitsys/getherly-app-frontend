@@ -11,7 +11,7 @@ const TermsPage = React.lazy(() => import("../../layout/TermsPage"));
 const GojsViewSlider = React.lazy(() =>
   import("../../components/GojsViewSlider")
 );
-const PageNotFound = React.lazy(() => import("../../components/PageNotFound"));
+// const PageNotFound = React.lazy(() => import("../../components/PageNotFound"));
 const UserOfflinePage = React.lazy(() =>
   import("../../../src/components/UserOfflinePage")
 );
@@ -68,7 +68,7 @@ const Routers = () => {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/familyTree" element={<GojsViewSlider />} />
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="*" element={<HomePage />} />
           <Route path="/off" element={<UserOfflinePage />} />
         </Routes>
       ) : (
