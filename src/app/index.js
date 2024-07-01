@@ -20,10 +20,10 @@ function App() {
           // Attempt to open the intent URL
           // window.location.href = androidIntentURL;
         } else if (/iPad|iPhone|iPod/.test(userAgent)) {
-          setTimeout(() => {
-            window.location.href =
-              "https://apps.apple.com/ag/app/twigs-one/id1608764375";
-          }, 1000);
+          // setTimeout(() => {
+          window.location.href =
+            "https://apps.apple.com/ag/app/getherly/id1608764375";
+          // }, 1000);
           // window.location.href =
           //   "https://apps.apple.com/ag/app/twigs-one/id1608764375";
           // }, 1000);
