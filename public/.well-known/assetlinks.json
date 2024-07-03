@@ -1,0 +1,36 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.lyncnsync.twigs.debug",
+    "sha256_cert_fingerprints":
+    ["BF:9F:C9:3E:0B:E0:19:31:2A:AE:D8:7F:50:34:82:0C:0C:4B:28:A9:F4:38:2B:C1:2F:F6:2F:03:51:43:04:D2"]
+  }
+},{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.lyncnsync.twigs",
+    "sha256_cert_fingerprints":
+    ["53:C0:37:60:B7:89:3D:86:08:B4:87:F9:A0:B3:19:AC:8E:FA:6C:90:C0:B4:FE:9A:E9:CB:BA:29:14:13:77:C7"]
+  }
+},{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.lyncnsync.twigs",
+    "sha256_cert_fingerprints":
+    ["D4:0A:E9:78:EA:CC:43:E4:9E:6C:7F:FD:6F:B4:A7:7C:02:68:79:4F:71:62:C2:71:07:31:DA:9E:12:9E:E8:35"]
+  }
+	},{
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.twigscorp.app",
+      "sha256_cert_fingerprints": [
+        "EA:36:B6:32:A6:B9:EA:B2:84:CD:77:10:43:25:DF:87:12:52:09:80:7C:97:D4:56:E5:00:16:1D:B4:BE:81:D4"
+      ]
+    }
+}]
