@@ -1,0 +1,13 @@
+
+{
+  "routes": [
+    {
+      "route": "/.well-known/*",
+      "serve": "/.well-known/"
+    },
+    {
+      "route": "/*",
+      "serve": "/index.html"
+    }
+  ]
+}
