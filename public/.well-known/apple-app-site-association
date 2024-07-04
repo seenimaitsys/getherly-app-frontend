@@ -3,7 +3,11 @@
     "apps": [],
     "details": [
       {
-        "appID": "W5265H5W59.com.lyncnsync.twigs",
+        "appID": "2NK6MK57Q5.com.getherly.twigscorp",
+        "paths": ["*"]
+      },
+      {
+        "appID": "2NK6MK57Q5.com.twigscorp.one",
         "paths": ["*"]
       }
     ]
