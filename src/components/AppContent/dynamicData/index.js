@@ -43,7 +43,7 @@ export const AppButtonProps = [
     },
     btnName: "App Store",
     links: {
-      href: "https://apps.apple.com/ag/app/getherly/id1608764375",
+      href: "https://apple.co/3LzuQLS",
       target: "_blank",
       rel: "noreferrer",
     },
@@ -89,7 +89,7 @@ export const AppButtonProps = [
     },
     btnName: " Google Play",
     links: {
-      href: "https://play.google.com/store/apps/details?id=com.twigscorp.app",
+      href: "https://bit.ly/3Erc0HS",
       target: "_blank",
       rel: "noreferrer",
     },

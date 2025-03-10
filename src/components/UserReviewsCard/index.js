@@ -202,7 +202,7 @@ const UserReviewsCard = () => {
                     />
                   </Card.Title>
                   <div>
-                    <p className="fw-normal h-9 text-custom-gray-800 font-Inter lh-custom-lh-1 fs-25 fst-normal text-start m-0 overflow-hidden display-webkit-box">
+                    <p className="fw-normal h-9 text-custom-gray-800 font-Inter lh-custom-lh-1 fs-18 fst-normal text-start m-0 overflow-hidden display-webkit-box">
                       {list.cord_condent}
                     </p>
                   </div>
