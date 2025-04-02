@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 const HomePage = React.lazy(() => import("../../layout/HomePage"));
 const AboutPage = React.lazy(() => import("../../layout/AboutPage"));
 const Contacts = React.lazy(() => import("../../../src/components/Contacts"));
-const LoginPage = React.lazy(() => import("../../layout/LoginPage"));
+// const LoginPage = React.lazy(() => import("../../layout/LoginPage"));
 const HowDOIpage = React.lazy(() => import("../../layout/How_Do_I_Page"));
 const Privacy = React.lazy(() => import("../../layout/PrivacyPage"));
 const TermsPage = React.lazy(() => import("../../layout/TermsPage"));
@@ -63,7 +63,8 @@ const Routers = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/aboutus" element={<AboutPage />} />
           <Route path="/contact" element={<Contacts />} />
-          <Route path="/login" element={<LoginPage />} />
+          {/* <Route path="/login" element={<LoginPage />} /> */}
+
           <Route path="/how_do_i" element={<HowDOIpage />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<TermsPage />} />

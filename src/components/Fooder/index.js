@@ -9,7 +9,7 @@ const Fooder = () => {
       <footer>
         <Container className="mt-5 mb-5" fluid>
           <Row className="mt-5">
-            <Col lg={3} md={6} sm={6}>
+            <Col lg={4} md={6} sm={6}>
               <Col className="d-flex justify-content-center align-items-center mt-5">
                 <Image
                   src={getherly}
@@ -36,7 +36,7 @@ const Fooder = () => {
               </div>
             </Col>
             <Col
-              lg={3}
+              lg={4}
               sm={6}
               md={6}
               className="d-flex flex-column justify-content-center mt-5"
@@ -59,7 +59,7 @@ const Fooder = () => {
               </a>
             </Col>
             <Col
-              lg={3}
+              lg={4}
               md={6}
               sm={6}
               className="d-flex flex-column justify-content-center mt-5"
@@ -88,7 +88,7 @@ const Fooder = () => {
               </a>
             </Col>
 
-            <Col
+            {/* <Col
               lg={3}
               md={6}
               sm={6}
@@ -105,7 +105,7 @@ const Fooder = () => {
                   Log in
                 </a>
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </footer>

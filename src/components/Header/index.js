@@ -170,15 +170,15 @@ const Header = ({ page }) => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="nave-body d-flex justify-content-end flex-grow-1 gap-5 gap-lg-3 gap-xl-5 align-items-center ">
-                  <Nav.Link
+                  {/* <Nav.Link
                     href="/login"
                     className="navmanu fw-semibold text-login text-nowrap font-Poppins fs-20 fst-normal lh-0"
                   >
                     Log in
-                  </Nav.Link>
+                  </Nav.Link> */}
 
                   <Nav.Link
-                    className="navmanu fw-semibold text-black text-nowrap font-Poppins fs-20 fst-normal lh-0"
+                    className="navmanu fw-semibold text-login text-nowrap font-Poppins fs-20 fst-normal lh-0"
                     href="/"
                   >
                     Home

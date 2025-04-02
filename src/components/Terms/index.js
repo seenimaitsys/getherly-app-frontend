@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, Image } from "react-bootstrap";
-import { UseGetScreenResolution } from "../GetScreenResolution";
+// import { UseGetScreenResolution } from "../GetScreenResolution";
 import pin from "../../assert/images/pin.svg";
 import dick from "../../assert/images/tick.svg";
-import diament from "../../assert/images/diament.svg";
+// import diament from "../../assert/images/diament.svg";
 import email_to from "../../assert/images/email-to.svg";
 const Terms = () => {
-  const [currentResolution] = UseGetScreenResolution();
+  // const [currentResolution] = UseGetScreenResolution();
   return (
     <>
       <Container className={`text-start d-flex flex-column gap-1`}>

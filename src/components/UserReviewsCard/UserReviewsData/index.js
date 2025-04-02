@@ -10,13 +10,13 @@ export const UserReviewsData = [
     rading_value: 4,
     cord_condent: `"Most social media platforms feel overwhelming, but Getherly keeps things simple and enjoyable. No unnecessary ads, no toxic content—just pure family connection. It’s a breath of fresh air!"`,
     presion_img: demo,
-    presion_name: "SEENIVASAN T",
+    presion_name: "Seenivasan",
   },
   {
     rading_value: 3,
     cord_condent: `"I love how Getherly encourages meaningful interactions rather than just mindless scrolling. The app is user-friendly, and my kids can safely engage with their grandparents and cousins. Highly recommend!"`,
     presion_img: demo,
-    presion_name: "Madhu Balan",
+    presion_name: "Sethuraman",
   },
   {
     rading_value: 4,
