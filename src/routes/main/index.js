@@ -65,7 +65,7 @@ const Routers = () => {
           <Route path="/contact" element={<Contacts />} />
           {/* <Route path="/login" element={<LoginPage />} /> */}
 
-          <Route path="/how_do_i" element={<HowDOIpage />} />
+          {/* <Route path="/how_do_i" element={<HowDOIpage />} /> */}
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/familyTree" element={<GojsViewSlider />} />

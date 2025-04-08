@@ -73,7 +73,7 @@ const Fooder = () => {
                 className="text-decoration-none"
               >
                 <div className="text-custom-gray-800 fst-normal fw-normal p-10 lh-normal font-Poppins fs-20">
-                  Terms of use
+                  Terms of service
                 </div>
               </a>
 

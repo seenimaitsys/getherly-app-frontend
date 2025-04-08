@@ -196,7 +196,7 @@ const Header = ({ page }) => {
                   >
                     Contact us
                   </Nav.Link>
-                  <Nav.Link href="/how_do_i">
+                  {/* <Nav.Link href="/how_do_i">
                     <Button className="text-nowrap fw-semibold btn-howtoi text-black text-nowrap font-Poppins fs-20 fst-normal lh-0 p-20 h-40 rounded-30 d-flex align-items-center justify-content-center">
                       <h4 className="d-flex align-items-center justify-content-center mt-2 fw-semibold text-black text-nowrap font-Poppins fs-20 fst-normal lh-0 gap-1">
                         How do i?
@@ -212,7 +212,7 @@ const Header = ({ page }) => {
                         )}
                       </h4>
                     </Button>
-                  </Nav.Link>
+                  </Nav.Link> */}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
